@@ -85,33 +85,27 @@ def write_strings_from_csv(patch, filename, reverse_font_map, pointer_table_addr
     for pool in pools:
         write_with_size_check(patch, pool.address, pool.capacity, pool.get_bytes(), fill_byte=b'\xff')
         
-def write_gfx(patch, filename, address, length):
+def write_gfx(patch, data, address, length):
+    write_with_size_check(patch, address, length, gfx_util.compress(data))
+
+def write_gfx_from_file(patch, filename, address, length):
     with open(filename, 'rb') as f:
-        write_with_size_check(patch, address, length, gfx_util.compress(f.read()))
+        write_gfx(patch, f.read(), address, length)
 
 if __name__ == '__main__':
     reverse_font_map = text_util.load_map_reverse('assets/text/font.tbl')
-    
-    
 
     patch = Patch()
-    #patch.add_record(0x10000, b'1234')
-    
-    
-    #bank_1_string_pool = StringPool(0x1d2ed, 6766)
-    #bank_1_pointer_table = encode_from_csv('assets/text/dialog_bank_1.csv', reverse_font_map, 0x1d2b3, [bank_1_string_pool])
-    
-    #patch.add_record(0x1d2b3, bank_1_pointer_table)
-    #patch.add_record(bank_1_string_pool.address, bank_1_string_pool.get_bytes())
-    
+
     write_strings_from_csv(patch, 'assets/text/dialog_bank_1.csv', reverse_font_map, 0x1d2b3, 29 * 2, 0x1d2ed, 6766, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_2.csv', reverse_font_map, 0xfb719, 81 * 2, 0xfb7bb, 18185, 0xfa730, 944, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_3.csv', reverse_font_map, 0xedfc1, 33 * 2, 0xee011, 6684, pad_to_line_count=6, pad_final_line=True)
-    
-    write_gfx(patch, 'assets/gfx/font.bin', 0x79358, 2578)
-    
-    #print(patch.encode())
-    
+
+    with open('assets/gfx/font.bin', 'rb') as font_file:
+        font_data = font_file.read()
+        write_gfx(patch, font_data, 0x79358, 2578)
+        write_gfx(patch, font_data[0x200:0x600], 0x77c7e, 711)
+
     os.makedirs('build', exist_ok=True)
     with open('build/test.ips', 'w+b') as f:
         f.write(patch.encode())
