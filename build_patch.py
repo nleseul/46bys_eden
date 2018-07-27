@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 import os
+import subprocess
+import sys
 
 import csv
 from ips_util import Patch
@@ -92,10 +94,28 @@ def write_gfx_from_file(patch, filename, address, length):
     with open(filename, 'rb') as f:
         write_gfx(patch, f.read(), address, length)
 
+def write_code(patch, filename, address, length):
+    tmp_filename = 'build/_tmp.a65'
+    result = subprocess.run(['xa', '-o', tmp_filename, '-w', filename], stderr=subprocess.PIPE)
+    if result.returncode == 0:
+        with open(tmp_filename, 'rb') as tmp_file:
+            write_with_size_check(patch, address, length, tmp_file.read())
+        os.remove(tmp_filename)
+    else:
+        raise Exception('Assembler failed on {0} with error code {1}:\n\nErrors:\n{2}'.format(filename, result.returncode, result.stderr.decode(sys.stderr.encoding)))
+
+
 if __name__ == '__main__':
+    os.makedirs('build', exist_ok=True)
+
     reverse_font_map = text_util.load_map_reverse('assets/text/font.tbl')
 
     patch = Patch()
+
+    # New tiles for digits in font.
+    patch.add_record(0x488a, b'\xB5\xB6\xB7\xB8')
+
+    write_code(patch, 'assets/code/menu text.asm', 0x4f90, 309)
 
     write_strings_from_csv(patch, 'assets/text/dialog_bank_1.csv', reverse_font_map, 0x1d2b3, 29 * 2, 0x1d2ed, 6766, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_2.csv', reverse_font_map, 0xfb719, 81 * 2, 0xfb7bb, 18185, 0xfa730, 944, pad_to_line_count=6, pad_final_line=True)
@@ -106,6 +126,5 @@ if __name__ == '__main__':
         write_gfx(patch, font_data, 0x79358, 2578)
         write_gfx(patch, font_data[0x200:0x600], 0x77c7e, 711)
 
-    os.makedirs('build', exist_ok=True)
     with open('build/test.ips', 'w+b') as f:
         f.write(patch.encode())
