@@ -58,9 +58,6 @@ def write_strings_from_csv(patch, filename, reverse_font_map, pointer_table_addr
             #flag_map = {7: 0x2, 9: 0x4, 10: 0x8, 16: 0x8}
             #encoded_string = encode_text_interleaved(row[4], reverse_map, i != 15, flag_map[i] if i in flag_map else 0x1)
             
-            #encoded_string = text_util.encode_text(row[4], reverse_font_map)
-            #encoded_string = encode_text(row[4], reverse_map, pad_to_line_count=6, pad_final_line=True)
-            #encoded_string = encode_text(row[4], reverse_map, newline=b'\xff\xfe', terminator=b'\xff\xff')
             encoded_string = text_util.encode_text(row[column_to_encode], reverse_font_map, 
                                                    pad_to_line_count=pad_to_line_count, pad_final_line=pad_final_line,
                                                    newline=newline, terminator=terminator)
@@ -120,6 +117,9 @@ if __name__ == '__main__':
     write_strings_from_csv(patch, 'assets/text/dialog_bank_1.csv', reverse_font_map, 0x1d2b3, 29 * 2, 0x1d2ed, 6766, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_2.csv', reverse_font_map, 0xfb719, 81 * 2, 0xfb7bb, 18185, 0xfa730, 944, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_3.csv', reverse_font_map, 0xedfc1, 33 * 2, 0xee011, 6684, pad_to_line_count=6, pad_final_line=True)
+
+    write_strings_from_csv(patch, 'assets/text/menu_prologue.csv', reverse_font_map, 0xf9156, 5 * 2, 0xf9160, 288, newline=b'\xff\xfe', terminator=b'\xff\xff')
+    write_strings_from_csv(patch, 'assets/text/menu_title.csv', reverse_font_map, 0xf9280, 3 * 2, 0xf9286, 214, newline=b'\xff\xfe', terminator=b'\xff\xff')
 
     with open('assets/gfx/font.bin', 'rb') as font_file:
         font_data = font_file.read()
