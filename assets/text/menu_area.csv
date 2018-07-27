@@ -1,0 +1,128 @@
+"　１．進化
+(1)２．のうりょく
+(2)３．進化のき",55,,,"[#6200ffbb00]Ev[ol]u[ti]on
+[#a200ffbb01]Status
+[#e200ffbb02]Preserve [#3233]s
+[#0301ffbb02]body [in] [#3031]
+[#2301ffbb02]foss[il] record",,
+"のうりょく
+＊
+類へつ：　
+Hｐ：体カ……………MAX：　　　ｐ
+＊
+Aｐ：こうけきカ／かみつき…　　　ｐ
+／体あたり…　　　ｐ
+／けり………　　　ｐ
+＊
+／なくり……　　　ｐ
+／ツノ………　　　ｐ
+＊　＊
+Dｐ：ほうきょカ………………　　　ｐ
+はやさ……………………………　　　ｐ
+＊　　ｏ
+シャンフカ………………………　　　ｐ",363,,,"[#4d00]Status
+[#8600]C[la]s[si][fi]ca[ti]on:[#ffcc00]
+[#c600]Max he[al]th:
+[#0601]A[tt]acks…
+[#1101]B[it]e:
+[#4c01]Body s[la]m:
+[#9001]Kick:
+[#d101]To[ol]:
+[#1002]Horn:
+[#4602]Defense power:
+[#8602]Speed:
+[#c602]Jump[in]g:",,
+"＊
+進化させた　せいふつを
+ｏ　＊
+なんヘーシに、き
+しますか……？",79,,,"[#4401]Where wou[ld] you [li]ke
+[#6401]to preserve [#3233]s
+[#8401]creature?",,
+"　(e)
+ｐ．　　／",21,,,"[#2402ffbb000e]
+[#2502]#   /",,
+"ｏ　＊＊　　　＊
+このヘーシて、いいてすか？
+(e)
+　はい
+／
+(1)いいえ",83,,,"[#2c02]Are you sure?
+[#6c02][#0e] [#ffbb00]Yes[#ffbbff]/[#ffbb01]No",,
+"＊
+進化させた　せいふつに
+＊
+名まえを　つけてくたさい。
+　(f)",75,,,"[#4801]What wou[ld] you
+[#6801][li]ke to name
+[#8801][#3233]s creature?
+[#ce01ffbb000f]",,
+,3,,,[#0000],,
+名まえ：＿＿＿＿＿＿＿＿＿＿,31,,,[#4800]Name:__________,,
+"き
+　しました。",21,,,"[#2b01]Foss[il]
+[#4b01]recorded.",,
+"　１．進化
+(1)２．のうりょく
+(2)３．進化のき
+
+(3)　　　　　　　＊
+(3)４．進化のさいけん",101,,,"[#6200ffbb00]Ev[ol]u[ti]on
+[#a200ffbb01]Status
+[#e200ffbb02]Preserve [#3233]s
+[#0301ffbb02]body [in] [#3031]
+[#2301ffbb02]foss[il] record
+[#6201ffbb03]Restore a foss[il]
+[#8301ffbb03]from [#3031] foss[il]
+[#a301ffbb03]record",,0x116fc
+"”進化のき
+”に、き
+したキャラの
+＊　　　　　　　　　　＊
+とれかひとつに、１かいたけ
+＊＊
+進化することかてきます。
+　(f)",143,,,"[#8501]Us[in]g [#3031] Green Cryst[al],
+[#a501]you can temporar[il]y
+[#c501]return to a form
+[#e501]recorded [in] [#3031] foss[il]
+[#0502]record. The Cryst[al] w[ill]
+[#2502]be consumed after one
+[#4502]use.
+[#6f02ffbb000f]",,
+"＊
+とうしますか？
+　(e)進化する
+(1)(e)いまは、やめとく…。",67,,,"[#a601]Proceed?
+[#e601ffbb000e]Yes
+[#2602ffbb010e]Not now…",,
+"ｏ　＊
+進化のき
+の、なんヘーシのキャラに
+進化しますか？",67,,,"[#8301]W[hi]ch entry wou[ld] you
+[#a301][li]ke to restore?",,
+"　(e)
+ｐ．　　／",21,,,"[#6402ffbb000e]
+[#6502]#   /",,
+"ｏ　＊＊　　　＊
+このヘーシて、いいてすか？
+(e)
+　はい
+／
+(1)いいえ",83,,,"[#6c02]Are you sure?
+[#ad02][#0e] [#ffbb00]Yes[#ffbbff]/[#ffbb01]No",,
+"き
+　されていません！",27,,,[#c901]There are no records!,,
+"　１．のうりょく
+(1)２．進化のき",41,,,"[#6200ffbb00]Status
+[#a200ffbb01]Preserve [#3233]s
+[#c300ffbb01]body [in] [#3031]
+[#e300ffbb01]foss[il] record",,
+　１．のうりょく,19,,,[#8200ffbb00]Status,,
+"＊
+みらいのせいふつには、
+＊
+進化てきません！！",59,,,"[#4c02]You cannot
+[#6c02]restore a
+[#8c02]creature from
+[#ac02][#3031] future!",,
