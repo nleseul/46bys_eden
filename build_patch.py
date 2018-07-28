@@ -161,7 +161,7 @@ if __name__ == '__main__':
     patch.add_record(0x116bc, b'\x8d') # "This will overwrite..." (for saving) - Menu window wider on right
     patch.add_record(0x116bd, b'\x46') #                                         and taller on bottom.
     patch.add_record(0x116c0, b'\x10') #                                         Shorten the save window to compensate.
-    patch.add_record(0x116d3, b'\x1c') # Not sure what window this is? Makes something shorter.
+    patch.add_record(0x116d3, b'\x1c') # Believe this to be the area name window.
     patch.add_record(0x116ff, b'\x62') # Used by both the area and map root menus. - Window becomes taller
     patch.add_record(0x11701, b'\x8d') #                                             and wider.
     patch.add_record(0x117e0, b'\x8d') # "Which entry would you like to view?" - Menu window wider on right
@@ -185,6 +185,11 @@ if __name__ == '__main__':
     patch.add_record(0x11854, b'\xc5') #                                          Wider confirmation window
     patch.add_record(0x11857, b'\xcd') #                                          continuing to next region.
 
+
+    # Tilemap for the chapter graphics and possibly some other things.
+    with open('assets/gfx/chapter_tilemap.bin', 'rb') as f:
+        write_gfx(patch, f.read(), 0x4efec, 1488)
+
     # There's a section of the font tiles that gets replaced with the evolution buttons while that menu is
     # open, and then reloaded from a different compressed image. Write both of those from the source asset.
     with open('assets/gfx/font.bin', 'rb') as f:
@@ -199,6 +204,10 @@ if __name__ == '__main__':
     # Title image
     with open('assets/gfx/title.bin', 'rb') as f:
         write_gfx(patch, f.read(), 0x11acb2, 3990)
+
+    # Chapter title graphics
+    with open('assets/gfx/chapter.bin', 'rb') as f:
+        write_gfx(patch, f.read(), 0x110c06, 2022)
 
     # "Triconodon" image from chapter 4 intro
     with open('assets/gfx/triconodon.bin', 'rb') as f:
