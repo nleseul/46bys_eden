@@ -147,6 +147,10 @@ if __name__ == '__main__':
 
     write_strings_from_csv(patch, 'assets/text/evo_options.csv', reverse_font_map, 0xfaae0, 28 * 2, 0xfab20, 3065)
 
+    # Credits... odd format here, and I'm not entirely sure how it works.
+    with open('assets/text/credits.txt', 'r') as f:
+        write_with_size_check(patch, 0x13f516, 1949, text_util.encode_text(f.read(), reverse_font_map, newline=b'\x0d', terminator=b''))
+
     # And HDMA tables...
     patch.add_record(0x1160f, b'\x7b') # Standalone yes/no confirmation on evo menu; make slightly wider on the left.
     patch.add_record(0x11618, b'\x42') # Some window a little shorter; might be one of the evolution messages.
