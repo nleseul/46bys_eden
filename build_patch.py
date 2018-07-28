@@ -131,7 +131,7 @@ if __name__ == '__main__':
     write_code(patch, 'assets/code/menu text.asm', 0x4f90, 309)
 
     write_strings_from_csv(patch, 'assets/text/dialog_bank_1.csv', reverse_font_map, 0x1d2b3, 29 * 2, 0x1d2ed, 6766, pad_to_line_count=6, pad_final_line=True)
-    write_strings_from_csv(patch, 'assets/text/dialog_bank_2.csv', reverse_font_map, 0xfb719, 81 * 2, 0xfb7bb, 18185, 0xfa730, 944, pad_to_line_count=6, pad_final_line=True)
+    write_strings_from_csv(patch, 'assets/text/dialog_bank_2.csv', reverse_font_map, 0xfb719, 81 * 2, 0xfb7bb, 18185, 0xfa730, 928, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_3.csv', reverse_font_map, 0xedfc1, 33 * 2, 0xee011, 6684, pad_to_line_count=6, pad_final_line=True)
 
     write_strings_from_csv(patch, 'assets/text/menu_area.csv', reverse_font_map, 0xf8170, 19 * 2, 0xf8196, 1378, newline=b'\xff\xfe', terminator=b'\xff\xff')
@@ -140,7 +140,12 @@ if __name__ == '__main__':
     write_strings_from_csv(patch, 'assets/text/menu_prologue.csv', reverse_font_map, 0xf9156, 5 * 2, 0xf9160, 288, newline=b'\xff\xfe', terminator=b'\xff\xff')
     write_strings_from_csv(patch, 'assets/text/menu_title.csv', reverse_font_map, 0xf9280, 3 * 2, 0xf9286, 214, newline=b'\xff\xfe', terminator=b'\xff\xff')
     write_strings_from_csv(patch, 'assets/text/menu_load.csv', reverse_font_map, 0xf9374, 3 * 2, 0xf937a, 206, newline=b'\xff\xfe', terminator=b'\xff\xff')
-    write_strings_from_csv(patch, 'assets/text/menu_inserted_text.csv', reverse_font_map, 0xfa660, 64 * 2, 0xfa6e0, 1024, newline=b'\xff\xfe', terminator=b'\xff\xff')
+    write_strings_from_csv(patch, 'assets/text/menu_inserted_text.csv', reverse_font_map, 0xfa660, 55 * 2, 0xfa6e0, 96, newline=b'\xff\xfe', terminator=b'\xff\xff')
+
+    # Note that we reserve a lot of room in what was originally the block associated with the text at 0xfa660 for overflow in the 0xfb719 dialog block.
+    # If for some reason the inserted text ever gets any bigger, make sure to update the overflow block's start address and size too.
+
+    write_strings_from_csv(patch, 'assets/text/evo_options.csv', reverse_font_map, 0xfaae0, 28 * 2, 0xfab20, 3065)
 
     # And HDMA tables...
     patch.add_record(0x1160f, b'\x7b') # Standalone yes/no confirmation on evo menu; make slightly wider on the left.
@@ -187,8 +192,7 @@ if __name__ == '__main__':
 
 
     # Tilemap for the chapter graphics and possibly some other things.
-    with open('assets/gfx/chapter_tilemap.bin', 'rb') as f:
-        write_gfx(patch, f.read(), 0x4efec, 1488)
+    write_gfx_from_file(patch, 'assets/gfx/chapter_tilemap.bin', 0x4efec, 1488)
 
     # There's a section of the font tiles that gets replaced with the evolution buttons while that menu is
     # open, and then reloaded from a different compressed image. Write both of those from the source asset.
@@ -198,20 +202,16 @@ if __name__ == '__main__':
         write_gfx(patch, font_data[0x200:0x600], 0x77c7e, 711)
 
     # Evolution menu buttons
-    with open('assets/gfx/evo_buttons.bin', 'rb') as f:
-        write_gfx(patch, f.read(), 0x7efe0, 860)
+    write_gfx_from_file(patch, 'assets/gfx/evo_buttons.bin', 0x7efe0, 860)
 
     # Title image
-    with open('assets/gfx/title.bin', 'rb') as f:
-        write_gfx(patch, f.read(), 0x11acb2, 3990)
+    write_gfx_from_file(patch, 'assets/gfx/title.bin', 0x11acb2, 3990)
 
     # Chapter title graphics
-    with open('assets/gfx/chapter.bin', 'rb') as f:
-        write_gfx(patch, f.read(), 0x110c06, 2022)
+    write_gfx_from_file(patch, 'assets/gfx/chapter.bin', 0x110c06, 2022)
 
     # "Triconodon" image from chapter 4 intro
-    with open('assets/gfx/triconodon.bin', 'rb') as f:
-        write_gfx(patch, f.read(), 0x1247e2, 2248)
+    write_gfx_from_file(patch, 'assets/gfx/triconodon.bin', 0x1247e2, 2248)
 
     # All done! Build the patch now...
     with open('build/test.ips', 'w+b') as f:
