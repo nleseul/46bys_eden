@@ -43,7 +43,7 @@ def write_with_size_check(patch, address, available_length, data, fill_byte=b'\x
 
 def write_strings_from_csv(patch, filename, reverse_font_map, pointer_table_address, pointer_table_length,
                            string_pool_address, string_pool_length, overflow_pool_address = None, overflow_pool_length = None,
-                           column_to_encode=4, newline=b'\xfe', terminator=b'\xff', pad_to_line_count=1, pad_final_line=False):
+                           column_to_encode=4, newline=b'\xfe', terminator=b'\xff', pad_to_line_count=1, pad_final_line=False, interleaved=False):
     pointer_table_out = bytearray()
     previously_encoded = {}
 
@@ -55,12 +55,14 @@ def write_strings_from_csv(patch, filename, reverse_font_map, pointer_table_addr
     with open(filename, 'r', encoding='shift-jis') as in_file:
         reader = csv.reader(in_file, lineterminator='\n')
         for i, row in enumerate(reader):
-            #flag_map = {7: 0x2, 9: 0x4, 10: 0x8, 16: 0x8}
-            #encoded_string = encode_text_interleaved(row[4], reverse_map, i != 15, flag_map[i] if i in flag_map else 0x1)
-
-            encoded_string = text_util.encode_text(row[column_to_encode], reverse_font_map,
-                                                   pad_to_line_count=pad_to_line_count, pad_final_line=pad_final_line,
-                                                   newline=newline, terminator=terminator)
+            if interleaved:
+                # This is only used for area names, which have some special flags that need to be set, except for index 15.
+                flag_map = {7: 0x2, 9: 0x4, 10: 0x8, 16: 0x8}
+                encoded_string = text_util.encode_text_interleaved(row[4], reverse_font_map, i != 15, flag_map[i] if i in flag_map else 0x1)
+            else:
+                encoded_string = text_util.encode_text(row[column_to_encode], reverse_font_map,
+                                                       pad_to_line_count=pad_to_line_count, pad_final_line=pad_final_line,
+                                                       newline=newline, terminator=terminator)
 
             string_address = None
             if encoded_string in previously_encoded:
@@ -129,6 +131,8 @@ if __name__ == '__main__':
     patch.add_record(0x632d, b'\x06')
 
     write_code(patch, 'assets/code/menu text.asm', 0x4f90, 309)
+
+    write_strings_from_csv(patch, 'assets/text/area_names.csv', reverse_font_map, 0x1c9db, 108 * 2, 0x1cab3, 2048, interleaved=True)
 
     write_strings_from_csv(patch, 'assets/text/dialog_bank_1.csv', reverse_font_map, 0x1d2b3, 29 * 2, 0x1d2ed, 6766, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_2.csv', reverse_font_map, 0xfb719, 81 * 2, 0xfb7bb, 18185, 0xfa730, 928, pad_to_line_count=6, pad_final_line=True)

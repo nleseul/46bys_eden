@@ -71,7 +71,6 @@ def encode_text(text, reverse_map, newline=b'\xfe', terminator=b'\xff', pad_to_l
     lines = text.splitlines()
     
     appended_lines = 0
-    #print('derp {0} {1} {2}'.format(len(lines), pad_to_line_count, len(lines) % pad_to_line_count))
     while len(lines) % pad_to_line_count != 0:
         lines.append('')
         appended_lines += 1
@@ -84,32 +83,16 @@ def encode_text(text, reverse_map, newline=b'\xfe', terminator=b'\xff', pad_to_l
     for line in lines:
         prev_out_length = current_out_length
         current_out_length = 0
-        
-        #print('{0} -> {1}'.format(prev_out_length, current_out_length))
-    
+
         if line != line.rstrip():
             print('Warning: Line \'{0}\' had trailing whitespace.'.format(line))
             line = line.rstrip()
         while len(line) > 0:
             line, ch = consume_char(line, reverse_map, unknown_chars)
             out += ch
-            
+
             current_out_length += 1
-            '''
-            if line[0] == '[':
-                end_index = line.index(']')
-                ch = line[1:end_index]
-                line = line[end_index + 1:]
-                
-                if ch.startswith('#'):
-                    out += bytes.fromhex(ch[1:])
-                else:
-                    out += map_char(ch, reverse_map, unknown_chars)
-            else:
-                ch = line[0]
-                line = line[1:]
-                out  += map_char(ch, reverse_map, unknown_chars)
-            '''
+
         out += newline
         
     if len(unknown_chars) > 0:
