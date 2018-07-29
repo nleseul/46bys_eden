@@ -155,6 +155,17 @@ if __name__ == '__main__':
     with open('assets/text/credits.txt', 'r') as f:
         write_with_size_check(patch, 0x13f516, 1949, text_util.encode_text(f.read(), reverse_font_map, newline=b'\x0d', terminator=b''))
 
+    # The health and EP displays... 16-bit tiles.
+    patch.add_record(0xf8060, b'\x87\x30\x8f\x30\xdc')                             # "HP:"
+    patch.add_record(0xf8078, b'\x84\x30\x8f\x30\xdc\x30\x00\x30\x00\x30\x00\x30') # "EP:   " (Note three spaces)
+
+    # "Pause" text... just constants embedded in assembly.
+    patch.add_record(0x1c67d, text_util.map_char('P', reverse_font_map))
+    patch.add_record(0x1c684, text_util.map_char('a', reverse_font_map))
+    patch.add_record(0x1c68b, text_util.map_char('u', reverse_font_map))
+    patch.add_record(0x1c692, text_util.map_char('s', reverse_font_map))
+    patch.add_record(0x1c699, text_util.map_char('e', reverse_font_map))
+
     # And HDMA tables...
     patch.add_record(0x1160f, b'\x7b') # Standalone yes/no confirmation on evo menu; make slightly wider on the left.
     patch.add_record(0x11618, b'\x42') # Some window a little shorter; might be one of the evolution messages.
