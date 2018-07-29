@@ -209,6 +209,30 @@ if __name__ == '__main__':
     patch.add_record(0x11854, b'\xc5') #                                          Wider confirmation window
     patch.add_record(0x11857, b'\xcd') #                                          continuing to next region.
 
+    # Dialog window dimensions... mostly constants in assembly.
+    # All I'm doing is changing the width of text to 22 characters to fill the existing window and shifting the text over by
+    # one tile to compensate. Bunch of redundant constants need to get touched for that.
+    dialog_width, dialog_height,  = 22, 6
+    dialog_start_addr_prologue, dialog_start_addr_area = 0xe08a, 0xe1ca
+
+    patch.add_record(0x1b63f, (dialog_width * 2).to_bytes(2, byteorder='little'))                 # Offset in bytes between lines in the dialog buffer,
+    patch.add_record(0x1b695, (dialog_width * 2).to_bytes(2, byteorder='little'))                 #   and again for scrolling.
+    patch.add_record(0x1b6c1, (dialog_width * dialog_height * 2).to_bytes(2, byteorder='little')) # Length of a page in bytes.
+    patch.add_record(0x1b6c9, dialog_width.to_bytes(2, byteorder='little'))                       # Width of dialog window in characters.
+    patch.add_record(0x1b6d4, (64 - dialog_width * 2).to_bytes(2, byteorder='little'))            # Offset in bytes from end of line in the tilemap to start of the next.
+    patch.add_record(0x1efca, dialog_start_addr_area.to_bytes(2, byteorder='little'))             # Start address of dialog text on initial page,
+    patch.add_record(0x1f000, dialog_start_addr_area.to_bytes(2, byteorder='little'))             #   and on subsequent pages.
+    patch.add_record(0x1f2df, dialog_start_addr_prologue.to_bytes(2, byteorder='little'))         #   Same thing for the prologue text.
+    patch.add_record(0x1f31f, dialog_start_addr_prologue.to_bytes(2, byteorder='little'))         #
+
+    # Change the palette for the prologue dialog windows to gray/dark gray instead of white/red.
+    prolog_dialog_palette = 0x2000
+    patch.add_record(0x1f2d1, prolog_dialog_palette.to_bytes(2, byteorder='little')) # Used for text.
+    patch.add_record(0x1f36d, prolog_dialog_palette.to_bytes(2, byteorder='little')) # Used for the arrow.
+
+    # Instructions in the area of 0x1f1ae are responsible for loading the prologue text. Update some constants there.
+    patch.add_record(0x1f1af, b'\x02') # Start music at index 2.
+    patch.add_record(0x1f1dc, b'\x05') # End the prologue and move on to the sun scene at index 5.
 
     # Tilemap for the chapter graphics and possibly some other things.
     write_gfx_from_file(patch, 'assets/gfx/chapter_tilemap.bin', 0x4efec, 1488)
