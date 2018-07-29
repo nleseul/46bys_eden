@@ -30,6 +30,12 @@ class StringPool:
     def get_bytes(self):
         return self.pool
 
+def num_8bit(num):
+    return num.to_bytes(1, byteorder='little')
+
+def num_16bit(num):
+    return num.to_bytes(2, byteorder='little')
+
 def write_with_size_check(patch, address, available_length, data, fill_byte=b'\x00'):
     difference = available_length - len(data)
     if difference < 0:
@@ -132,22 +138,62 @@ if __name__ == '__main__':
 
     write_code(patch, 'assets/code/menu text.asm', 0x4f90, 309)
 
+    # This assembly code sets the height of the area name window. Make it shorter.
+    patch.add_record(0x1c2af, num_16bit(4))
+
     write_strings_from_csv(patch, 'assets/text/area_names.csv', reverse_font_map, 0x1c9db, 108 * 2, 0x1cab3, 2048, interleaved=True)
 
     write_strings_from_csv(patch, 'assets/text/dialog_bank_1.csv', reverse_font_map, 0x1d2b3, 29 * 2, 0x1d2ed, 6766, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_2.csv', reverse_font_map, 0xfb719, 81 * 2, 0xfb7bb, 18185, 0xfa730, 928, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_3.csv', reverse_font_map, 0xedfc1, 33 * 2, 0xee011, 6684, pad_to_line_count=6, pad_final_line=True)
 
+    # Before the pointer table for each of these menus, there's a block of 8 bytes per entry describing the size of the window.
+    # Starting address, width, height. The fourth word is a flag of some kind, but I'm not sure what it does.
+
+    # Area menu
+    patch.add_record(0xf8122, num_16bit(17) + num_16bit(13)) # Window for the main window is a bit bigger.
+    patch.add_record(0xf816c, num_16bit(6))                  # "You cannot restore a creature from the future" is a little shorter.
     write_strings_from_csv(patch, 'assets/text/menu_area.csv', reverse_font_map, 0xf8170, 19 * 2, 0xf8196, 1378, newline=b'\xff\xfe', terminator=b'\xff\xff')
+
+    # Evolution menu
+    patch.add_record(0xf8708, num_16bit(0x01ef) + num_16bit(15)) # "Are you sure?" stretches to the left.
+    patch.add_record(0xf8710, num_16bit(0x01ef) + num_16bit(15)) # "Not enough EP!" does the same.
+    patch.add_record(0xf871c, num_16bit(9))                      # "Time flows by rapidly" gets shorter...
+    patch.add_record(0xf872c, num_16bit(9))                      #   same for "An unfamiliar environment"
+    patch.add_record(0xf8734, num_16bit(9))                      #   and "Crystal's power is depleted"
+    patch.add_record(0xf873c, num_16bit(9))                      #   and "Crystal's power accelerates your evolution"
+    patch.add_record(0xf8744, num_16bit(9))                      #   and "evolve into a bird.
     write_strings_from_csv(patch, 'assets/text/menu_evo.csv', reverse_font_map, 0xf8748, 10 * 2, 0xf875c, 1008, newline=b'\xff\xfe', terminator=b'\xff\xff')
+
+    # Map menu
+    patch.add_record(0xf8b4e, num_16bit(17) + num_16bit(13))    # Window for the main menu is a bit bigger.
+    patch.add_record(0xf8b5e, num_16bit(15))                    # "Are you sure?" (for saving) gets wider.
+    patch.add_record(0xf8b68, num_16bit(4))                     # "Save data recorded" gets shorter.
+    patch.add_record(0xf8b94, num_16bit(0x01c7))                # "There are no records" moves down a row
+    patch.add_record(0xf8b98, num_16bit(4))                     #   and get shorter to compensate.
+    patch.add_record(0xf8bae, num_16bit(15))                    # "Are you sure?" (for deleting) gets wider.
+    patch.add_record(0xf8bb4, num_16bit(0x010b) + num_16bit(4)) # "Save data deleted" moves down and gets shorter.
+    patch.add_record(0xf8bce, num_16bit(15))                    # "Are you sure?" (for deleting record entries) gets shorter.
+    patch.add_record(0xf8bd4, num_16bit(0x0127))                # "Entry deleted" moves down...
+    patch.add_record(0xf8bd8, num_16bit(4))                     #   and gets shorter.
     write_strings_from_csv(patch, 'assets/text/menu_map.csv', reverse_font_map, 0xf8bdc, 18 * 2, 0xf8c00, 1366, newline=b'\xff\xfe', terminator=b'\xff\xff')
+
+    # Prologue and title screen strings... no window borders associated with these.
     write_strings_from_csv(patch, 'assets/text/menu_prologue.csv', reverse_font_map, 0xf9156, 5 * 2, 0xf9160, 288, newline=b'\xff\xfe', terminator=b'\xff\xff')
     write_strings_from_csv(patch, 'assets/text/menu_title.csv', reverse_font_map, 0xf9280, 3 * 2, 0xf9286, 214, newline=b'\xff\xfe', terminator=b'\xff\xff')
+
+    # Load menu
+    patch.add_record(0xf9366, num_16bit(15)) # "Are you sure?" gets wider.
+    patch.add_record(0xf9370, num_16bit(4))  # "Save data loaded" gets shorter.
     write_strings_from_csv(patch, 'assets/text/menu_load.csv', reverse_font_map, 0xf9374, 3 * 2, 0xf937a, 206, newline=b'\xff\xfe', terminator=b'\xff\xff')
+
+    # "Inserted text" is only used for storing classification text like "Fish", "Amphibian", etc. that gets inserted into the status displays.
+    # The original ROM has some other unused text there, but we just blank it all out to save room.
+    # Note that the space saved here gets used for overflow in the 0xfb719 dialog block.
+    # If for some reason the inserted text ever gets any bigger, make sure to update the overflow block's start address and size too.
     write_strings_from_csv(patch, 'assets/text/menu_inserted_text.csv', reverse_font_map, 0xfa660, 55 * 2, 0xfa6e0, 96, newline=b'\xff\xfe', terminator=b'\xff\xff')
 
-    # Note that we reserve a lot of room in what was originally the block associated with the text at 0xfa660 for overflow in the 0xfb719 dialog block.
-    # If for some reason the inserted text ever gets any bigger, make sure to update the overflow block's start address and size too.
+
 
     write_strings_from_csv(patch, 'assets/text/evo_options.csv', reverse_font_map, 0xfaae0, 28 * 2, 0xfab20, 3065)
 
