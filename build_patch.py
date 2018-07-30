@@ -104,7 +104,7 @@ def write_code(patch, filename, address, length):
     result = subprocess.run(['xa', '-o', tmp_filename, '-w', filename], stderr=subprocess.PIPE)
     if result.returncode == 0:
         with open(tmp_filename, 'rb') as tmp_file:
-            write_with_size_check(patch, address, length, tmp_file.read())
+            write_with_size_check(patch, address, length, tmp_file.read(), fill_byte=b'\xea')
         os.remove(tmp_filename)
     else:
         raise Exception('Assembler failed on {0} with error code {1}:\n\nErrors:\n{2}'.format(filename, result.returncode, result.stderr.decode(sys.stderr.encoding)))
@@ -140,6 +140,21 @@ if __name__ == '__main__':
 
     # This assembly code sets the height of the area name window. Make it shorter.
     patch.add_record(0x1c2af, num_16bit(4))
+
+    # Assembly code to render text for save slots. The text used comes from the area names, I think?
+
+    # NOP out some instructions that skip the first few bytes of the text.
+    patch.add_rle_record(0x1c441, b'\xea', 4)
+
+    # I rewrote one whole block for simplicity... I think the changes are still basically just constants where
+    # the chapter digits come from. I'm honestly not sure what exactly this does differently, though; the file
+    # I originally compiled it from seems to have disappeared.
+    write_code(patch, 'assets/code/save slot text.asm', 0x1c46f, 52)
+
+    # These are the destination offsets for the number of areas cleared and total areas in the chapter, respectively.
+    # I'm just shifting them left by one character (2 bytes) to accomodate the translated string.
+    patch.add_record(0x1c4b4, num_16bit(0x004a))
+    patch.add_record(0x1c4de, num_16bit(0x0051))
 
     write_strings_from_csv(patch, 'assets/text/area_names.csv', reverse_font_map, 0x1c9db, 108 * 2, 0x1cab3, 2048, interleaved=True)
 
