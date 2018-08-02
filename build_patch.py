@@ -36,6 +36,9 @@ def num_8bit(num):
 def num_16bit(num):
     return num.to_bytes(2, byteorder='little')
 
+def num_24bit(num):
+    return num.to_bytes(3, byteorder='little')
+
 def write_with_size_check(patch, address, available_length, data, fill_byte=b'\x00'):
     difference = available_length - len(data)
     if difference < 0:
@@ -109,6 +112,28 @@ def write_code(patch, filename, address, length):
     else:
         raise Exception('Assembler failed on {0} with error code {1}:\n\nErrors:\n{2}'.format(filename, result.returncode, result.stderr.decode(sys.stderr.encoding)))
 
+def write_dialog_choice_entry(patch, address, dialog_index=None, page_index=None, options=None, dest1=None, dest2=None, dest3=None, first_option=None):
+    # Dialog choice data consists of 7 words:
+    #  0: Dialog index.
+    #  1: Line index. Should be a multiple of 6 for the window height.
+    #  2: Number of options. If this is 0, it simply redirects the dialog to the first destination automatically.
+    #  3: Destination line for option 1. Note that the destination lines need to be 6 lines (1 page) before the intended displayed line, as the line counter still gets advanced by 6 after the redirect.
+    #  4: Destination line for option 2.
+    #  5: Destination line for option 3, probably. Unused.
+    #  6: Index of first option. If this is 1, the space allocated for the first option is assumed to be static text instead and becomes unselectable.
+
+    if dialog_index is not None:
+        patch.add_record(address,     num_16bit(dialog_index))
+    if page_index is not None:
+        patch.add_record(address + 2, num_16bit(page_index * 6))
+    if options is not None:
+        patch.add_record(address + 4, num_16bit(options))
+    for index, dest in enumerate([dest1, dest2, dest3]):
+        if dest is not None:
+            patch.add_record(address + 6 + (index * 2), b'\xff\xff' if dest == 0xffff else num_16bit((dest - 1) * 6))
+    if first_option is not None:
+        patch.add_record(address + 12, num_16bit(first_option))
+
 
 if __name__ == '__main__':
     os.makedirs('build', exist_ok=True)
@@ -138,6 +163,17 @@ if __name__ == '__main__':
 
     write_code(patch, 'assets/code/menu text.asm', 0x4f90, 309)
 
+    # Code for dialog choices starts at 0x1b6f8... the arrows all need to shift left and up.
+
+    # First, all three possible arrow spots are blanked out. Update those.
+    patch.add_record(0x1b752, num_24bit(0x7ee9ca))
+    patch.add_record(0x1b756, num_24bit(0x7eea4a))
+    patch.add_record(0x1b75a, num_24bit(0x7eeaca))
+
+    # Then, the base location to which the arrow actually gets written. (Gets offset by the current focus index.)
+    patch.add_record(0x1b76d, num_24bit(0x7ee9ca))
+
+
     # This assembly code sets the height of the area name window. Make it shorter.
     patch.add_record(0x1c2af, num_16bit(4))
 
@@ -161,6 +197,25 @@ if __name__ == '__main__':
     write_strings_from_csv(patch, 'assets/text/dialog_bank_1.csv', reverse_font_map, 0x1d2b3, 29 * 2, 0x1d2ed, 6766, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_2.csv', reverse_font_map, 0xfb719, 81 * 2, 0xfb7bb, 18185, 0xfa730, 928, pad_to_line_count=6, pad_final_line=True)
     write_strings_from_csv(patch, 'assets/text/dialog_bank_3.csv', reverse_font_map, 0xedfc1, 33 * 2, 0xee011, 6684, pad_to_line_count=6, pad_final_line=True)
+
+    # And then, the dialogs have a data table starting at 0x1ed5b. See the helper method for notes on that.
+    write_dialog_choice_entry(patch, 0x1ed5b, page_index=2, dest1=4, dest2=3, first_option=1) # 0x11 - Ichthyostega elder's story
+    write_dialog_choice_entry(patch, 0x1ed69, page_index=3, dest1=1)
+    write_dialog_choice_entry(patch, 0x1ed77, page_index=12, dest1=2, dest2=0xffff)           # 0x23 - Styracosaur's story
+    write_dialog_choice_entry(patch, 0x1ed85, dest1=6, first_option=0)                        # 0x2f - Tyrannosaurs
+    write_dialog_choice_entry(patch, 0x1ed93, page_index=5)
+    write_dialog_choice_entry(patch, 0x1eda1, page_index=6, dest1=2, dest2=7)
+    write_dialog_choice_entry(patch, 0x1edaf, page_index=6, dest1=7, dest2=8)                 # 0x35 - Mammal evolution
+    write_dialog_choice_entry(patch, 0x1edbd, page_index=7)
+    write_dialog_choice_entry(patch, 0x1edcb, page_index=9)
+    write_dialog_choice_entry(patch, 0x1edd9, first_option=0)                                 # 0x39 - Avian King
+    write_dialog_choice_entry(patch, 0x1edf5, page_index=4, dest1=5, dest2=6)                 # 0x3b - Yeti Lord
+    write_dialog_choice_entry(patch, 0x1ee03, page_index=5)
+    write_dialog_choice_entry(patch, 0x1ee11, page_index=1, dest1=2, dest2=5)                 # 0x3f - Hidden glade stegosaur
+    write_dialog_choice_entry(patch, 0x1ee1f, page_index=4)
+    # No changes to...                                                                        # 0x42 - Visitors above condor mountain
+    write_dialog_choice_entry(patch, 0x1ee49, page_index=3, dest1=4, dest2=5)                 # 0x48 - Rogon Commander
+    write_dialog_choice_entry(patch, 0x1ee57, page_index=4)
 
     # Before the pointer table for each of these menus, there's a block of 8 bytes per entry describing the size of the window.
     # Starting address, width, height. The fourth word is a flag of some kind, but I'm not sure what it does.
