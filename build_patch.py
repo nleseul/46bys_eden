@@ -214,8 +214,25 @@ if __name__ == '__main__':
     write_dialog_choice_entry(patch, 0x1ee11, page_index=1, dest1=2, dest2=5)                 # 0x3f - Hidden glade stegosaur
     write_dialog_choice_entry(patch, 0x1ee1f, page_index=4)
     # No changes to...                                                                        # 0x42 - Visitors above condor mountain
-    write_dialog_choice_entry(patch, 0x1ee49, page_index=3, dest1=4, dest2=5)                 # 0x48 - Rogon Commander
+    write_dialog_choice_entry(patch, 0x1ee49, page_index=3, dest1=4, dest2=5)                 # 0x48 - Lagon Commander
     write_dialog_choice_entry(patch, 0x1ee57, page_index=4)
+
+    # At 0x1ef27, there's a routine that does several checks for special things that happen after dialog lines. 0x1ef65
+    # checks the line index for the mammal evolution one; that needs to be updated. (Happens on page 7, from above.)
+    patch.add_record(0x1ef66, num_8bit(7 * 6))
+
+    # At 0x1f010, there's some code that wants to draw a fake progress meter of ellipses for a "test" that was once part of
+    # the mammal dialog. Get rid of it by setting the constants against which the dialog index (0x1f016) and the line index (0x1f1e)
+    # are checked to invalid values. I could NOP out that whole routine instead, I suppose, but that seems riskier.
+    patch.add_record(0x1f017, b'\xff\xff')
+    patch.add_record(0x1f01f, b'\xff\xff')
+
+    # Somewhere in the vicinity of 0x1f0d8, there's another set of checks for dialog events which handles the ones that load cut scenes.
+    patch.add_record(0x1f0e3, num_8bit(7 * 6))  # 0x2f - Tyrannosaurs
+    patch.add_record(0x1f105, num_8bit(4 * 6))  # 0x48 - Lagon Commander
+    patch.add_record(0x1f116, num_8bit(6 * 6))  # 0x42 - Visitors above condor mountain
+    patch.add_record(0x1f127, num_8bit(4 * 6))  # 0x3f - Hidden glade stegosaur
+
 
     # Before the pointer table for each of these menus, there's a block of 8 bytes per entry describing the size of the window.
     # Starting address, width, height. The fourth word is a flag of some kind, but I'm not sure what it does.
