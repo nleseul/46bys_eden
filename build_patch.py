@@ -173,6 +173,32 @@ if __name__ == '__main__':
     # Then, the base location to which the arrow actually gets written. (Gets offset by the current focus index.)
     patch.add_record(0x1b76d, num_24bit(0x7ee9ca))
 
+    # The name entry window used by the fossil record...
+
+    # Remove a multiplication by 4 (two ASLs) when fetching the character to store.
+    patch.add_rle_record(0x1b9ff, b'\xea', 2)
+
+    # "Space" is now at index 0x55.
+    patch.add_record(0x1ba0d, num_8bit(0x55))
+
+    # We only write one row, and set the palette ourselves. This inserts "AND #$00ff: OR #$3000: NOP" in place of an extra write to the top row.
+    patch.add_record(0x1ba20, b'\x29\xff\x00\x09\x00\x30\xea')
+
+    # Code to read the characters in the name entry window is rewritten to use 1 byte per character instead of 4.
+    write_code(patch, 'assets/code/name entry grid.asm', 0x1ba69, 289)
+
+    # Scrolling arrows on name entry... goal is only one page of characters, so scrolling should never be supported. For this
+    # block that draws the arrows, just skip comparing to 0xb for the up arrow; this has the effect of doing the comparison
+    # against 0 instead.
+    patch.add_rle_record(0x1bb93, b'\xea', 3)
+
+    # The characters used in the name entry. Control characters go immediately after them.
+    with open('assets/text/name entry grid.txt', 'r', encoding='shift-jis') as f:
+        grid_start = 0x1c6b3
+        data = text_util.encode_text(f.read(), reverse_font_map, newline=b'', terminator=b'')
+        ctrl_start = grid_start + len(data)
+        data += text_util.encode_text('Space End', reverse_font_map, newline=b'', terminator=b'')
+        write_with_size_check(patch, grid_start, 798, data)
 
     # This assembly code sets the height of the area name window. Make it shorter.
     patch.add_record(0x1c2af, num_16bit(4))
@@ -279,8 +305,6 @@ if __name__ == '__main__':
     # Note that the space saved here gets used for overflow in the 0xfb719 dialog block.
     # If for some reason the inserted text ever gets any bigger, make sure to update the overflow block's start address and size too.
     write_strings_from_csv(patch, 'assets/text/menu_inserted_text.csv', reverse_font_map, 0xfa660, 55 * 2, 0xfa6e0, 96, newline=b'\xff\xfe', terminator=b'\xff\xff')
-
-
 
     write_strings_from_csv(patch, 'assets/text/evo_options.csv', reverse_font_map, 0xfaae0, 28 * 2, 0xfab20, 3065)
 
