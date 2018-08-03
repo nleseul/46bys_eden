@@ -233,7 +233,7 @@ if __name__ == '__main__':
     write_dialog_choice_entry(patch, 0x1eda1, page_index=6, dest1=2, dest2=7)
     write_dialog_choice_entry(patch, 0x1edaf, page_index=6, dest1=7, dest2=8)                 # 0x35 - Mammal evolution
     write_dialog_choice_entry(patch, 0x1edbd, page_index=7)
-    write_dialog_choice_entry(patch, 0x1edcb, page_index=9)
+    write_dialog_choice_entry(patch, 0x1edcb, page_index=8)
     write_dialog_choice_entry(patch, 0x1edd9, first_option=0)                                 # 0x39 - Avian King
     write_dialog_choice_entry(patch, 0x1edf5, page_index=4, dest1=5, dest2=6)                 # 0x3b - Yeti Lord
     write_dialog_choice_entry(patch, 0x1ee03, page_index=5)
@@ -288,7 +288,7 @@ if __name__ == '__main__':
     patch.add_record(0xf8bb4, num_16bit(0x010b) + num_16bit(4)) # "Save data deleted" moves down and gets shorter.
     patch.add_record(0xf8bce, num_16bit(15))                    # "Are you sure?" (for deleting record entries) gets shorter.
     patch.add_record(0xf8bd4, num_16bit(0x0127))                # "Entry deleted" moves down...
-    patch.add_record(0xf8bd8, num_16bit(4))                     #   and gets shorter.
+    patch.add_record(0xf8bd8, num_16bit(3))                     #   and gets shorter.
     write_strings_from_csv(patch, 'assets/text/menu_map.csv', reverse_font_map, 0xf8bdc, 18 * 2, 0xf8c00, 1366, newline=b'\xff\xfe', terminator=b'\xff\xff')
 
     # Prologue and title screen strings... no window borders associated with these.
@@ -336,8 +336,9 @@ if __name__ == '__main__':
     patch.add_record(0x1168a, b'\x46') #                                and taller on bottom.
     patch.add_record(0x1168d, b'\x10') #                                Shorten the save window to compensate.
     patch.add_record(0x11692, b'\xb5') #                                Wider confirmation window.
-    patch.add_record(0x116ad, b'\x60') # "There are no records!" - Menu window wider on right
-    patch.add_record(0x116ae, b'\x0b') #                           and taller on bottom.
+    patch.add_record(0x116ad, b'\x60') # "There are no records!" - Menu window wider on left
+    patch.add_record(0x116ae, b'\x8d') #                           and right
+    patch.add_record(0x116af, b'\x0b') #                           and taller on bottom.
     patch.add_record(0x116b0, b'\x1a') #                           Compensate with shorter message window.
     patch.add_record(0x116bc, b'\x8d') # "This will overwrite..." (for saving) - Menu window wider on right
     patch.add_record(0x116bd, b'\x46') #                                         and taller on bottom.
