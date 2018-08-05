@@ -145,6 +145,11 @@ if __name__ == '__main__':
     # New tiles for digits in font.
     patch.add_record(0x488a, b'\xB5\xB6\xB7\xB8')
 
+    # Some code that gets executed to get the evolution menu into a clean state after making a selection...
+    # it ensures that the "Yes" option is visible if it was in the middle of blinking. But because the "Yes"
+    # text is longer than the original, no easy way to expand it. Just NOP it out; it'll look fine.
+    patch.add_rle_record(0x4ade, b'\xea', 12)
+
     # Evolution options...
     # These instructions write blank to each possible location of the arrow.
     # Nudge each one up by 0x40...
