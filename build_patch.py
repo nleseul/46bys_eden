@@ -202,6 +202,9 @@ if __name__ == '__main__':
     patch.add_record(0x1bd1b, num_16bit(85)) # Force to the index of "Space"
     patch.add_record(0x1bd24, num_16bit(86)) # Force to the index of "End"
 
+    # When navigating up from "End," it needs to shift the current index forward a bit to align visually. This checks that value.
+    patch.add_record(0x1bd73, num_16bit(86 - 10))
+
     # At 0x1bdcc, there's a list of indices in the character grid that should be skipped over. We don't need most of them.
     write_with_size_check(patch, 0x1bdcc, 14, num_8bit(28) + num_8bit(58), fill_byte=b'\xff')
 
