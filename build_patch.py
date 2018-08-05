@@ -175,6 +175,9 @@ if __name__ == '__main__':
 
     # The name entry window used by the fossil record...
 
+    # This is the check for the index of "End," which happens way before most of the name entry code for some reason.
+    patch.add_record(0x1a822, num_8bit(0x56))
+
     # Remove a multiplication by 4 (two ASLs) when fetching the character to store.
     patch.add_rle_record(0x1b9ff, b'\xea', 2)
 
@@ -191,6 +194,16 @@ if __name__ == '__main__':
     # block that draws the arrows, just skip comparing to 0xb for the up arrow; this has the effect of doing the comparison
     # against 0 instead.
     patch.add_rle_record(0x1bb93, b'\xea', 3)
+
+    # Instructions to check a few bounds on the current index (after navigating down?).
+    patch.add_record(0x1bcff, num_16bit(85)) # Compare to index of "Space"
+    patch.add_record(0x1bd04, num_16bit(88)) # Compare to index of "End"
+    patch.add_record(0x1bd09, num_16bit(90)) # Compare to first overflow index
+    patch.add_record(0x1bd1b, num_16bit(85)) # Force to the index of "Space"
+    patch.add_record(0x1bd24, num_16bit(86)) # Force to the index of "End"
+
+    # At 0x1bdcc, there's a list of indices in the character grid that should be skipped over. We don't need most of them.
+    write_with_size_check(patch, 0x1bdcc, 14, num_8bit(28) + num_8bit(58), fill_byte=b'\xff')
 
     # The characters used in the name entry. Control characters go immediately after them.
     with open('assets/text/name entry grid.txt', 'r', encoding='shift-jis') as f:
