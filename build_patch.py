@@ -290,7 +290,6 @@ if __name__ == '__main__':
     patch.add_record(0xf8112, num_16bit(17))                 #   and is wider.
     patch.add_record(0xf811c, num_16bit(4))                  # "Fossil recorded" is shortened.
     patch.add_record(0xf8122, num_16bit(17) + num_16bit(13)) # Window for the main window is a bit bigger.
-    patch.add_record(0xf816c, num_16bit(6))                  # "You cannot restore a creature from the future" is a little shorter.
     write_strings_from_csv(patch, 'assets/text/menu_area.csv', reverse_font_map, 0xf8170, 19 * 2, 0xf8196, 1378, newline=b'\xff\xfe', terminator=b'\xff\xff')
 
     # Evolution menu
@@ -375,6 +374,18 @@ if __name__ == '__main__':
     patch.add_record(0x116d3, b'\x1c') # Believe this to be the area name window.
     patch.add_record(0x116ff, b'\x62') # Used by both the area and map root menus. - Window becomes taller
     patch.add_record(0x11701, b'\x8d') #                                             and wider.
+    patch.add_record(0x1170b, b'\x8d') # "Proceed with green crystal?" - Window becomes wider
+    patch.add_record(0x1170c, b'\x1b') #                                 and taller.
+    patch.add_record(0x1170f, b'\x2f') #                                 Shorten next region to compensate.
+    patch.add_record(0x1171b, b'\x8d') # "Which entry to restore?" - Window becomes wider
+    patch.add_record(0x1171c, b'\x1b') #                             and taller.
+    patch.add_record(0x1171f, b'\x41') #                             Shorten next region to compensate.
+    patch.add_record(0x1172b, b'\x8d') # "Restore--are you sure? / Cannot restore" - Root menu wider
+    patch.add_record(0x1172c, b'\x1b') #                                             and taller.
+    patch.add_record(0x1172f, b'\x14') #                                             Shorten next region to compensate.
+    patch.add_record(0x1179a, b'\x8d') # "Which entry to preserve?" - Window becomes wider
+    patch.add_record(0x1179b, b'\x2d') #                              and taller.
+    patch.add_record(0x1179e, b'\x2d') #                              Shorten next region to compensate.
     patch.add_record(0x117e0, b'\x8d') # "Which entry would you like to view?" - Menu window wider on right
     patch.add_record(0x117e1, b'\x2c') #                                         and taller on bottom.
     patch.add_record(0x117e4, b'\x2e') #                                         Shorten next region to compensate.
