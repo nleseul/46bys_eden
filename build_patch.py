@@ -285,6 +285,10 @@ if __name__ == '__main__':
     # Starting address, width, height. The fourth word is a flag of some kind, but I'm not sure what it does.
 
     # Area menu
+    patch.add_record(0xf810a, num_16bit(23))                 # Name entry grid is narrower.
+    patch.add_record(0xf8110, num_16bit(7))                  # "Name" window starts earlier
+    patch.add_record(0xf8112, num_16bit(17))                 #   and is wider.
+    patch.add_record(0xf811c, num_16bit(4))                  # "Fossil recorded" is shortened.
     patch.add_record(0xf8122, num_16bit(17) + num_16bit(13)) # Window for the main window is a bit bigger.
     patch.add_record(0xf816c, num_16bit(6))                  # "You cannot restore a creature from the future" is a little shorter.
     write_strings_from_csv(patch, 'assets/text/menu_area.csv', reverse_font_map, 0xf8170, 19 * 2, 0xf8196, 1378, newline=b'\xff\xfe', terminator=b'\xff\xff')
@@ -349,6 +353,10 @@ if __name__ == '__main__':
     patch.add_record(0x11618, b'\x42') # Some window a little shorter; might be one of the evolution messages.
     patch.add_record(0x11622, b'\x42') # I think this is the red crystal message. Make it a bit shorter.
 
+    patch.add_record(0x11657, b'\x3b') # Name entry screen... "Name" window wider on the left,
+    patch.add_record(0x1165b, b'\xd5') #                      and text entry window narrower on right.
+    patch.add_record(0x1165e, b'\xd5') #                      Why is it split up into three identical
+    patch.add_record(0x11661, b'\xd5') #                      blocks? I don't know.
     patch.add_record(0x11669, b'\x1e') # "Save data recorded." Wider on the left.
     patch.add_record(0x11679, b'\x8d') # "Where will you record your save data?" - Menu window wider on right
     patch.add_record(0x1167a, b'\x46') #                                         - and taller on bottom.
