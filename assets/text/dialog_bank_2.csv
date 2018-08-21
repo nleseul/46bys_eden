@@ -30,14 +30,14 @@ You['ll] have a [lo]t of
 ev[ol]u[ti]onary op[ti]ons [in]
 [#3233]s era. For examp[le],
 you can [in]crease your
-jump[in]g power by
+jump[in]g ab[il][it]y by
 stand[in]g on two [le]gs.
-You can dev[el]op much
-stronger defenses by
-stay[in]g on four [le]gs,
-but you won['t] be ab[le]
-to jump as we[ll].
-So take care!"
+4-[le]gged creatures have
+[the] [hi]ghest HP and best
+defense, but [the]ir
+speed and jump[in]g w[ill]
+suffer accord[in]g[ly].
+So take care!",
 "ゲーロ、ゲロ！
 おれたちゃ　ヌルヌル　両せい類！
 
@@ -60,10 +60,10 @@ We['r]e s[li]my amp[hi]bians!
 Everyone hates s[li]me
 for some reason!
 
->croooak<
->[rib]b[it]< >[rib]b[it]<
+>[si]gh<
 
-"
+>[rib]b[it]< >[rib]b[it]<
+",
 "げんしガエルA
 「ヌルヌルして、きもちわるいだって？」
 
@@ -94,22 +94,23 @@ Syrocosaurus child:
 ""Help me!""
 ",234,"A:
 “It['s] gross when we
- s[li]me you, [is]n['t] [it]?”
-
-
-
+ s[li]me you, [is]n['t] [it][?”]
 B:
-“You stuck-up rep[ti][le]
- brat! Ha ha! >slurp<
- >slurp<”
+“Hey, stuck-up rep[ti][le]
+ brat!>slurp< >slurp<”
 Styracosaur c[hi][ld]:
-“No! Stopp[it][!!] Yucky!”
+“No! Stopp[it][!!] Yucky[!”]
 A:
-“Oh no! It['s] a bigger
- rep[ti][le]! Run! Ruuun[!!]
- >croak<”
+“Ahh, [it]['s] a bigger
+ rep[ti][le]! Time to s[li]p
+ away! >[rib]b[it]< >[rib]b[it]<”
 C[hi][ld]:
-“>sob< Scary[!”]"
+“>sob< Scary[!”]
+
+
+
+
+",
 "われわれは、そのむかしから
 みどりを　みまもっている　しゅぞく
 なのです。
@@ -127,12 +128,14 @@ stripped [the] [la]nd bare
 of p[la]nts.
 
 There are so many [la]rge
-p[la]nt-eat[in]g rep[ti][le]s
-[the]se days… W[ill] [the]
-[le]gend happen aga[in]?
+p[la]nt-eat[in]g rep[ti][le]s [the]se
+days…
 
+It['s] tru[ly] worry[in]g.
 
-"
+","“We are the tribe that watches over greenery, since olden times.”
+
+“These days, because all the reptiles are overeating the plants, we're very worried.”"
 "どこからともなく、
 ヒソヒソごえが、きこえてくる…。
 
@@ -184,23 +187,27 @@ A:
  Courage’ now[?”]
 B:
 “…we cannot act rash[ly]
- aga[in]…
+ aga[in]… we must offer
+ our g[if]ts on[ly] to
+ rep[ti][le]s strong [in]
+ spir[it].
+ …for on[ly] [the]y may bu[il]d
+ [the] future of [thi]s
+ wor[ld].
 
-
-
- …we must be sure [#3637]t
- [#3031] rep[ti][le]s we choose
- possess [#3031] necessary
- strength of spir[it] to
- bu[il]d upon. Th[is] [is] [#3031]
- best p[la]n we have…”
+ T[hi]s [le]gend [is] [the] best
+ p[la]n we have…”
 A:
 “It just seems [li]ke
- we['r]e m[is]s[in]g
- some[#3233]ng…”
+ we['r]e m[is]s[in]g some[#3233]ng…”
 
 
-"
+
+","A: “Regarding the Mountain of Courage, how much are the reptiles challenging it?”
+
+B: “Regardless, only reptiles having courage of the heart are qualified to build the next age. I believe this is a good way of testing.”
+
+A: “But still, I feel an unpleasant premonition...”"
 "あー、イライラする！！
 
 
@@ -232,7 +239,7 @@ be[tt]er stay out of my
 way.
 
 
-"
+",
 "スティラコサウルスのこども
 「あのね、やさしいハ虫類がたすけて
 　くれたんだよ！」
@@ -395,7 +402,7 @@ Fa[#3031]r:
 
 
 
-"
+",
 "
 　　　　　TｅXT　３６",16,"Deltadium:
 ""Time will come for 
@@ -405,7 +412,7 @@ Choo..
 
 ""Oh, enemies are
 coming!""
-",82,
+",82,,
 "デルタデリジウム
 「いつか、オレたちの時代が、きっと
 　やってくるでチュ！」
@@ -431,7 +438,7 @@ B:
  >squeak<”
 
 
-"
+",
 "ヒソヒソごえ　A
 「そこの、ハ虫類くん！
 　ここは、そらのせかいの　いりぐちだよ。
@@ -463,12 +470,12 @@ Brave[ly]?
 
 
 
-"
+",
 "ヒソヒソごえ　B
 「ハッ！！
 　　　　みられたっ！！」",36,"Whisper B:
 ""Somebody saw me!""
-",34,
+",34,,
 "じゃましやがって！
 せっかく、あたまをよくしてもらってる
 さいちゅうだったのにっ！
@@ -485,7 +492,7 @@ bra[in]! >kweh<
 
 
 
-"
+",
 "さいきん、アステロイドのかわ　が
 どんどん　さがってるような
 きがするけど………
@@ -520,7 +527,7 @@ I hope [it] w[ill] be okay…
 
 
 
-"
+",
 "
 　　　　　TｅXT　４２",16,"The dinosaurs beneath
 us don't think about
@@ -530,7 +537,7 @@ creatures with
 intelligence will 
 rule the land, not
 creatures with 
-strength.",163,
+strength.",163,,
 "ケーッ！
 したのせかいの、きょうりゅうどもは
 バカだよ！
@@ -556,7 +563,7 @@ are [#3031] ones w[it]h bra[in]s!
 
 
 
-"
+",
 "おい！　きみ！
 そのクリスタルには　かかわりあわんほうが
 いいぞ！
@@ -594,7 +601,7 @@ bu[tt][in]g technique!
 
 
 
-"
+",
 "アンキロサウルス
 「おっ！？　めずらしい！
 　ひさびさの　いのちしらず　が、きたぞ！
@@ -625,7 +632,7 @@ Ra[is]e [#3031] a[la]rm! Let
 d[in]ner [ti]me!
 
 
- >ank< >ank<"
+ >ank< >ank<",
 "アロサウルス
 「おおっ！
 　こんなところまで　きやがった！
@@ -651,7 +658,7 @@ apart[!!]
 
 
 
-"
+",
 "ほほお………。
 よく、ここまでこれたな……。
 グルルル………
@@ -767,14 +774,14 @@ Heh heh heh heh…
 
 
 
-"
+",
 "
 　　　　　TｅXT　４８",16,"There apprears to be
 changes in your body
 from eating the red,
 green and blue 
 crystals continously.
-",108,
+",108,,
 "あか、あお、みどりのクリスタルを
 つづけてたべた　あなたの体に
 へんかが　おこった！",64,"There apprears to be
@@ -782,7 +789,7 @@ changes in your body
 from eating the red,
 green and blue 
 crystals continously.
-",108,
+",108,,
 "
 　たいへんです！
 
@@ -817,7 +824,7 @@ You have to get out!
 
 
 
-"
+",
 "　　　　　”進化のアドバイス”
 これからの時代の　進化は、
 ゆっくり　と　したものになるでしょう。
@@ -870,7 +877,7 @@ you can ev[ol]ve [in]to
 somehow, [#3435]ugh…
 
 
-"
+",
 "わたしたちは、こんなすがたになったけど、
 もう　テキにおびえることも　なくなって
 いまは、とても　しあわせです………。
@@ -896,7 +903,7 @@ something to tell you.
          for you…
 
 
-"
+",
 "ガイアという　おかたから、
 あなたが　ホにゅう類になれるカを
 あたえるようにと　いわれました。
@@ -1038,7 +1045,7 @@ at anytime.",680," …to embrace weakness…
 
 …[if] you reconsider…
 
-    …return here…"
+    …return here…",
 "デルタデリジウムの　うわさばなし
 A：「まだ、きょうりゅうの　いきのこりが
 　　　いて、やになっチューなー。」
@@ -1105,7 +1112,7 @@ are c[hi][tt]er[in]g.
  [#3637]t tr[ie]s to ev[ol]ve,
  one by one!
 
- >squeeeeak<”"
+ >squeeeeak<”",
 "マンモス
 「わしら、マンモス　３きょうだい！
 　イエティ　なんかも　おそれなす！
@@ -1160,7 +1167,7 @@ be!
 
 Heeey! Big bro! We're
 under a[tt]ack!
->pwuuuuungh<"
+>pwuuuuungh<",
 "また、いっぴき
 ドレイが　やってきたぞーーー！！
 ",46,"Another fool is
@@ -1171,7 +1178,7 @@ Get [it]! >keke<
 
 
 
-"
+",
 "よく　きたなっ！！
 かとうせいぶつ！！
 
@@ -1325,7 +1332,7 @@ creature…
 
 
 You w[ill] burn [in] [#3031]
-Cryst[al]['s] [li]ght!"
+Cryst[al]['s] [li]ght!",
 "
 わわっ！！　みつかったっ！！
 
@@ -1341,7 +1348,7 @@ us!
 We've strugg[le]d to
 surv[iv]e [#3233]s [lo]ng.
 P[le]ase don['t] cause
-us any troub[le]…"
+us any troub[le]…",
 "　ころせー！　ころせー！
 　くいまくれー！　さつりくこそが
 　わがいきがい！　ウッホッホーのホー！
@@ -1447,7 +1454,7 @@ Hah, what a bo[ld] [li]ar!
 I've [al]ready eaten
 [#3435]usands [li]ke you…
 
-Wahahaa!"
+Wahahaa!",
 "みなみのたいりくには、
 ”まえあしで、ものをつかめる”という
 せいぶつがいるそうだ…。
@@ -1473,7 +1480,7 @@ on [#3031] head w[it]h [#3435]se
 caref[ul]!
 
 
-"
+",
 "みなみのたいりくには、
 ”まえあしで、ものをつかめる”という
 せいぶつがいるそうだ…。
@@ -1499,7 +1506,7 @@ on [#3031] head w[it]h [#3435]se
 caref[ul]!
 
 
-"
+",
 "おい！
 お、おれは　みたんだ！
 
@@ -1525,7 +1532,7 @@ seen a bird [li]ke [#3637]t
 before!
 
 
-"
+",
 "かくれステゴザウルス
 「わあー！！
 　また、テキが　やってきたあー！！」
@@ -1613,7 +1620,7 @@ another way…
 
 But we['ll] fight for
 our surv[iv][al] as
-[lo]ng as we can."
+[lo]ng as we can.",
 "わたしたちは、きのとおくなるようなむかし
 から、みどりを　みまもりつづけている
 両せい類……。
@@ -1651,7 +1658,7 @@ w[it]h greenery unt[il] [#3031]
 end of days.
 
 
-"
+",
 "
 そらから、ひそひそごえがきこえる…。
 
@@ -1766,7 +1773,7 @@ A:
  Cou[ld] a species capab[le]
  of understand[in]g our
  techn[ol]ogy have
- dev[el]oped [al]ready?”"
+ dev[el]oped [al]ready?”",
 "わわっ！！
 ゆるしてくれっ！
 われわれが　わるかった！！
@@ -1849,7 +1856,7 @@ our wor[ld], [in] [#3637]nks.
 
 
 
-"
+",
 "おいらたちゃ、えん人！
 クリスタルのカによって”どうぐ”が
 つかえるようになった　しゅぞくさ！
@@ -1878,7 +1885,7 @@ are to o[#3031]r creatures!
 >uki<
 
 
-"
+",
 "いつか、クリスタルのなぞをといて、
 ひがしのたいりくにすむせいぶつ　のように
 かしこくなってやるんだ！　ウッキーー！",99,"We will become smart
@@ -1897,7 +1904,7 @@ Oogi..
 “Cryst[al]s” work, and
 we['ll] be smart [li]ke [the]
 creatures on [the]
-eastern con[ti]nent!"
+eastern con[ti]nent!",
 "ストーンサークルの　まんなかで
 あそんでいたなかまが、とつぜんすがたを
 けしてしまった！
@@ -1923,7 +1930,7 @@ go…?
 
 
 
-"
+",
 "
 ガイアです。
 
@@ -1964,7 +1971,7 @@ out [#3031] wha[le]s and teach
 
 
 
-"
+",
 "われわれは、魚から進化しつづけた
 魚人ぞく、　ラーゴン！
 
@@ -2005,7 +2012,7 @@ You['r]e not [al][lo]wed
 here!
 
 
-"
+",
 "クジラぞくに、きょうりょくするのは
 おまえか！？
 
@@ -2097,7 +2104,7 @@ wh[al]es’ [si]de[?!]
 Abs[ol]ute[ly] unforg[iv]ab[le][!!]
 
 
-"
+",
 "
 ねえ、ぼくらのはなしをきいておくれよ…。
 
@@ -2147,7 +2154,7 @@ But birds be[lo]ng [in]
 
 
 
-"
+",
 "きたのやまにすむおかたは、いだいだわ！
 わたしたちを、ふたたび
 こんなに　大きくしてくださったの。
@@ -2176,7 +2183,7 @@ from [in]vaders.
 
 
 
-"
+",
 "われわれは、いちど　ぜつめつしかけた
 ティラノサウルスだが、
 きたのやまにすむおかた　によって、
@@ -2208,7 +2215,7 @@ D[ie][!!]
 
 
 
-"
+",
 "
 さむい…さむい………。
 
@@ -2281,7 +2288,7 @@ t[ol]d me not to [le]t
 anyone [in] under any
 circumstances. Now go
 away, or I['ll] knock
-you off [#3233]s mounta[in]!"
+you off [#3233]s mounta[in]!",
 "
 なぜ、はいってきたのだ！？
 
@@ -2358,7 +2365,7 @@ how dead[ly] [#3031] Cryst[al]s
 can be!
 
 
-"
+",
 "おまえか……。
 ガイアのみちびきによって　エデンへ
 むかおうとしている　せいぶつは……。
@@ -2441,7 +2448,7 @@ It w[ill] be He[ll][!!]
 
 
 
-"
+",
 "
 ガイアです。
 
@@ -2517,7 +2524,7 @@ Let['s] get started!
 
 We['ll] bu[il]d [#3031] future…
 
-    …toge[#3031]r."
+    …toge[#3031]r.",
 "クジラぞく　おうさま
 「ありがとう。ラーゴンぞくを
 　たおして　くれたんじゃね。
@@ -2597,7 +2604,7 @@ restore you to your
 former body.
 
 
-"
+",
 "クラゲ
 「おっ！？　また　あたらしい　さかなが
 　うまれたようだな。
@@ -2694,7 +2701,7 @@ wiped out [in] [#3031] >snap<
 of a tentac[le] here!
 Is [#3637]t gonna be you…
 newb[ie]?
-Heh heh heh… >snap<"
+Heh heh heh… >snap<",
 "おい！　スゴイだろ！
 それが”えれべえたあー”というものだ！
 
@@ -2735,7 +2742,7 @@ Isn['t] [it] n[if]ty? >uk<
 
 
 
-"
+",
 "それでは、いきものたちが　じょうりく
 しきった時代まで、”時のとびら”を
 つかって、まいりましよう。",82,"Let us go to the Era
@@ -2749,7 +2756,7 @@ era when [li]fe has fu[ll]y
 popu[la]ted [#3031] [la]nd.
 
 
-"
+",
 "
 　　　　　TｅXT　８４",16,"I congratulate you
 on passing through the
@@ -2774,7 +2781,7 @@ You make me very
 angry!
 I am going to
 defeat you!
-",329,
+",329,,
 "
 　　　　　TｅXT　８５",16,"I congratulate you
 on passing through the
@@ -2799,7 +2806,7 @@ You make me very
 angry!
 I am going to
 defeat you!
-",329,
+",329,,
 "
 　　　　　TｅXT　８６",16,"I congratulate you
 on passing through the
@@ -2824,7 +2831,7 @@ You make me very
 angry!
 I am going to
 defeat you!
-",329,
+",329,,
 "
 　　　　　TｅXT　８７",16,"I congratulate you
 on passing through the
@@ -2849,7 +2856,7 @@ You make me very
 angry!
 I am going to
 defeat you!
-",329,
+",329,,
 "
 　　　　　TｅXT　８８",16,"I congratulate you
 on passing through the
@@ -2874,7 +2881,7 @@ You make me very
 angry!
 I am going to
 defeat you!
-",329,
+",329,,
 "
 　　　　　TｅXT　８９",16,"I congratulate you
 on passing through the
@@ -2899,7 +2906,7 @@ You make me very
 angry!
 I am going to
 defeat you!
-",329,
+",329,,
 "よくぞ、まもりのとちを
 とっぱしてきたなっ！　ほめてやるっ！
 しかし、おまえも　ここまでだっ！
@@ -2976,7 +2983,7 @@ I w[ill] put an end to [it]!
 
 
 
-"
+",
 "へへへ……。
 とんで　ひにいる　なつの虫　とは、
 あんたのことでゲスな！
@@ -3011,7 +3018,7 @@ Queen w[ill] see you now!
 
 
 
-"
+",
 "あなたね……。
 わたしのダンナ、ハチキングをたおした、
 両せい類とは……。
@@ -3067,7 +3074,7 @@ Fe[el] my husband['s] pa[in]!
 
 
 
-"
+",
 "ゲコッ、ゲコッ！！
 
 
@@ -3114,7 +3121,7 @@ children! Attack!""",229,">[rib]b[it]< >[rib]b[it]<
 
 
 
-"
+",
 "バルキテリウム
 「イエティ　から　のがれてきたのは
 　いいけれど………
@@ -3137,7 +3144,7 @@ aren['t] re[al][ly] meant to
 
 
 
-"
+",
 "むぼうにも、”サンソ”のない　せかいに
 とびこんだ　あなたは、
 チッソクし　してしまいました……。",60,"You recklessly jumped
@@ -3151,7 +3158,7 @@ oxygen and d[ie]d
 unp[le]asant[ly].
 
 
-"
+",
 "ツノ　の　たいきゅうカ　が
 げんかいを　こえて
 　　　　　　　おれてしまった！",57,"The horn couldn't
@@ -3162,7 +3169,7 @@ few so[li]d rams… and
 [#3031]n [it] broke.
 
 
-"
+",
 "ヒソヒソごえ　A
 「けっきょく……、　われわれのこころみは
 　うらめに　でてしまいましたね……。」
@@ -3262,7 +3269,7 @@ B:
  c[ul]ture…
  …[in] hopes [#3637]t one day,
  we w[ill] ga[in] [#3031] w[is]dom to
- avoid such errors…”"
+ avoid such errors…”",
 "かとうせいぶつが
 しんにゅう　してきたぞーーー！！
 ",49,"Lower creatures are
@@ -3273,7 +3280,7 @@ everywhere! Catch [it]!
 
 
 
-"
+",
 "ティラノサウルス
 「うわぁ！　　イエティがきたぞー！
 
@@ -3296,7 +3303,7 @@ Whew… what a re[li]ef!
 
 
 
-"
+",
 "ケーッ！ケッケッケー！！
 また、いっぴき　ドレイが
 きおったわい！",49,"
@@ -3310,7 +3317,7 @@ Heh heh! Ano[#3031]r s[la]ve [in]
 [#3031] trap! >keke<
 
 
-"
+",
 "こおりのトビラがある。
 おもくて、うごかすことができない………。
 ",58,"There is a door 
@@ -3321,7 +3328,7 @@ entrance.
 
 
 
-"
+",
 "マンモスギャル
 「まあー！？　てっきり　イエティが
 　おそってきたとばかり　おもってたら…。
@@ -3401,7 +3408,7 @@ way… be caref[ul]!
 
 
 
-"
+",
 "ガイアです……。
 つらい　けっかになってしまいましたね…。
 
@@ -3460,7 +3467,7 @@ now…
 
 
 
-"
+",
 "鳥人たち
 「たいへんだー！！
 　クリスタルのパワーがきれて
@@ -3486,7 +3493,7 @@ Everyone! F[ly]! F[ly]!
 
 
 
-"
+",
 "イエティ
 「だれだ！？　　しんせいな　ばしょに
 　むだんで　はいってくるものは？
@@ -3577,7 +3584,7 @@ will end!""",338,"“Who['s] [#3031]re? No one [is]
  address your anc[ie]nt
  s[in]s. At [la]st, [#3031]
  ex[ti]nct sha[ll] have
- th[ei]r vengeance[!”]"
+ th[ei]r vengeance[!”]",
 "きょうりゅう人
 「わあーっ！
 　　　　　　たいへんだーっ！
@@ -3594,7 +3601,7 @@ exploded!""
  we se[al]ed [#3031] Cryst[al]s[!”]
 
 
-"
+",
 "たいよう
 「ガイアに　えらばれし　せいぶつよ！
 
@@ -3722,7 +3729,7 @@ Go to Eden with Gaia.""
 
 
 
-"
+",
 "イエティ
 「バ、バカな…！？　この、オレさまが
 　なんで？　ク、クリスタルのカは？
@@ -3748,7 +3755,7 @@ Junior....!""
 
 
 
-"
+",
 "
 　　　　ガイアです……。
 
@@ -3797,4 +3804,4 @@ The end of [#3233]s journey
 [is] [in] [si]ght!
 
 
-To Eden!"
+To Eden!",
