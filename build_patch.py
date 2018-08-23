@@ -248,7 +248,7 @@ if __name__ == '__main__':
     # And then, the dialogs have a data table starting at 0x1ed5b. See the helper method for notes on that.
     write_dialog_choice_entry(patch, 0x1ed5b, page_index=2, dest1=4, dest2=3, first_option=1) # 0x11 - Ichthyostega elder's story
     write_dialog_choice_entry(patch, 0x1ed69, page_index=3, dest1=1)
-    write_dialog_choice_entry(patch, 0x1ed77, page_index=12, dest1=2, dest2=0xffff)           # 0x23 - Styracosaur's story
+    write_dialog_choice_entry(patch, 0x1ed77, page_index=13, dest1=3, dest2=0xffff)           # 0x23 - Styracosaur's story
     write_dialog_choice_entry(patch, 0x1ed85, dest1=6, first_option=0)                        # 0x2f - Tyrannosaurs
     write_dialog_choice_entry(patch, 0x1ed93, page_index=5)
     write_dialog_choice_entry(patch, 0x1eda1, page_index=6, dest1=2, dest2=7)
