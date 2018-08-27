@@ -737,27 +737,27 @@ W-wait...
 I've made my decision.
 Well, Well!
 Hahaha...
-",530,"Ahh… Someone actu[al][ly]
-got [in] here.
+",530,"Ah, impress[iv]e… Someone
+was ab[le] to reach us.
 
- >grr<
+>grr<
 
 
 We are tyrannosaurs…
-W[it]h [#3031] power of [#3031]
+W[it]h [the] power of [the]
 Cryst[al]s, we['v]e become
-[#3031] strongest creatures
-[in] [#3031] wor[ld].
+[the] strongest creatures
+[in] [the] wor[ld].
 
-We cou[ld] tear a [#3233]ng
+We cou[ld] tear a [thi]ng
 [li]ke you apart [in] an
 [in]stant. However…
-You may have some
+You seem to have some
 poten[ti][al].
 
 Perhaps, [if] you serve
 us, we w[ill] a[ll]ow you a
-sma[ll] part of [#3031] wor[ld]
+sma[ll] part of [the] wor[ld]
 to ru[le].
 
 
@@ -768,8 +768,8 @@ to ru[le].
 
 
 So… you['d] prefer to
-be our food [#3637]n our
-s[la]ve, [#3031]n. Heh heh…
+be our food [tha]n our
+s[la]ve, [the]n. Heh heh…
 So be [it].
 
 D[ie][!!]
@@ -785,7 +785,9 @@ Heh heh heh heh…
 
 
 
-",
+","“For us to deal with a thing like you would be as easy as twisting a baby's hand.”
+
+“You set yourself against the Tyrannos? Heedless of the consequences, you set yourself against us? Heh heh... In that case... die!!!”"
 "
 　　　　　TｅXT　４８",16,"There apprears to be
 changes in your body
@@ -835,7 +837,7 @@ You have to get out!
 
 
 
-",
+","“It's a disaster! A river of asteroids floating in the sky is starting to break up, and it's going to rain down on the surface. Countless rocks are going to fall! Quickly, quickly... Please, escape!!”"
 "　　　　　”進化のアドバイス”
 これからの時代の　進化は、
 ゆっくり　と　したものになるでしょう。
@@ -871,22 +873,22 @@ The pace of ev[ol]u[ti]on
 has become s[lo]wer [in]
 [thi]s age.
 Rep[ti][le]s aren['t] ev[ol]v[in]g
-much… maybe because
-[the]y have fewer
-predators now? Be
-caref[ul] regard[le]ss!
-
-Mamm[al]s aren['t] ev[ol]v[in]g
-rapid[ly] [ei][the]r… but [the]y
-certa[in][ly] have p[le]nty of
-strong compe[ti][ti]on!
+much… [the]y probab[ly] won['t]
+have many enem[ie]s from
+now on.
 
 
-There might be a new
-mamm[al] ca[ll]ed a “human”
-you can ev[ol]ve [in]to
-somehow, [#3435]ugh…
-
+But be on guard! The
+mamm[al]s don['t] seem to be
+[in] a hurry to ev[ol]ve…
+Cou[ld] [the]re be a strong
+enemy mak[in]g [it] d[if][fi]c[ul]t
+for [the]m?
+But [if] [the]y persevere,
+[the]re might be a way
+for [the]m to ev[ol]ve [in]to
+creatures c[al][le]d
+“humans”…
 
 ",
 "わたしたちは、こんなすがたになったけど、
@@ -914,7 +916,7 @@ something to tell you.
          for you…
 
 
-",
+","“We've become in this form, but we no longer need to fear enemies now, so it's very good luck. The Styraco parent and child within seem to have business with you...”"
 "ガイアという　おかたから、
 あなたが　ホにゅう類になれるカを
 あたえるようにと　いわれました。
@@ -1039,24 +1041,45 @@ at anytime.",680," …to embrace weakness…
      ab[le] to return to
      what you are now…
 
-…do you accept [the]
- g[if]t of weakness?…
-
+    …do you accept [the]
+     g[if]t of weakness?…
   Embrace weakness
+
   Keep current body
 
-             …so be [it]…
+…so be [it]…
 
       …Almighty Power…
+
  …bestow upon [thi]s
   creature a new body…
 
+              …
+
+…and may [thi]s body
+ guide us to [the] New
+ Dawn…
              …so be [it]…
 
 
 …[if] you reconsider…
 
-    …return here…",
+    …return here…","I was told by a lady called Gaia to give you the power to become a mammal. But she also told me to test whether or not you're qualified to become a mammal. 
+
+That's because, in order to make you a mammal, we have to use a lot of spirit power called “hope” of our many extinct comrades. 
+
+Testing.............
+
+Congratulations! You're qualified to become a mammal. However, if you become a mammal, you'll never be able to return to your current body. What will you do?
+
+> Evolve into a mammal
+> Persist in this state
+
+I understand. Almighty power! Bestow upon this creature a body for the new age.
+
+I understand. I'll praise your courage. However, if you change your mind, you are always welcome to return here.
+
+Unfortunately, it seems you aren't qualified. Long ago, did you do something bad, perhaps?"
 "デルタデリジウムの　うわさばなし
 A：「まだ、きょうりゅうの　いきのこりが
 　　　いて、やになっチューなー。」
@@ -1108,20 +1131,20 @@ are c[hi][tt]er[in]g.
 
 “They can['t] squeak by
  [in] [#3233]s c[ol]d for [lo]ng…
- [#3031]y['ll] d[ie] out soon!”
+ [#3031]y['ll] d[ie] out soon[!”]
 
 
 
 “That two-[le]gged wh[it]e
- [#3233]ng [#3637]t [li]ves on [#3031]
- western con[ti]nent [is]
- way scar[ie]r! >squeak<
+ [thi]ng [tha]t [li]ves on [the]
+ far end of [the]
+ con[ti]nent [is] way
+ scar[ie]r!
 
-
- They say [it]['s] try[in]g to
- k[ill] every s[in]g[le] mamm[al]
- [#3637]t tr[ie]s to ev[ol]ve,
- one by one!
+ They say [if] you try to
+ ev[ol]ve, [it]['ll] hunt you
+ down and k[ill] you,
+ wherever you are!
 
  >squeeeeak<”",
 "マンモス
@@ -1156,7 +1179,7 @@ The enemy is here!""
 
 Pahooom....
 ",263,"We… are [the] [thr]ee
-mammoth bro[#3031]rs!
+mammoth bro[the]rs!
 >pwuuh< Even [the] Ye[ti]
 have [le]arned to fear
 us!
@@ -1164,21 +1187,22 @@ us!
 Pwhaat… are you?
 
 
-W[it]hout a doubt…
+I suppose…
 
 
-you must be an [al][ly]
-of [#3031] Ye[ti]! That['s]
-[it]!
+You must be [in] cahoots
+w[it]h [the] Ye[ti]!
 
+Yup, [tha]t must be [it]! No
+o[the]r exp[la]na[ti]on!
 
-
-Or… you might as we[ll]
-be!
-
-Heeey! Big bro! We're
+Heeey! Big bros! We['r]e
 under a[tt]ack!
->pwuuuuungh<",
+
+>pwuuuuungh<
+
+
+",
 "また、いっぴき
 ドレイが　やってきたぞーーー！！
 ",46,"Another fool is
@@ -1284,35 +1308,35 @@ sky, escap[in]g [#3031] f[ie]ry
 impact [#3637]t purged [#3031]
 Earth of [#3031] [lo]wer
 d[in]osaurs…
-I am not to be [in]s[ul]ted
+I am NOT to be [in]s[ul]ted
 [li]ke [#3233]s!
 
-If you can understand
-c[iv][ili]zed speech… [li]sten!
-
+…Can you understand
+c[iv][ili]zed speech? L[is]ten,
+[the]n!
 Henceforth, [it] [is] not [#3031]
 strongest, but [#3031]
 smartest who w[ill] ru[le] [#3031]
 weak! T[hi]s [is] [#3031] age of
 [in]t[el][li]gence!
 
-Bru[ti]sh creatures [li]ke
-you [#3637]t eat, rut, and
+The bru[ti]sh creatures
+[#3637]t eat, rut, and
 befo[ul] [#3031] wor[ld] b[el]ow
 are an ev[ol]u[ti]onary dead
 end, just as [#3031]
 d[in]osaurs of o[ld] were.
-Our race has been
-[li]fted above you by
+But our race has been
+[li]fted above [the]m by
 messengers from a wor[ld]
 c[al][le]d “outer space”!
 
 
 W[it]h [#3031]ir g[if]t of [#3031]
-Cryst[al]s, we w[ill]
-accomp[li]sh what [#3031]
-d[in]osaurs cou[ld] not[#dadb]
-wor[ld] dom[in]a[ti]on!
+Cryst[al]s, we w[ill] ach[ie]ve
+what [the] d[in]osaurs cou[ld]
+not[--]wor[ld] dom[in]a[ti]on!
+
 
 And we w[ill] proceed from
 [#3031]re to “outer space”…
@@ -1334,16 +1358,38 @@ g[lo]rious future?
 
 Exce[ll]ent… you can see
 [#3031] v[al]ue of [in]t[el][li]gence!
+
 Toge[#3031]r, we sha[ll]
 c[le]anse [#3031] wor[ld] of [#3031]
 stupid…
-
 As expected of a [lo]wer
 creature…
 
 
 You w[ill] burn [in] [#3031]
-Cryst[al]['s] [li]ght!",
+Cryst[al]['s] [li]ght!","'How dirty! A lower creature!
+
+I am the head of the bird-people-tribe, Bird Man King!
+
+Because of the dinosaur era's asteroid fall, we lost many of our comrades, but nonetheless I am the leader of the tribe that has continued to evolve without slipping!
+
+Listen well! From now on, brains! That is, this is the age of intelligence!
+
+The creatures of the world below still seem to be making their bodies evolve, repeating the same failures of the stupid dinosaurs. However, we have been elevated by fellows who came from a world called “outer space!”
+
+With the crystals they gave us, we will achieve the “world domination” that even the dinosaurs could not achieve.
+
+Then, we will fly to the world called “outer space!”
+
+How about it? Won't you cooperate with us?
+> Do
+> Do not
+
+Wonderful! You have considerable intelligence!
+
+Nununu...
+Impertinence, from the social standing of a base creature.
+Realize the power of the crystals!"
 "
 わわっ！！　みつかったっ！！
 
@@ -1354,12 +1400,12 @@ discovered!
 We survive with much
 difficulty, leave us
 alone!
-",84,"Whoa! Someone found
-us!
-We've strugg[le]d to
+",84,"Oh! Someone found us!
+
+We['v]e strugg[le]d to
 surv[iv]e [#3233]s [lo]ng.
-P[le]ase don['t] cause
-us any troub[le]…",
+
+Just [le]ave us a[lo]ne!",
 "　ころせー！　ころせー！
 　くいまくれー！　さつりくこそが
 　わがいきがい！　ウッホッホーのホー！
@@ -1430,22 +1476,22 @@ Ha ha ha...
   B[lo]od and [la]ughter,
   La, [la], [la]! [#10]
 Wahahahahaaaa!
-Oh! Who['s] [#3031]re? How did
+Oh! Who['s] [#3031]re? How['d]
 you get [in] here?
-Oh… [#3637]t huge exp[lo][si]on
-[in] [#3031] sky must have
-b[lo]wn [#3031] ice door off
-[#3031] entrance.
-Such [lo]v[el]y destruc[ti]on…
-
+Did [tha]t huge exp[lo][si]on
+[in] [the] sky b[lo]w [the] [ic]e
+door off [the] entrance?
+That['s] impress[iv]e!
 Thanks to [#3031] Cryst[al]['s]
 power, I've become [#3031]
-emperor of ice…
-[#3031] Ye[ti] Lord!
+emperor of [the] wor[ld] of
+[ic]e… [the] Ye[ti] Lord!
+
+
 Al[#3435]ugh [#3031] weaker
 mamm[al]s keep try[in]g to
 ev[ol]ve and surpass me…
-[it]['s] so irr[it]a[ti]ng!
+[it]['s] so irr[it]a[ti]ng[!!]
 
 
 You sure [lo]ok [li]ke you['r]e
@@ -1457,15 +1503,32 @@ one of [#3031]m…
 You t[al]k too much.
 
 I've [al]ready eaten
-[#3435]usands [li]ke you…
+[#3435]usands [li]ke you!
 
 Wahahaa!
 Hah, what a bo[ld] [li]ar!
 
 I've [al]ready eaten
-[#3435]usands [li]ke you…
+[#3435]usands [li]ke you!
 
-Wahahaa!",
+Wahahaa!","'Kill! Kill! Devour everything! Slaughter is my purpose! Uhhohooonohoo!
+
+Oh! Who's that? How the heck did you get in here?
+
+Ah, the blast from the big explosion in the sky earlier must have blown off the ice door on the entrance. Amazing thing...
+
+I'm Yeti-sama, who became the leader of the ice world because of the power of the crystals! Uhho, uhho!
+
+I'm irritated because those with the status of weak mammals keep trying so hard to evolve to become strong.
+
+From your appearance, are you also evolving?
+
+> I evolve; what's wrong with it?
+> I don't evolve anymore.
+
+You talk a lot! You'll be my 10,000th victim! Ooohohoo!
+
+This lying doofus! You'll be my 10,000th victim! Oooohohoo!"
 "みなみのたいりくには、
 ”まえあしで、ものをつかめる”という
 せいぶつがいるそうだ…。
@@ -1487,11 +1550,13 @@ front paws.
 
 And [#3031]y['ll] bonk you hard
 on [#3031] head w[it]h [#3435]se
-“to[ol]s” [if] you're not
+“to[ol]s” [if] you['r]e not
 caref[ul]!
 
 
-",
+","On the southern continent, there seem to be creatures called “They can carry things in their forelimbs.”
+
+What's more, they can use things called “tools,” and it seems like they hit you, so you'd better watch out!"
 "みなみのたいりくには、
 ”まえあしで、ものをつかめる”という
 せいぶつがいるそうだ…。
@@ -1614,24 +1679,35 @@ Words can['t] express my
 gra[ti]tude. But maybe a
 story I heard w[ill] h[el]p
 you…
-There were once some
-harm[le]ss anim[al]s [li]v[in]g
+Some anim[al]s w[it]h a cat-
+[li]ke face and a rabb[it]-
+[li]ke body once [li]ved
 near a mounta[in] shr[in]e
-on [#3031] sou[#3031]rn
+on [the] sou[the]rn
 con[ti]nent.
+But [it]['s] said [tha]t [the]y['v]e
+now ev[ol]ved [in]to a
+dangerous predator
+un[li]ke any o[the]r…
 
-They had a cat-[li]ke
-face and a rabb[it]-[li]ke
-body. But [#3031]y've
-recent[ly] ev[ol]ved [in]to a
-new and dangerous k[in]d
-of predator…
+
 If on[ly] [#3031]re were
 another way…
 
-But we['ll] fight for
-our surv[iv][al] as
-[lo]ng as we can.",
+But we['ll] [fi]ght for our
+surv[iv][al] as [lo]ng as we
+can.
+","“Wah! An enemy showed up again!
+
+Since I ask it, please don't attack us. We only want to live quietly. Please overlook us.”
+> Overlook
+> Don't overlook
+
+“Eh? Really? Thank you! In gratitude, I'll tell you an interesting rumor.
+
+Animals that had a face like a cat and a body like a rabbit that have evolved like no other creature before seem to have gathered at a small shrine on the southern continent.”
+
+“It can't be helped. In that case, we too will fight to defend ourselves.”"
 "わたしたちは、きのとおくなるようなむかし
 から、みどりを　みまもりつづけている
 両せい類……。
@@ -1651,22 +1727,22 @@ to monitor the plant
 life as long as the
 sky is blue.
 
-",185,"Our commun[it]y has been
-protect[in]g [#3031] p[la]nts of
-[#3233]s [la]nd s[in]ce anc[ie]nt
+",185,"We amp[hi]bians have been
+protect[in]g [the] p[la]nts of
+[thi]s [la]nd s[in]ce anc[ie]nt
 [ti]mes.
 
 
 We are p[le]ased w[it]h [#3031]
 he[al]th of p[la]nt [li]fe
-today. But we w[ill]
-con[ti]nue our work…
+today. But our work
+must con[ti]nue.
 
 
-We w[ill] str[iv]e to keep
-[#3233]s blue wor[ld] br[il][li]ant
-w[it]h greenery unt[il] [#3031]
-end of days.
+We sha[ll] str[iv]e to keep
+[thi]s wor[ld] br[il][li]ant[ly]
+s[hi]n[in]g blue and green,
+unt[il] [the] end of days.
 
 
 ",
@@ -1738,53 +1814,49 @@ creatures like us.""",562,"You hear wh[is]pers from
 
 
 A:
-“Capta[in]! I['v]e taken
- steps to conclude
- our ev[ol]u[ti]onary
- [in]terven[ti]on, as
- ordered.”
+“Capta[in]! I [thi]nk [it]['s] [ti]me
+ for us to canc[el] [thi]s
+ experiment[.”]
 B:
-“…good…”
-
+“…agreed…”
 A:
-“I just don['t]
- understand…
- We be[li]eved our
- ancestors were f[la]wed
- because of [#3031]
- compe[ti][ti]ve [in]s[ti]ncts [#3031]y
- deve[lo]ped [thr]ough [#3031]
- ev[ol]u[ti]onary process.
- H[el]p[in]g [#3233]s wor[ld]['s]
- creatures grow w[it]hout
- need[in]g to compete
- shou[ld] have [le]d [#3031]m to
- become [le]ss destruc[ti]ve
- [#3637]n us… right?
- But, anyway, [#3031]
- rema[in][in]g cryst[al]
- devices shou[ld] a[ll] be
- se[al]ed away soon.”
-
-
+“We['v]e just been
+ repeat[in]g our
+ ancestors' m[is]takes,
+ and [li]fe on [thi]s p[la]net
+ has suffered for [it].
+ We [tho]ught we cou[ld]
+ [fi]x [thi]ngs, but we
+ were wrong.
+ So… I['ll] arrange to
+ have [the] cryst[al] dev[ic]es
+ deac[ti]vated[.”]
 B:
-“…[#3031]re are st[ill] some
- cryst[al]s ac[ti]ve…”
+“…but [the]ir secrets are
+ known…
 
+ Not a[ll] rema[in] w[it]h[in] our
+ contr[ol]…”
 A:
 “But [#3637]t['s] impos[si]b[le]!
  None of [#3233]s wor[ld]['s]
  creatures cou[ld] use
  [#3031] cryst[al]s w[it]hout
  our superv[is]ion.
-
-
  Un[le]ss…
 
- Cou[ld] a species capab[le]
+ Cou[ld] a spec[ie]s capab[le]
  of understand[in]g our
  techn[ol]ogy have
- dev[el]oped [al]ready?”",
+ ev[ol]ved [al]ready[?”]","Whispered voice A: “Soon, let's conclude the evolution manipulation experiment.”
+
+Whispered voice B: “You're right.”
+
+Whispered voice A: “We repeated our ancestors' mistakes on the creatures of this world. Since we didn't want to accept it, we've been continuing this experiment, but that was our error. Collect all the experimental crystal devices.”
+
+Whispered voice B: “About that... the fact is, there are creatures who understand those crystals' secrets.”
+
+Whispered voice A: “That's... absurd? Surely if they're not a tribe like us, they don't understand that? ...Could it be?? Could a creature like us have been born?”"
 "わわっ！！
 ゆるしてくれっ！
 われわれが　わるかった！！
@@ -1867,7 +1939,13 @@ our wor[ld], [in] [#3637]nks.
 
 
 
-",
+","“Wawa! Forgive us! We were bad! We'll never again behave excessively towards the evolution of this world's creatures! Forgive us!”
+> I forgive
+> I don't forgive!
+
+“As expected... Goodbye...”
+
+“R-really? How? What a generous creature! In gratitude, we'll take you to our planet”"
 "おいらたちゃ、えん人！
 クリスタルのカによって”どうぐ”が
 つかえるようになった　しゅぞくさ！
@@ -1890,13 +1968,13 @@ We [le]arned how to use
 to[ol]s by study[in]g
 “Cryst[al] power”!
 
-We saw how handy [#3031]y
-are to o[#3031]r creatures!
+We saw how handy [tho]se
+Cryst[al]s are to o[the]r
+creatures!
 
 >uki<
 
-
-",
+",“We're the ape people! Our tribe became able to use “tools” because of the Crystal's power! Aren't there other creatures who've been made to use those handy creatures?”
 "いつか、クリスタルのなぞをといて、
 ひがしのたいりくにすむせいぶつ　のように
 かしこくなってやるんだ！　ウッキーー！",99,"We will become smart
@@ -1911,11 +1989,12 @@ to do this.
 
 Oogi..
 ",155,">ukiuki< One day, we['ll]
-[fi]gure out how
-“Cryst[al]s” work, and
-we['ll] be smart [li]ke [the]
-creatures on [the]
-eastern con[ti]nent!",
+[fi]gure out how Cryst[al]s
+work, and we['ll] be smart
+[li]ke [the] creatures on [the]
+eastern con[ti]nent!
+
+",
 "ストーンサークルの　まんなかで
 あそんでいたなかまが、とつぜんすがたを
 けしてしまった！
@@ -1941,7 +2020,7 @@ go…?
 
 
 
-",
+",“A friend of mine who was playing in the center of the stone circle suddenly seemed to vanish! I wonder where they went?”
 "
 ガイアです。
 
@@ -1977,12 +2056,12 @@ harassed by an army of
 
 
 Cou[ld] you p[le]ase h[el]p
-out [#3031] wha[le]s and teach
-[#3435]se “Lagons” a [le]sson?
+out [the] wha[le]s and teach
+[tho]se Lagons a [le]sson?
 
 
 
-",
+","“The peace-loving whales are being attacked by the Lagon tribe, who have been turned violent because of the Crystals. Please discipline the Lagons and save the whales!”"
 "われわれは、魚から進化しつづけた
 魚人ぞく、　ラーゴン！
 
@@ -2012,18 +2091,23 @@ ancestors!
 
 
 There are reports of
-[in]vaders com[in]g from [#3031]
-[la]nd, so we['v]e been
-ordered to defend our
-borders.
+[la]nd creatures try[in]g to
+carve out [the]ir own sea
+k[in]gdom… so we['r]e p[la]nn[in]g
+a strike [tha]t w[ill] dr[iv]e
+[the]m back to [the] [la]nd!
+Wa[it]… That body…
 
-Wa[it]… That body… You
-don['t] [lo]ok [li]ke a f[is]h!
-You['r]e not [al][lo]wed
-here!
+You don['t] [lo]ok [li]ke a
+f[is]h!
 
+You['r]e not [al][lo]wed here!","“We are the tribe of fish-people who have continued to evolve from fish, the Lagons.
 
-",
+Recently, some doofuses from land have heard that we've made a territory, and they're about to invade.
+
+Huh? Your body...
+
+You must be one of them too! I won't allow it!”"
 "クジラぞくに、きょうりょくするのは
 おまえか！？
 
@@ -2079,24 +2163,24 @@ whales!
 
 I don't approve of
 you.
-",518,"You[?!] You['r]e [#3031] one
-h[el]p[in]g [#3031] wha[le]s!
-The Lagons have been
-chosen by [#3031] Cryst[al]s
-to be [#3031] so[le] ru[le]rs of
-[#3031] sea!
-Those wha[le]s… [#3031]ir
-ancestors went to
-ev[ol]ve on [la]nd and [le]ft
-[#3031] sea to us.
+",518,"You[?!] You['r]e [the] one
+h[el]p[in]g [the] wha[le]s!
 
 
-And now [#3031]y dare to
-return and comp[la][in]
-about our dom[in]ance[?!]
-Unforg[iv]ab[le]!
 
 
+We, [the] Lagons, have
+been chosen by [the]
+Cryst[al]s to be [the] so[le]
+ru[le]rs of [#3031] sea!
+
+
+For [tho]se wha[le]s to go
+off and ev[ol]ve on [la]nd…
+and [the]n presume to
+return to [the] sea and
+comp[la][in] about us?
+It['s] unforg[iv]ab[le]!
 We[ll]? You see my po[in]t
 of v[ie]w… right[?!]
   You do have a po[in]t…
@@ -2110,7 +2194,7 @@ Why don['t] you jo[in] up
 w[it]h [#3031] Lagon army?
 
 Whaaat[?!] You['r]e tak[in]g [#3031]
-wh[al]es’ [si]de[?!]
+wh[al]es' [si]de[?!]
 
 Abs[ol]ute[ly] unforg[iv]ab[le][!!]
 
@@ -2149,18 +2233,18 @@ have wings.
 
 Long ago, our
 ancestors bu[il]t a
-cast[le] [in] [#3031] sky and
+cast[le] [in] [the] sky and
 dreamed of ascend[in]g
 to “outer space[.”]
 
-Because of [#3031]ir hubr[is],
-[#3031]y were ban[is]hed
-forever from [#3031] sky.
-So now, we['r]e w[in]g[le]ss
-birds.
+Because of [the]ir hubr[is],
+[the]y were ban[is]hed
+forever from [the] sky.
 
-But birds be[lo]ng [in]
-[#3031] sky…
+And so, we['r]e now birds
+w[it]h no w[in]gs.
+But [the] sky [is] st[ill]
+our home…
 
 
 

@@ -252,9 +252,9 @@ if __name__ == '__main__':
     write_dialog_choice_entry(patch, 0x1ed85, dest1=6, first_option=0)                        # 0x2f - Tyrannosaurs
     write_dialog_choice_entry(patch, 0x1ed93, page_index=5)
     write_dialog_choice_entry(patch, 0x1eda1, page_index=6, dest1=2, dest2=7)
-    write_dialog_choice_entry(patch, 0x1edaf, page_index=6, dest1=7, dest2=8)                 # 0x35 - Mammal evolution
+    write_dialog_choice_entry(patch, 0x1edaf, page_index=6, dest1=7, dest2=9)                 # 0x35 - Mammal evolution
     write_dialog_choice_entry(patch, 0x1edbd, page_index=7)
-    write_dialog_choice_entry(patch, 0x1edcb, page_index=8)
+    write_dialog_choice_entry(patch, 0x1edcb, page_index=9)
     write_dialog_choice_entry(patch, 0x1edd9, first_option=0)                                 # 0x39 - Avian King
     write_dialog_choice_entry(patch, 0x1edf5, page_index=4, dest1=5, dest2=6)                 # 0x3b - Yeti Lord
     write_dialog_choice_entry(patch, 0x1ee03, page_index=5)
