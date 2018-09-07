@@ -2,7 +2,7 @@ import csv
 import tkinter as tk
 
 from PIL import ImageTk
-from pyy_chr import Renderer
+from pyy_chr import Renderer, StandardBitplaneTileInterpreter
 
 import text_util
 
@@ -15,6 +15,7 @@ class DisplayWindow:
 
         self.renderer = Renderer()
         self.renderer.resize((32, 32))
+        self.renderer.set_tile_interpreter(StandardBitplaneTileInterpreter(interleaved_count = 2, layered_count = 1))
         self.renderer.load_tile_data(open('assets/gfx/font.bin', 'rb').read())
 
         self.master = master
