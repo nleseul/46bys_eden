@@ -2,7 +2,7 @@ import csv
 import tkinter as tk
 
 from PIL import ImageTk
-from pyy_chr import Renderer, StandardBitplaneTileInterpreter
+from pyy_chr import Renderer, StandardBitplaneTileInterpreter, StandardMapInterpreter, GrayscalePaletteInterpreter
 
 import text_util
 
@@ -13,10 +13,14 @@ class DisplayWindow:
 
         self.reverse_font_map = text_util.load_map_reverse('assets/text/font.tbl')
 
+        self.map_data = bytearray(32 * 32)
+
         self.renderer = Renderer()
-        self.renderer.resize((32, 32))
+        self.renderer.set_map_interpreter(StandardMapInterpreter((32, 32)))
         self.renderer.set_tile_interpreter(StandardBitplaneTileInterpreter(interleaved_count = 2, layered_count = 1))
+        self.renderer.set_palette_interpreter(GrayscalePaletteInterpreter(4))
         self.renderer.load_tile_data(open('assets/gfx/font.bin', 'rb').read())
+        self.renderer.load_map_data(self.map_data)
 
         self.master = master
         self.master.title('46BYS gfx previewer')
@@ -72,22 +76,26 @@ class DisplayWindow:
         self.__draw()
 
     def __draw(self):
-        self.renderer.write_tiles(bytes([1] + [2] * self.display_width + [3]), self.start_column - 1, self.start_row - 1)
+        self.__write_tiles(bytes([1] + [2] * self.display_width + [3]), (self.start_column - 1, self.start_row - 1))
         for r in range(self.start_row, self.start_row + self.display_height + 2):
-            self.renderer.write_tiles(bytes([8] + [0] * self.display_width + [10]), self.start_column - 1, r)
-        self.renderer.write_tiles(bytes([4] + [5] * self.display_width + [6]), self.start_column - 1, self.start_row + self.display_height + 2)
+            self.__write_tiles(bytes([8] + [0] * self.display_width + [10]), (self.start_column - 1, r))
+        self.__write_tiles(bytes([4] + [5] * self.display_width + [6]), (self.start_column - 1, self.start_row + self.display_height + 2))
 
         for typeset_line in range(0, self.display_height):
             start_index = (self.current_page * self.display_height + typeset_line + self.scroll_offset) * self.display_width
             end_index = start_index + self.display_width
-            self.renderer.write_tiles(self.typeset_buffer[start_index:end_index], self.start_column, self.start_row + typeset_line)
+            self.__write_tiles(self.typeset_buffer[start_index:end_index], (self.start_column, self.start_row + typeset_line))
 
         if not self.__is_last_page():
-            self.renderer.write_tiles(b'\x0f', self.start_column + self.display_width // 2, self.start_row + self.display_height + 1)
+            self.__write_tiles(b'\x0f', (self.start_column + self.display_width // 2, self.start_row + self.display_height + 1))
 
         img = self.renderer.render()
         self.tkimage = ImageTk.PhotoImage(img.resize([3 * d for d in img.size]))
         self.display.configure(image=self.tkimage)
+
+    def __write_tiles(self, tiles, pos):
+        index = pos[1] * 32 + pos[0]
+        self.map_data[index:index + len(tiles)] = tiles
 
     def __is_last_page(self):
         return (self.current_page + 1) * self.display_height * self.display_width >= len(self.typeset_buffer)
