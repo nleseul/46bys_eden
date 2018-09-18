@@ -1151,7 +1151,7 @@ wander.
  Whoa! You sure are a
  funny one[!h]
 
-Captain:
+Capta[in]:
 gIt won['t] se[ll] for much
  [li]ke [#3637]t! Just gr[in]d
  [it] up [in]to f[is]h s[ti]cks[.h]
@@ -1168,7 +1168,13 @@ great Lagon army
 d[is]perses [in] [#3031] ocean
 currents. You journey
 [al]one [thr]ough [#3031] sea,
-aim[le]ss[ly] dr[if]t[in]gc",
+aim[le]ss[ly] dr[if]t[in]gc","gWhat's this fish? Wah! You have a bad shape!h
+
+gIt's fine; grind it up anyway and make it into kamaboko.h
+
+gHeey! Help me!h
+
+And you who have lost your leader become solitary, and decide to depart on a alone on a wandering journey."
 "ƒqƒ\ƒqƒ\‚²‚¦@A
 u‚Ú‚­‚ç‚ÍA‚«‚İ‚½‚¿‚æ‚è@‚·‚¤‰­”N‚à
 @‚³‚«‚Éi‰»‚µ‚½@‚«‚å‚¤‚è‚ã‚¤l‚°‚ñ‚Å‚·B
@@ -1215,43 +1221,53 @@ apologize.""
 
 Whisper A:
 ""We should be able to
-see our planet soon.""",435,"gWe ev[ol]ved on ano[#3031]r
- wor[ld], hundreds of
+see our planet soon.""",435,"gWe ev[ol]ved hundreds of
  m[il][li]ons of years
- before you.
+ before [li]fe on your
+ p[la]net, and have been
+ work[in]g to guide [it]s
+ ev[ol]u[ti]on.
+ The Saurians who [li]ve
+ to [the] east are [the]
+ c[ul]m[in]a[ti]on of our
+ work.
 
 
- Al[#3435]ugh we [li]ve
- peacefu[ll]y now, our
+ Our [in]ten[ti]ons are
+ peacef[ul] nowc but our
  ancestors made many
  m[is]takes and brought
- our wor[ld] to [#3031] br[in]k
- of destruc[ti]on[.h]
-gcso when we saw [li]fe
- beg[in] to emerge on
- your wor[ld], we
- dev[el]oped [#3031] ecryst[al]sf
- as to[ol]s to bypass [#3031]
- ev[ol]u[ti]onary processc
- cwe hoped [#3637]t w[it]hout
- [#3031] strugg[le] for surv[iv][al]
- dr[iv][in]g your ev[ol]u[ti]on,
- you wou[ld] become [le]ss
- prone to destruc[ti]ve
- errors [#3637]n were wec
- However, our
- [in]terference mere[ly]
- worsened [#3031] outcomec
- even now, we cont[in]ue
- to err destruct[iv]e[ly]c
- we are ashamed[.h]
+ our own p[la]net to [the]
+ br[in]k of destruc[ti]on[.h]
+gcwe hoped we cou[ld]
+ prevent [li]fe on your
+ p[la]net from ev[ol]v[in]g [in]
+ [the] same m[is]taken way
+ as usc
+
+ cso we seeded your
+ p[la]net w[it]h Cost[al][li]casc
+
+ c[the] eCryst[al] dev[ic]esf
+ we dev[el]opedc
+
+ c[it] was shamef[ul]
+ [in]terferencec we are
+ no be[tt]er [tha]n our
+ ancestorsc
+
+ ch
 gAh, [it] w[ill] soon be
  [ti]me for you to see
  our home wor[ld][!h]
 
 
 
-",
+","gWe are the original dinosaur people who evolved several hundred million years before you. Today, we live in peace, but long ago, with our often-repeated mistakes, we seemed to carelessly drive the planet we live on to ruin.h
+
+gSo for you, so you wouldn't make the same mistakes with us, we made devices called crystals... no, 'kosutarikas'... and decided to scatter them around your planet. We did unthinkable meddling. We are ashamed!h
+
+gYou should be able to see our planet soon!h"
 "ccc‚»‚µ‚ÄA
 ‚ ‚È‚½‚ÍA‚©‚ê‚ç‚Ì‚±‚«‚å‚¤h‚©‚¹‚¢h‚Å
 ‚¾‚¢‚©‚ñ‚°‚¢‚ğ@‚¤‚¯‚Ü‚µ‚½cB
@@ -1268,6 +1284,6 @@ safely.
 ",123,"You are w[el]comed warm[ly]
 to [#3031]ir home on Mars.
 
-After a short v[is][it], you
-ask to be returned
+And after a short v[is][it],
+you are returned safe[ly]
 home to Earthc",
