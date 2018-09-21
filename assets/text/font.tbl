@@ -14,6 +14,7 @@
 29=,Åf
 2A=?Åh
 2B=?Åf
+2C=.~
 
 3031=the
 3233=thi
@@ -22,7 +23,9 @@
 3839=thy
 3a3b=thr
 
+3f=s'
 4041=rib
+4243=str
 
 5f=_
 
@@ -69,6 +72,16 @@
 
 A0=ic
 A1=ig
+A2=ia
+A3=ai
+A4=ni
+A5=vi
+A6=ci
+A7=ff
+A8=lu
+A9=ip
+AA=pi
+AB=ig
 
 B0='r
 B1='v

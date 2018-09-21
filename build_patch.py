@@ -27,6 +27,9 @@ class StringPool:
 
         return start
 
+    def free_space(self):
+        return self.capacity - len(self.pool)
+
     def get_bytes(self):
         return self.pool
 
@@ -53,6 +56,9 @@ def write_with_size_check(patch, address, available_length, data, fill_byte=b'\x
 def write_strings_from_csv(patch, filename, reverse_font_map, pointer_table_address, pointer_table_length,
                            string_pool_address, string_pool_length, overflow_pool_address = None, overflow_pool_length = None,
                            column_to_encode=4, newline=b'\xfe', terminator=b'\xff', pad_to_line_count=1, pad_final_line=False, interleaved=False):
+    print('Writing strings from {0}...'.format(filename))
+
+
     pointer_table_out = bytearray()
     previously_encoded = {}
 
@@ -73,11 +79,13 @@ def write_strings_from_csv(patch, filename, reverse_font_map, pointer_table_addr
                                                        pad_to_line_count=pad_to_line_count, pad_final_line=pad_final_line,
                                                        newline=newline, terminator=terminator)
 
+            is_tiny = (len(encoded_string) < 100)
+
             string_address = None
             if encoded_string in previously_encoded:
                 string_address = previously_encoded[encoded_string]
             else:
-                for pool in pools:
+                for pool in (reversed(pools) if is_tiny else pools):
                     if pool.can_add(encoded_string):
                         string_address = (0xffff & pool.add(encoded_string))
                         break
@@ -86,14 +94,17 @@ def write_strings_from_csv(patch, filename, reverse_font_map, pointer_table_addr
                     previously_encoded[encoded_string] = string_address
 
             if string_address is None:
-                print('Text {0} didn\'t fit!'.format(row[4]))
+                print('Text {0} didn\'t fit! Size was {1}'.format(row[4], len(row[4])))
+                for poolIndex, pool in enumerate(pools):
+                    print('Pool {0}: {1} free'.format(poolIndex, pool.free_space()))
                 pointer_table_out += (0xffff).to_bytes(2, byteorder='little')
             else:
                 pointer_table_out += string_address.to_bytes(2, byteorder='little')
 
     write_with_size_check(patch, pointer_table_address, pointer_table_length, pointer_table_out)
-    for pool in pools:
+    for poolIndex, pool in enumerate(pools):
         write_with_size_check(patch, pool.address, pool.capacity, pool.get_bytes(), fill_byte=b'\xff')
+        print('Remaining in pool at {0:x}: {1}'.format(pool.address, pool.free_space()))
 
 def write_gfx(patch, data, address, length):
     write_with_size_check(patch, address, length, gfx_util.compress(data))
