@@ -4,13 +4,13 @@ import tkinter as tk
 import text_util
 import preview_util
 
-class AreaNamesPreviewDisplayWindow(preview_util.PreviewDisplayWindow):
+class EvoOptionsPreviewDisplayWindow(preview_util.PreviewDisplayWindow):
     def __init__(self, master):
         super().__init__(master)
 
         self.reverse_font_map = text_util.load_map_reverse('assets/text/font.tbl')
 
-        self.base_offset, self.width = 0xe5 // 2, 22
+        self.x, self.y, self.width, self.height = 2, 4, 17, 20
 
         self.current_entry = 0
 
@@ -31,40 +31,33 @@ class AreaNamesPreviewDisplayWindow(preview_util.PreviewDisplayWindow):
 
     def __reload(self):
         self.entries = []
-        with open('assets/text/area_names.csv', 'r', encoding='shift-jis') as in_file:
+        with open('assets/text/evo_options.csv', 'r', encoding='shift-jis') as in_file:
             reader = csv.reader(in_file, lineterminator='\n')
             for i, row in enumerate(reader):
-                entry = text_util.encode_text_interleaved(row[4], self.reverse_font_map)
+                entry = text_util.encode_text(row[4], self.reverse_font_map)
                 self.entries.append(entry)
 
         self.__typeset()
 
     def __typeset(self):
 
-        base_x, base_y = self.__offset_to_coords(self.base_offset)
-
-        self.write_window(base_x - 1, base_y - 1, self.width + 2, 4)
+        self.write_window(self.x - 1, self.y - 1, self.width + 2, self.height + 2)
 
         line = self.entries[self.current_entry]
-        offset = int.from_bytes(line[0:1], byteorder='little') // 2
-        if offset != 0:
-            x, y = self.__offset_to_coords(offset)
-            line_data = line[4:]
-
-            for i, b in enumerate(line_data):
+        x, y = self.x, self.y
+        for b in line:
+            if b == 0xfe:
+                x = self.x
+                y += 1
+            elif b == 0xff:
+                break
+            else:
                 self.write_tiles([b], (x, y))
-                if i % 2 == 0:
-                    y += 1
-                else:
-                    y -= 1
-                    x += 1
+                x += 1
 
         self.refresh_display()
 
-    def __offset_to_coords(self, offset):
-        return (offset % self.display_width, offset // self.display_width)
-
 if __name__ == '__main__':
     tk_root = tk.Tk()
-    window = AreaNamesPreviewDisplayWindow(tk_root)
+    window = EvoOptionsPreviewDisplayWindow(tk_root)
     tk_root.mainloop()
