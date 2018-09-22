@@ -1,44 +1,46 @@
 import csv
 import tkinter as tk
 
-from PIL import ImageTk
-from pyy_chr import Renderer, StandardBitplaneTileInterpreter, StandardMapInterpreter, GrayscalePaletteInterpreter
-
 import text_util
+import preview_util
 
-class DisplayWindow:
+class DialogPreviewDisplayWindow(preview_util.PreviewDisplayWindow):
     def __init__(self, master):
-        self.display_width, self.display_height = 22, 6
-        self.start_column, self.start_row = 5, 2
+        super().__init__(master)
 
         self.reverse_font_map = text_util.load_map_reverse('assets/text/font.tbl')
 
-        self.map_data = bytearray(32 * 32)
+        self.__reload()
 
-        self.renderer = Renderer()
-        self.renderer.set_map_interpreter(StandardMapInterpreter((32, 32)))
-        self.renderer.set_tile_interpreter(StandardBitplaneTileInterpreter(interleaved_count = 2, layered_count = 1))
-        self.renderer.set_palette_interpreter(GrayscalePaletteInterpreter(4))
-        self.renderer.load_tile_data(open('assets/gfx/font.bin', 'rb').read())
-        self.renderer.load_map_data(self.map_data)
+    def on_next_page(self, event):
+        if not self.__is_last_page() and self.scroll_offset == 0:
+            self.current_page += 1
+            self.scroll_offset = -6
 
-        self.master = master
-        self.master.title('46BYS gfx previewer')
+            self.__on_scroll()
 
-        self.master.bind('<Down>', self.__on_next_page)
-        self.master.bind('<Up>', self.__on_prev_page)
-        self.master.bind('<Right>', self.__on_next_entry)
-        self.master.bind('<Left>', self.__on_prev_entry)
-        self.master.bind('r', self.__on_reload)
+    def on_prev_page(self, event):
+        if self.current_page > 0 and self.scroll_offset == 0:
+            self.current_page -= 1
+            self.scroll_offset = 6
 
-        self.display = tk.Label(self.master)
-        self.display.pack(side="bottom", fill="both", expand="yes")
-        self.display.configure(background='darkblue')
+            self.__on_scroll()
 
-        self.current_entry = 0
-        self.current_page = 0
-        self.scroll_offset = 0
+    def on_next_entry(self, event):
+        if self.current_entry < len(self.entries) - 1 and self.scroll_offset == 0:
+            self.current_entry += 1
+            self.current_page = 0
 
+            self.__typeset()
+
+    def on_prev_entry(self, event):
+        if self.current_entry > 0 and self.scroll_offset == 0:
+            self.current_entry -= 1
+            self.current_page = 0
+
+            self.__typeset()
+
+    def on_reload(self, event):
         self.__reload()
 
     def __reload(self):
@@ -76,60 +78,20 @@ class DisplayWindow:
         self.__draw()
 
     def __draw(self):
-        self.__write_tiles(bytes([1] + [2] * self.display_width + [3]), (self.start_column - 1, self.start_row - 1))
-        for r in range(self.start_row, self.start_row + self.display_height + 2):
-            self.__write_tiles(bytes([8] + [0] * self.display_width + [10]), (self.start_column - 1, r))
-        self.__write_tiles(bytes([4] + [5] * self.display_width + [6]), (self.start_column - 1, self.start_row + self.display_height + 2))
+        self.write_window(self.start_column - 1, self.start_row - 1, self.display_width + 2, self.display_height + 4)
 
         for typeset_line in range(0, self.display_height):
             start_index = (self.current_page * self.display_height + typeset_line + self.scroll_offset) * self.display_width
             end_index = start_index + self.display_width
-            self.__write_tiles(self.typeset_buffer[start_index:end_index], (self.start_column, self.start_row + typeset_line))
+            self.write_tiles(self.typeset_buffer[start_index:end_index], (self.start_column, self.start_row + typeset_line))
 
         if not self.__is_last_page():
-            self.__write_tiles(b'\x0f', (self.start_column + self.display_width // 2, self.start_row + self.display_height + 1))
+            self.write_tiles(b'\x0f', (self.start_column + self.display_width // 2, self.start_row + self.display_height + 1))
 
-        img = self.renderer.render()
-        self.tkimage = ImageTk.PhotoImage(img.resize([3 * d for d in img.size]))
-        self.display.configure(image=self.tkimage)
-
-    def __write_tiles(self, tiles, pos):
-        index = pos[1] * 32 + pos[0]
-        self.map_data[index:index + len(tiles)] = tiles
+        self.refresh_display()
 
     def __is_last_page(self):
         return (self.current_page + 1) * self.display_height * self.display_width >= len(self.typeset_buffer)
-
-    def __on_next_page(self, event):
-        if not self.__is_last_page() and self.scroll_offset == 0:
-            self.current_page += 1
-            self.scroll_offset = -6
-
-            self.__on_scroll()
-
-    def __on_prev_page(self, event):
-        if self.current_page > 0 and self.scroll_offset == 0:
-            self.current_page -= 1
-            self.scroll_offset = 6
-
-            self.__on_scroll()
-
-    def __on_next_entry(self, event):
-        if self.current_entry < len(self.entries) - 1 and self.scroll_offset == 0:
-            self.current_entry += 1
-            self.current_page = 0
-
-            self.__typeset()
-
-    def __on_prev_entry(self, event):
-        if self.current_entry > 0 and self.scroll_offset == 0:
-            self.current_entry -= 1
-            self.current_page = 0
-
-            self.__typeset()
-
-    def __on_reload(self, event):
-        self.__reload()
 
     def __on_scroll(self):
         if self.scroll_offset > 0:
@@ -142,7 +104,8 @@ class DisplayWindow:
         if self.scroll_offset != 0:
             self.master.after(16, self.__on_scroll)
 
+
 if __name__ == '__main__':
     tk_root = tk.Tk()
-    window = DisplayWindow(tk_root)
+    window = DialogPreviewDisplayWindow(tk_root)
     tk_root.mainloop()
