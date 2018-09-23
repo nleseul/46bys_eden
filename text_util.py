@@ -91,7 +91,7 @@ def encode_text(text, reverse_map, newline=b'\xfe', terminator=b'\xff', pad_to_l
             line, ch = consume_char(line, reverse_map, unknown_chars)
             out += ch
 
-            current_out_length += 1
+            current_out_length += len(ch)
 
         out += newline
         
