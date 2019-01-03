@@ -38,7 +38,7 @@ your EP a [li][tt][le]. Sorry!
 
 
 
-",169,
+",169,,
 "
 おどろかせて、ごめんなさい…。
 
@@ -91,7 +91,7 @@ This is your goal.
 
 
 Please, do your best!
-",456,,1,
+",456,,1,,
 "
 …………………………！？
 
@@ -174,7 +174,7 @@ part.
  ev[ol]ve caref[ul][ly][!”]
 
 
-",480,
+",480,,
 "あなたのことを　ウワサしているこえが
 きこえてくる。　しかし、だれが
 しゃべっているのかは　わからない……。
@@ -194,7 +194,7 @@ looks different from
 the others....""
 ""This creature may
 evolve wonderfully.""
-",173,,1,
+",173,,1,,
 "「そこの、おさかなさん！　その、あかい
 　クリスタルをたべてごらん。　ふしぎな
 　進化をするよ…。」",72,"""Hi there fish!"" 
@@ -202,19 +202,19 @@ evolve wonderfully.""
 crystal. You may 
 evolve into a strange
 creature.""
-",94,"“Excuse me, f[is]h? Cou[ld]
+",94,"“Excuse me, f[is]h? Co[ul]d
  you maybe try ea[ti]ng
  [tha]t red cryst[al] [the]re,
  p[le]ase?
 
 
- It shou[ld] make ev[ol]v[in]g
+ It sho[ul]d make ev[ol]v[in]g
  much eas[ie]r for you…”
 
 
 
 
-",128,Formality and “fushigi” are difficult
+",128,,Formality and “fushigi” are difficult
 "
 ”すいりゅうのカベ”が　できている。
 ",37,"There is a wall of 
@@ -225,7 +225,7 @@ prevent you from
 
 
 
-",47,A “wall of water currents” is built
+",47,,A “wall of water currents” is built
 "かざんばくはつのショックで
 ”すいりゅうのカベ”が　なくなった！
 ",61,"The wall of bubbles has
@@ -239,7 +239,7 @@ v[ol]can[ic] erup[ti]on.
 
 
 
-",57,“shock”
+",57,,“shock”
 "ナマコたちの　うわさばなしがきこえる。
 「アンコウのつの　って　そのひかりで
 　テキを　ひきつけるんだって！スゴイ！」
@@ -298,7 +298,7 @@ gos[si]p[in]g exc[it]ed[ly].
 
 
 
-",388,“nama nama”
+",388,,“nama nama”
 "かいそう　たちの
 ヒソヒソばなしが、きこえる。
 
@@ -342,7 +342,7 @@ seagrass.
  d[el]ayed…”
 
 
-",226,"“komaru” - troubled, worried, stumped"
+",226,,"“komaru” - troubled, worried, stumped"
 "　　　　”進化のアドバイス”
 ようこそ！　両せい類のせかいへ！
 さて、さて、
@@ -368,7 +368,7 @@ a[ff]ect your jump[in]g
 ab[il][it]y as we[ll] as your
 HP!
 
-",170,"“as well as” not in the original
+",170,,"“as well as” not in the original
 Not too sure about grammar"
 "ストロマトライトたちの
 ヒソヒソばなしが、きこえる。
@@ -406,7 +406,7 @@ cave will hear you!""
 
 “>s[ig]h< If we weren['t]
  stuck to [the] seabed,
- we cou[ld] be free… no
+ we co[ul]d be free… no
  gang of C[la]dos[el]aches
  t[el][li]ng us what to
  do…”
@@ -416,7 +416,7 @@ cave will hear you!""
 
 
 
-",218,"“If only we could move around freely, without clinging to things like the seabed, we would live without being ruled by those rough Cladoselaches.”
+",218,,"“If only we could move around freely, without clinging to things like the seabed, we would live without being ruled by those rough Cladoselaches.”
 “Shh! The cave boss will hear you!”"
 "
 ん？　　なにものだ！？
@@ -473,7 +473,7 @@ work[--]not on [thi]s guy['s]
 watch!
 
 
-",423,“This me won't forgive any doofus who helps those doofuses”
+",423,,“This me won't forgive any doofus who helps those doofuses”
 "ぼくらは、ストロマトライト。
 うみのそとは、ぼくらのつくった”サンソ”
 にみたされ、
@@ -496,7 +496,7 @@ new opportun[it][ie]s!
 The entrance [is] r[ig]ht
 up [the]re!
 
-",150,
+",150,,
 "さあ、おゆきなさい！
 ”あたらしいせかい”がまってますよ！
 ",45,"Okay, let's go.
@@ -507,7 +507,7 @@ Wor[ld]” [is] wa[it][in]g!
 
 
 
-",44,
+",44,,
 "ガイアです。
 ２億年もつづいた”魚の時代”は、おわり
 これから、”サンソ”にみたされた
@@ -604,7 +604,7 @@ So, here we go!
 Almighty Power[!!] [#10]
 
 Bestow upon [thi]s
-creature a new body!",0,
+creature a new body!",0,,
 "シーラカンス
 「うーー……。
 　ぼ、ぼくらは　シーラカンス…。
@@ -632,7 +632,7 @@ compete and ev[ol]ve…
 So, w-we['d] [li]ke [it] [if] you
 just l-[le]ave us [al]one…
 
-R-re[al][ly]…",0,
+R-re[al][ly]…",0,,
 "よそものは　でていけっ！！
 ここからは、”しょくぶつ”をみまもる
 ちょうろうさまの　とちだっ！",81,"Get out stranger!
@@ -645,7 +645,7 @@ Get out!
 
 These p[la]nts are under
 [the] protec[ti]on of
-our great [el]der!",0,"“Leave, stranger! Beyond here is the land of the elder-sama who watches over plants.”"
+our great [el]der!",0,,"“Leave, stranger! Beyond here is the land of the elder-sama who watches over plants.”"
 "イクチオステガのちょうろう
 「みごとじゃ！！」
 
@@ -792,12 +792,12 @@ E[ld]er:
 C[hi][ld]:
 “… Dad…”
 E[ld]er:
-“We wou[ld] be gratef[ul] [if]
- you cou[ld] do some[thi]ng[.”]
+“We wo[ul]d be gratef[ul] [if]
+ you co[ul]d do some[thi]ng[.”]
 
 
 
-",0,
+",0,,
 "イクチオステガのこども
 「”しょくぶつ”を　すくって！！」
 ",50,"
@@ -808,7 +808,7 @@ Child of Ikustega:
 
 
 
-",0,
+",0,,
 "イクチオステガのちょうろう
 「さいきん、虫たちが　おとなしくなって
 　きたような…。」
@@ -831,7 +831,7 @@ C[hi][ld]:
 
 
 
-",0,
+",0,,
 "ガイア
 「あーーーーーーーーーーっ！！！
 　なんてことを！！！！！」",39,"Gaia:
@@ -842,7 +842,7 @@ C[hi][ld]:
 
 
 
-",0,
+",0,,
 "プロトファスマ（ゴキブリのせんぞ）
 「また、でしゃばり　両せい類が、
 　きやがったぞおーっ！　カサ、カサ！」",96,"Profasu (Ancestor of
@@ -856,7 +856,7 @@ Com[in]g to bug us aga[in]!
 >ksksksks<
 
 
-",0,
+",0,,
 "
 ぐぐっ………。　はあ、はあ………。
 
@@ -920,7 +920,43 @@ son.
 
 ",591,">cough< >gasp<
 
-…K[in]g Bee wou[ld]n['t] [li]sten…
+…hoped I co[ul]d conv[in]ce
+[the] K[in]g Bee… but [thi]s
+was h[is] response…
+
+Can['t] anyone show [hi]m
+[the] importance of
+coex[is]tence?
+
+Y-you [lo]ok [str]ong…
+>cough< H[el]p me, p[le]ase!
+I… I['ll] d[ie] soon…
+
+Once I'm dead, p[le]ase
+eat [thi]s meat I['v]e
+saved.
+
+Become [str]ong… and
+defeat [tha]t damn Bee
+K[in]g for me!
+Bea[ti]ng [hi]m sho[ul]d
+restore [the] green to
+[thi]s con[ti]nent…
+…
+
+If on[ly]…
+
+…I co[ul]d have [li]ved to
+see my son…
+>cooough<
+
+   …my son…
+      …farewe[ll]…
+
+
+",0,">cough< >gasp<
+
+…K[in]g Bee wo[ul]dn['t] [li]sten…
 did [thi]s to me… can['t]
 understand… need to
 work toge[the]r… Ugh!
@@ -960,7 +996,7 @@ my son… >cooough<
 …
 
 
-",0,"“I planned to persuade the King Bee, but now I'm in this mess.
+","“I planned to persuade the King Bee, but now I'm in this mess.
 
 Can't someone explain the importance of coexistence to that guy?
 
@@ -1022,7 +1058,7 @@ Cryst[al]['s] power too?
 I['v]e exp[la][in]ed many [ti]mes…
 When [the] Cryst[al]['s] g[if]t
 made our bod[ie]s [thi]s
-[la]rge, we cou[ld] on[ly] feed
+[la]rge, we co[ul]d on[ly] feed
 ours[el]ves by [in]vad[in]g
 o[the]rs.
 So [if] you want to end
@@ -1037,7 +1073,7 @@ back[!!]
 
 
 
-",0,
+",0,,
 "へへへへっ…。　あっしは　トンボの
 ”メガニウラ”っちゅーーもんでゲス。
 
@@ -1110,7 +1146,7 @@ d[is]tance from [tho]se
 [in]v[in][ci]b[le] sand-ea[ti]ng
 worms!
 
-Ehehe!",0,"Not sure about “sukunakatta”
+Ehehe!",0,,"Not sure about “sukunakatta”
 
 “However, you'd better avoid the completely invincible sand-eating bugs in the next desert and run away.”"
 "エダホサウルス
@@ -1129,7 +1165,18 @@ of Reptiles.
 The Era of Plants and
 Insects has ended.""
 
-",158,"Ha! Don['t]cha know?
+",158,"A:
+“Ya can['t] go on w[it]h a
+ body [li]ke [tha]t, don['t]cha
+ know[?”]
+
+
+B:
+“The Age of Rep[ti][le]s [is]
+ com[in]g!
+
+ Insects, amp[hi]b[ia]ns…
+ [the]ir [ti]me [is] up[!”]",0,"Ha! Don['t]cha know?
 That body [is] soooo
 20 m[il][li]on years ago!
 
@@ -1141,7 +1188,7 @@ com[in]g!
 Insects, amp[hi]b[ia]ns…
 [the]ir [ti]me [is] up!
 
-",0,"“yatte kenee”? What is? Probably “yatte ikenai”
+","“yatte kenee”? What is? Probably “yatte ikenai”
 
 “Hey you! There's no way to proceed from here with that body! 
 
@@ -1186,14 +1233,14 @@ creature a new body!
 ",375,"Those swarm[in]g g[ia]nt
 [in]sects put [the] ba[la]nce
 of nature out of
-order, but [thi]ngs shou[ld]
+order, but [thi]ngs sho[ul]d
 be back to norm[al] now!
 
 The p[la]nts [the]y devoured
 w[ill] eventu[al][ly] return,
-and [li]fe can cont[in]ue [in]
-a beau[ti]f[ul] green
-parad[is]e.
+and a[ni]m[al]s w[ill] [li]ve on
+peacef[ul][ly] [in] a beau[ti]f[ul]
+green parad[is]e.
 
 Anyway![#10]
 
@@ -1213,7 +1260,7 @@ Bestow upon [thi]s
 creature a new body!
 
 
-",0,"“The plants will soon increase to the extent that they devoured them, and the land will overflow with greenery. It should become a world of peaceful life for animals.”
+",0,,"“The plants will soon increase to the extent that they devoured them, and the land will overflow with greenery. It should become a world of peaceful life for animals.”
 
 “It's a wonderful body that holds the potential of various types of evolution.”"
 "つぎの時代は、
@@ -1259,7 +1306,7 @@ Dreadf[ul] rep[ti][le]s…
 
 
 
-",0,"Odd grammar
+",0,,"Odd grammar
 
 “This next age, you'll pass through a trial, and a world of 'power' of creatures that have evolved further” ...?"
 "そらの　ほうから
@@ -1327,6 +1374,36 @@ above you.
 
 
 A:
+“Capta[in]! Isn['t] [tha]t
+ green cryst[al] ba[si]c[al][ly]
+ an ‘ev[ol]u[ti]on revers[al]’
+ de[vi]ce [tha]t can restore
+ [the] foss[il] record[?”]
+B:
+“…yeees…”
+A:
+“But, Capta[in]… [is]n['t]
+ ma[ni]p[ul]a[ti]ng ev[ol]u[ti]on
+ [li]ke [tha]t… c[lu]msy[?”]
+B:
+“…noooo…”
+
+A:
+“I don['t] know what w[ill]
+ come of [it][!”]
+B:
+“…
+
+ …[it] [is] for [the] good of
+ [thi]s wor[ld]…”
+
+",0,"You hear a w[hi]spered
+conversa[ti]on from
+above you.
+
+
+
+A:
 “Capta[in]! I['v]e comp[le]ted
  [tha]t green cryst[al]
  de[vi]ce, as ordered.
@@ -1362,7 +1439,7 @@ B:
 
 
 
-",0,"“Captain! Wasn't the green crystal an 'evolution reversal' device that can restore your previous self?”
+","“Captain! Wasn't the green crystal an 'evolution reversal' device that can restore your previous self?”
 
 “But, Captain... isn't using such a thing to manipulate evolution unskillful?”
 
