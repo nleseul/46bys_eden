@@ -14,7 +14,25 @@ Please keep this a
 secret from my father,
 the Sun.
 Your EVO.P has been
-reduced slightly.",148,"Oh no! You['v]e gone
+reduced slightly.",148,"How terrib[le]! You['v]e
+become ex[ti]nct!
+
+
+
+
+c
+Th[is] [is] con[fi]den[ti][al]c
+  cat [le]ast as far as
+  my fa[the]r, [the] Sun, [is]
+  concernedc
+
+But, I w[ill] send you
+back!
+
+
+However, your EP w[ill] be
+reduced a [li][tt][le]c
+",169,"Oh no! You['v]e gone
 ex[ti]nct!
 
 >s[ig]h< c
@@ -38,7 +56,7 @@ your EP a [li][tt][le]. Sorry!
 
 
 
-",169,,
+",
 "
 ‚¨‚Ç‚ë‚©‚¹‚ÄA‚²‚ß‚ñ‚È‚³‚¢cB
 
@@ -144,34 +162,34 @@ one part of your body
 may decrease another
 part.
 
-",552,"Some[thi]ng speaks from
-[in][si]de your body!
+",552,"c[?!]
 
-
+Some[thi]ng starts t[al]k[in]g
+[in][si]de your body[!!]
 
 
 gEv[ol]u[ti]on go[in]g okay?
- No worr[ie]s! I['ll] be
- your ev[ol]u[ti]on h[el]per!
- Just ca[ll] me eCryst[al][.f]
- Here are some h[el]pf[ul]
- [ti]ps!
- Be[tt]er jaw[--]
-   Stronger b[it]e!
- Be[tt]er body[--]
-   More defense!
- Grow a horn[--]
-   Horn [str]ike power!
- Also! Ev[ol]v[in]g your
- hands, feet, and ta[il]
- w[ill] a[ff]ect your HP,
- body s[la]m a[tt]ack, and
+ Don['t] worry! I'm here
+ to h[el]p you out!
+ Ca[ll] me eCryst[al][,f] [if]
+ you want. I['ll] give you
+ some ev[ol]u[ti]on adv[ic]e!
+ Jaw ev[ol]u[ti]on ra[is]es
+ your b[it]e power.
+ Body ev[ol]u[ti]on ra[is]es
+ your defense power.
+ Horn ev[ol]u[ti]on ra[is]es
+ your horn a[tt]ack.
+ Hands, feet, [fi]n, and
+ ta[il] ev[ol]u[ti]on w[ill]
+ [in][fl]uence your HP, body
+ s[la]m a[tt]ack, and
  movement speed.
 
- But improv[in]g one
- ab[il][it]y m[ig]ht weaken
- some[thi]ng [el]se. So
- ev[ol]ve caref[ul][ly][!h]
+ But when you ev[ol]ve,
+ [the]re are [ti]mes when
+ o[the]r ab[ili][ti]es w[ill]
+ weaken. So be caref[ul][!h]
 
 
 ",480,,
@@ -197,12 +215,18 @@ evolve wonderfully.""
 ",173,,1,,
 "u‚»‚±‚ÌA‚¨‚³‚©‚È‚³‚ñI@‚»‚ÌA‚ ‚©‚¢
 @ƒNƒŠƒXƒ^ƒ‹‚ð‚½‚×‚Ä‚²‚ç‚ñB@‚Ó‚µ‚¬‚È
-@i‰»‚ð‚·‚é‚æcBv",72,"""Hi there fish!"" 
+@i‰»‚ð‚·‚é‚æcBv",72,"Hi there fish!"" 
 ""Try eating a red
 crystal. You may 
 evolve into a strange
 creature.""
-",94,"gExcuse me, f[is]h? Co[ul]d
+",94,"gHey [the]re, f[is]h! Try
+ ea[ti]ng [tha]t red cryst[al].
+ You w[ill] ev[ol]ve
+ wonderf[ul][ly]ch
+
+
+",128,"gExcuse me, f[is]h? Cou[ld]
  you maybe try ea[ti]ng
  [tha]t red cryst[al] [the]re,
  p[le]ase?
@@ -214,18 +238,24 @@ creature.""
 
 
 
-",128,,Formality and gfushigih are difficult
+",Formality and gfushigih are difficult
 "
 h‚·‚¢‚è‚ã‚¤‚ÌƒJƒxh‚ª@‚Å‚«‚Ä‚¢‚éB
 ",37,"There is a wall of 
 bubbles.
-",33,"Strong water currents
+",33,"A gwa[ll] of currentsh
+has formed.
+
+
+
+
+",47,"Strong water currents
 prevent you from
 [le]av[in]g.
 
 
 
-",47,,A gwall of water currentsh is built
+",A gwall of water currentsh is built
 "‚©‚´‚ñ‚Î‚­‚Í‚Â‚ÌƒVƒ‡ƒbƒN‚Å
 h‚·‚¢‚è‚ã‚¤‚ÌƒJƒxh‚ª@‚È‚­‚È‚Á‚½I
 ",61,"The wall of bubbles has
@@ -233,13 +263,19 @@ disappeared because
 of the explosion from
 the volcano.
 
-",87,"The water currents
+",87,"The gwa[ll] of currentsh
+[is] gone after [the] shock
+of [the] v[ol]can[ic] erup[ti]on.
+
+
+
+",57,"The water currents
 d[is][si]pate after [the]
 v[ol]can[ic] erup[ti]on.
 
 
 
-",57,,gshockh
+",gshockh
 "ƒiƒ}ƒR‚½‚¿‚Ì@‚¤‚í‚³‚Î‚È‚µ‚ª‚«‚±‚¦‚éB
 uƒAƒ“ƒRƒE‚Ì‚Â‚Ì@‚Á‚Ä@‚»‚Ì‚Ð‚©‚è‚Å
 @ƒeƒL‚ð@‚Ð‚«‚Â‚¯‚é‚ñ‚¾‚Á‚ÄIƒXƒSƒCIv
@@ -268,7 +304,37 @@ lead the fish to a
 new world.""
 
 ""Hmm... A new world.""
-",277,"The sea cucumbers are
+",277,"You hear [the] sea
+cucumbers gos[si]p[in]g.
+
+
+
+
+gSo, [tha]t Ang[le]r['s] Horn?
+ That attracts enem[ie]s
+ w[it]h [it]s [li][ght]?
+ Amaaaz[in]g[!!]h
+
+
+gBy [the] wayc [it] seems you
+ can['t] return to [the]se
+ waters when you pass
+ by [the] [thi]rd volcano.
+
+ From what I hearc
+ Lead[in]g [the] f[is]h to a
+ new wor[ld] seems to be
+ Lady Ga[ia]['s] p[la]n[!h]
+
+
+
+gHmmc A new wor[ld], huh?
+ For us, [thi]s sea [is]
+ p[le]nty! >cuke< >cuke<h
+
+
+
+",388,"The sea cucumbers are
 gos[si]p[in]g exc[it]ed[ly].
 
 
@@ -298,7 +364,7 @@ gos[si]p[in]g exc[it]ed[ly].
 
 
 
-",388,,gnama namah
+",gnama namah
 "‚©‚¢‚»‚¤@‚½‚¿‚Ì
 ƒqƒ\ƒqƒ\‚Î‚È‚µ‚ªA‚«‚±‚¦‚éB
 
@@ -324,22 +390,22 @@ trouble because the
 Kuraselaches keep
 interfering with
 them.""
-",216,"You hear some[thi]ng [in]
-[the] w[hi]spers of [the]
-seagrass.
+",216,"You can hear [the]
+seaweed wh[is]per[in]g.
 
 
 
-gcour Stromat[ol][it]e [al][li]es
- [in]tend to use some[thi]ng
- c[al][le]d eoxygenf to
- create [the] eNew Wor[ld][.f]
 
+Seaweed A:
+gOur Stromat[ol][it]e a[ll][ie]s
+ p[la]n to bu[il]d [the] eNew
+ Wor[ld]f w[it]h what [the]y
+ ca[ll] eoxygen[.f]
 
- But [tho]se C[la]dose[la]che
- hoo[li]gans are mak[in]g
- troub[le], so [the]y may be
- d[el]ayedch
+ But [tho]se [thu]gs, [the]
+ C[la]dose[la]ches, are
+ hass[li]ng [the]m, and [the]y
+ seem to be stym[ie]d[.h]
 
 
 ",226,,"gkomaruh - troubled, worried, stumped"
@@ -348,7 +414,7 @@ seagrass.
 ‚³‚ÄA‚³‚ÄA
 ‚¨‚Á‚Û‚Ìi‰»‚ªAƒWƒƒƒ“ƒvƒJA‘ÌƒJ‚É
 ‚¦‚¢‚«‚å‚¤‚·‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½‚æI
-",105,"""EVO tip.""
+",105,"EVO tip.""
 Welcome to the world
 of Amphibians!
 If you evolve your
@@ -356,17 +422,17 @@ tail, you will
 increase your jumping
 ability and your HP.
 
-",135,"W[el]come to [the] wor[ld] of
-amp[hi]b[ia]ns! Time for
-ano[the]r h[el]pf[ul] [ti]p!
+",135,"   gEv[ol]u[ti]on adv[ic]eh
+
+W[el]come to [the] wor[ld] of
+amp[hi]b[ia]ns!
+
+Now, [the]nc
+Ta[il] ev[ol]u[ti]on w[ill] now
+[in][fl]uence your jump[in]g
+and HP!
 
 
-
-We[ll], we[ll]! It [lo]oks [li]ke
-ev[ol]v[in]g your ta[il] w[ill] now
-a[ff]ect your jump[in]g
-ab[il][it]y as we[ll] as your
-HP!
 
 ",170,,"gas well ash not in the original
 Not too sure about grammar"
@@ -398,21 +464,27 @@ Strolite B:
 or the leader in the 
 cave will hear you!""
 
-",266,"You hear wh[is]pers from
-[the] Stromat[ol][it]es.
+",266,"You can hear [the]
+Stromat[ol][it]es wh[is]per[in]g.
 
 
 
+Stromat[ol][it]e A:
+g>s[ig]h< If on[ly] we cou[ld]
+ move free[ly] w[it]hour
+ s[ti]ck[in]g to [the] seabedc
 
-g>s[ig]h< If we weren['t]
- stuck to [the] seabed,
- we co[ul]d be freec no
- gang of C[la]dos[el]aches
- t[el][li]ng us what to
- doch
-gHush! Th[ei]r boss m[ig]ht
- hear you from [tha]t
- cave[!h]
+
+ We cou[ld] [li]ve w[it]hour
+ be[in]g r[ul]ed by [tho]se
+ C[la]dose[la]che [thu]gsch
+
+
+
+Stromat[ol][it]e B:
+gShh! The boss w[ill]
+ hear you from [hi]s
+ den[!h]
 
 
 
@@ -443,7 +515,22 @@ build a new world?
 
 I will defeat anyone
 who helps the 
-Strolites!",251,"Huh? Who['s] [tha]t?
+Strolites!",251,"Huh? What['s] [thi]s?
+
+T[hi]s turf be[lo]ngs to [the]
+gk[in]g of [the] sea[,h] [the]
+C[la]dose[la]che boss! And
+you came [in] anyway[?!]
+You moron! You can['t] be
+[thi]nk[in]g of h[el]p[in]g [tho]se
+Stromato-nuts w[it]h [the]ir
+gNew Worldh p[la]n!
+Th[is] gsea wor[ld]h [is] a[ll] [the]
+wor[ld] we need!
+
+If you['r]e here to he[lp]
+[tho]se numbsku[ll]s, I won['t]
+[le]t you [le]ave here a[li]ve[!!]",423,"Huh? Who['s] [tha]t?
 
 
 
@@ -473,7 +560,7 @@ work[--]not on [thi]s guy['s]
 watch!
 
 
-",423,,gThis me won't forgive any doofus who helps those doofusesh
+",gThis me won't forgive any doofus who helps those doofusesh
 "‚Ú‚­‚ç‚ÍAƒXƒgƒƒ}ƒgƒ‰ƒCƒgB
 ‚¤‚Ý‚Ì‚»‚Æ‚ÍA‚Ú‚­‚ç‚Ì‚Â‚­‚Á‚½hƒTƒ“ƒ\h
 ‚É‚Ý‚½‚³‚êA
@@ -484,7 +571,19 @@ Outside the sea a
 world filled with
 oxygen is being born.
 The entrance is here.
-",110,"Hey, [it]['s] us, [the]
+",110,"We['r]e [the] Stromat[ol][it]es.
+Out[si]de [the] sea, [the]
+goxygenh we made [is]
+spread[in]g.
+
+
+And now [tha]t wor[ld][--][the]
+gNew Wor[ld]h[--]has been
+born anew. The entrance
+[is] r[ig]ht [the]re!
+
+
+",150,"Hey, [it]['s] us, [the]
 Stromat[ol][it]es!
 
 Beyond [the] sea, [the] [ai]r
@@ -496,7 +595,7 @@ new opportun[it][ie]s!
 The entrance [is] r[ig]ht
 up [the]re!
 
-",150,,
+",
 "‚³‚ A‚¨‚ä‚«‚È‚³‚¢I
 h‚ ‚½‚ç‚µ‚¢‚¹‚©‚¢h‚ª‚Ü‚Á‚Ä‚Ü‚·‚æI
 ",45,"Okay, let's go.
@@ -557,7 +656,37 @@ awaits your new body.
 So----.
 Great Power-.
 Please give this 
-creature a new body.",580,"It['s] Ga[ia]!
+creature a new body.",580,"Th[is] [is] Ga[ia].
+
+After 200 m[il][io]on years,
+[it] [is] [the] end of [the] Age of
+F[is]h. Now, we beg[in] [the]
+oxygen-r[ic]h Age of Land.
+The gp[la]ntsh who h[el]ped
+[the] Stromat[ol][it]es have
+gone ahead of you. They
+are work[in]g hard now, so
+[tha]t [la]ter l[if]e can
+[fl]our[is]h.
+Now, [the]n!
+I have a wonderf[ul] g[if]t
+for you, now [tha]t you
+have surv[iv]ed [the] Age of
+F[is]hc
+An gamp[hi][bi]anh body!
+It can brea[the] oxygen
+w[it]h [it]s g[lu]ngs[,h] and [it] can
+move free[ly] on [la]nd.
+P[le]ase beg[in] your new
+adventure w[it]h [thi]s body.
+       Soc
+
+Alm[ig]hty Power!
+Grant [thi]s creature a
+new body!
+
+
+",0,"It['s] Ga[ia]!
 
 
 
@@ -604,7 +733,7 @@ So, here we go!
 Almighty Power[!!] [#10]
 
 Bestow upon [thi]s
-creature a new body!",0,,
+creature a new body!",
 "ƒV[ƒ‰ƒJƒ“ƒX
 u‚¤[[ccB
 @‚ÚA‚Ú‚­‚ç‚Í@ƒV[ƒ‰ƒJƒ“ƒXcB
@@ -621,18 +750,19 @@ for us to evolve or
 fight against other
 creatures.
 So, we stay as we
-are.""",142,"Umc
+are.""",142,"Coe[la]canth:
+gUmc
+ W-We['r]e Coe[la]canthsc
+ F[ig]ht[in]gc Ev[ol]v[in]gc
+ S-So much troub[le].
 
-W-we['r]e co[el]acanthsc
+ S-Soc
+ W-We['d] [li]ke [it] [if] you
+ [le]ave us a[lo]nec
+ R-Re[al][ly]ch
 
 
-
-It['s] r-re[al][ly] hard to
-compete and ev[ol]vec
-So, w-we['d] [li]ke [it] [if] you
-just l-[le]ave us [al]onec
-
-R-re[al][ly]c",0,,
+",0,,
 "‚æ‚»‚à‚Ì‚Í@‚Å‚Ä‚¢‚¯‚ÁII
 ‚±‚±‚©‚ç‚ÍAh‚µ‚å‚­‚Ô‚Âh‚ð‚Ý‚Ü‚à‚é
 ‚¿‚å‚¤‚ë‚¤‚³‚Ü‚Ì@‚Æ‚¿‚¾‚ÁI",81,"Get out stranger!
@@ -640,12 +770,18 @@ This land is owned
 by the elder who 
 takes care of plants.
 
-",85,"You don['t] b[el]ong here!
+",85,"Get out, stranger[!!]
+
+
+These are [the] [la]nds of
+our e[ld]er, [the] guard[ia]n of
+p[la]nts!
+",0,"You don['t] b[el]ong here!
 Get out!
 
 These p[la]nts are under
 [the] protec[ti]on of
-our great [el]der!",0,,"gLeave, stranger! Beyond here is the land of the elder-sama who watches over plants.h"
+our great [el]der!","gLeave, stranger! Beyond here is the land of the elder-sama who watches over plants.h"
 "ƒCƒNƒ`ƒIƒXƒeƒK‚Ì‚¿‚å‚¤‚ë‚¤
 u‚Ý‚²‚Æ‚¶‚áIIv
 
@@ -731,7 +867,61 @@ Child of Ikustega:
 ""---- Dad ----.""
 Elder of Ikustega:
 ""Could you please
-help us?""",813,"E[ld]er:
+help us?""",813,"Ich[thy]ostega e[ld]er:
+gImpress[iv]e[!h]
+
+Ich[thy]ostega c[hi][ld]:
+gYou['r]e so [str]ong[!h]
+
+Ich[thy]ostega e[ld]er:
+gWe knew someone w[it]h
+ your [str]ength wou[ld]
+ come. There['s] a favor
+ we need. W[ill] you hear
+ me out[?h]
+  Yes
+  No way!
+
+
+
+
+Ich[thy]ostega c[hi][ld]:
+gBut we need you!
+ L[is]ten to Grampa['s]
+ story[!h]
+
+
+gOh, good! You see,
+ [thi]s con[ti]nent was wet
+ once, [tha]nks to [the]
+ p[la]nts.
+
+
+ But some [str]ange[ly]-
+ ev[ol]ved [in]sects started
+ devour[in]g every[thi]ng,
+ and before you cou[ld]
+ b[li]nk, [it] was a
+ waste[la]nd.
+ Even when we p[le]d for
+ coex[is]tence, [the]y not
+ on[ly] refused, but
+ a[tt]acked our envoys as
+ we[ll]!
+
+ Th[is] c[hi][ld]['s] fa[the]r was
+ one of [the]m. He hasn['t]
+ come backch
+
+Ich[thy]ostega c[hi][ld]:
+gc Dadch
+Ich[thy]ostega e[ld]er:
+gIs [the]re any way you
+ can h[el]p[?h]
+
+
+
+",0,"E[ld]er:
 gMost impress[iv]e[!h]
 
 C[hi][ld]:
@@ -797,12 +987,12 @@ E[ld]er:
 
 
 
-",0,,
+",
 "ƒCƒNƒ`ƒIƒXƒeƒK‚Ì‚±‚Ç‚à
 uh‚µ‚å‚­‚Ô‚Âh‚ð@‚·‚­‚Á‚ÄIIv
 ",50,"
 Child of Ikustega:
-""Save the plants!""",42,"C[hi][ld]:
+""Save the plants!""",42,"Ich[thy]ostega c[hi][ld]:
 gP[le]ase h[el]p [the] p[la]nts[!h]
 
 
@@ -819,15 +1009,15 @@ Child of Ikustega:
 have become quiet.""
 Child of Ikustega:
 ""I wish dad would
-return soon.""",118,"E[ld]er:
+return soon.""",118,"Ich[thy]ostega e[ld]er:
 gThe [in]sects seem to
  have become more
- doc[il]e[.h]
+ doc[il]e lately[.h]
 
 
-C[hi][ld]:
-gCome home soon, Dadch
-
+Ich[thy]ostega c[hi][ld]:
+gWon['t] dad come home
+ soonc[?h]
 
 
 
@@ -837,8 +1027,8 @@ C[hi][ld]:
 @‚È‚ñ‚Ä‚±‚Æ‚ðIIIIIv",39,"Gaia:
 ""Ah.....h!""
 ""What are you doing?""",43,"Ga[ia]:
-gA[ie]eeeee[!!] You monster[!h]
-
+gA[ie]eeeee[!!] What are you
+ [thi]nk[in]g[?!]h
 
 
 
@@ -850,12 +1040,12 @@ Cockroach):
 ""Those pesky
 Amphibians are coming
 again!""
-",83,"Amp[hi]b[ia]n [in]vaders!
-Com[in]g to bug us aga[in]!
+",83,"Protophasma (ancestor
+  of cockroaches):
+gIt['s] [tho]se pesky
+ amp[hi][bi]ans aga[in]!
 
->ksksksks<
-
-
+ >ksksks<h
 ",0,,
 "
 ‚®‚®‚ÁcccB@‚Í‚ A‚Í‚ cccB
@@ -880,7 +1070,7 @@ Com[in]g to bug us aga[in]!
 ƒOƒtƒbI
 ‚ÞA‚Þ‚·‚±‚æccB
 @@@@@‚³‚æ‚¤‚È‚çcccB
-",432,"""Pant, pant...""
+",432,"Pant, pant...""
 I was supposed to try
 and persuade the King-
 Bee, but I have been
@@ -918,40 +1108,45 @@ Sighhh...
 ....Farewell, my
 son.
 
-",591,">cough< >gasp<
+",591,">cough< >pant< >pant<
 
-choped I co[ul]d conv[in]ce
-[the] K[in]g Beec but [thi]s
-was h[is] responsec
+I tr[ie]d to nego[ti]ate w[it]h
+[the] Bee K[in]gc
+T[hi]s was [hi]s rep[ly]c
 
-Can['t] anyone show [hi]m
-[the] importance of
-coex[is]tence?
+Can['t] anyone get [the]
+importance of
+coex[is]tence [thr]ough to
+[hi]m?
+>cough<
 
-Y-you [lo]ok [str]ongc
->cough< H[el]p me, p[le]ase!
-Ic I['ll] d[ie] soonc
+Y-you seem [str]ong.
+Can you h[el]p?
+>hack< >cough<
 
-Once I'm dead, p[le]ase
-eat [thi]s meat I['v]e
-saved.
+I-I['m] about to d[ie]c
 
-Become [str]ongc and
-defeat [tha]t damn Bee
-K[in]g for me!
-Bea[ti]ng [hi]m sho[ul]d
-restore [the] green to
-[thi]s con[ti]nentc
-c
+When I['m] dead, eat [the]
+meat I['v]e ga[the]red.
+Become [str]ong, and beat
+[tha]t damn Bee K[in]gc
 
-If on[ly]c
 
-cI co[ul]d have [li]ved to
-see my sonc
+And when he['s] gone, [the]
+con[ti]nent shou[ld] become
+green againc
+
+Butc
+
+I wanted to see my son
+before I d[ie], just oncec
+
 >cooough<
 
-   cmy sonc
-      cfarewe[ll]c
+M-my sonc
+
+  Goodbyec
+
 
 
 ",0,">cough< >gasp<
@@ -1043,32 +1238,32 @@ You may only change
 it one way though.
 By force!""
 
-",375,">[si]gh< The amp[hi]b[ia]ns
-just keep com[in]gc
+",375,"Bee K[in]g:
+gThey['r]e s[ti][ll] com[in]gc
+ Amp[hi][bi]ansch
+
+
+
+gHm?
+ You['v]e [al]so ev[ol]ved qu[it]e
+ we[ll]. Have you
+ borrowed power from
+ [the] Cryst[al]s[?h]
+
+gAs I['v]e s[ai]d, [the]
+ Cryst[al][s'] g[if]t of [si]ze
+ [le]aves us no way to
+ [li]ve except for
+ conquest[.h]
+
+gSo, [the] on[ly] way to stop
+ usc
 
 
 
 
-Wa[it]c you['v]e ev[ol]ved
-remarkab[ly], much [li]ke
-us. Have you used [the]
-Cryst[al]['s] power too?
+ [is] by force[!!]h
 
-
-I['v]e exp[la][in]ed many [ti]mesc
-When [the] Cryst[al]['s] g[if]t
-made our bod[ie]s [thi]s
-[la]rge, we co[ul]d on[ly] feed
-ours[el]ves by [in]vad[in]g
-o[the]rs.
-So [if] you want to end
-our [in]va[si]onc
-
-
-
-
-You['ll] have to [fi]ght
-back[!!]
 
 
 
@@ -1111,7 +1306,31 @@ next area is very
 strong. I suggest you
 run away.
 
-",331,"Hehehec
+",331,"Heh heh hehc Meganeura
+[the] dragonf[ly], at your
+serv[ic]e!
+
+
+
+That was amaz[in]g, [if] I
+may say so!
+Insects [li]ke mys[el]f d[id]n['t]
+care for [the] Bee K[in]g['s]
+methods.
+May I o[ff]er some adv[ic]e?
+There are no [str]ong
+enem[ie]s beyond here,
+so you won['t] need to
+worry about ev[ol]v[in]g.
+Heh hehc
+
+However, [the] sand-ea[ti]ng
+worms [in] [the] desert
+ahead are [in]v[ul]nerab[le].
+I suggest [tha]t you av[oi]d
+[the]m and run!
+
+",0,"Hehehec
 
 Meganeura [the] dragonf[ly],
 at your serv[ic]e!
@@ -1146,7 +1365,7 @@ d[is]tance from [tho]se
 [in]v[in][ci]b[le] sand-ea[ti]ng
 worms!
 
-Ehehe!",0,,"Not sure about gsukunakattah
+Ehehe!","Not sure about gsukunakattah
 
 gHowever, you'd better avoid the completely invincible sand-eating bugs in the next desert and run away.h"
 "ƒGƒ_ƒzƒTƒEƒ‹ƒX
@@ -1165,18 +1384,19 @@ of Reptiles.
 The Era of Plants and
 Insects has ended.""
 
-",158,"A:
-gYa can['t] go on w[it]h a
- body [li]ke [tha]t, don['t]cha
- know[?h]
+",158,"Edaphosaurus:
+gHey you! That body['s]
+ no good now[!h]
 
 
-B:
-gThe Age of Rep[ti][le]s [is]
- com[in]g!
 
- Insects, amp[hi]b[ia]nsc
- [the]ir [ti]me [is] up[!h]",0,"Ha! Don['t]cha know?
+gIt['s] [the] Age of Rep[ti][le]es
+ now! The age of
+ amp[hi][bi]ans and [in]sects [is]
+ over[!h]
+
+
+",0,"Ha! Don['t]cha know?
 That body [is] soooo
 20 m[il][li]on years ago!
 
@@ -1210,7 +1430,7 @@ From now on, it's the Age of Reptiles! It's the end of the age of amphibians, in
 ‚à‚Á‚½A‚Ó‚µ‚¬‚È‚©‚ç‚¾‚Å‚·B
 ‚¨‚¨‚¢‚È‚éƒJ‚æI
 ‚±‚Ì‚à‚Ì‚ÉA‚ ‚½‚ç‚µ‚¢‚©‚ç‚¾‚ð
-‚ ‚½‚¦‚½‚Ü‚¦I",418,"""Balance of Nature""
+‚ ‚½‚¦‚½‚Ü‚¦I",418,"Balance of Nature""
 which the giant 
 insects destroyed will
 recover.
@@ -1230,7 +1450,31 @@ many different things
 with this body.
 Great Power! Give this
 creature a new body!
-",375,"Those swarm[in]g g[ia]nt
+",375,"The gb[al]ance of natureh
+[the] g[ia]nt [in]sects
+d[is]rupted shou[ld] be
+restored now.
+
+
+The p[la]nts [the]y devoured
+w[ill] spread qu[ic]k[ly]. The
+[la]nd w[ill] overf[lo]w w[it]h
+green, and l[if]e w[ill]
+f[lo]ur[is]hc
+
+Now, [the]n! I w[ill] grant
+you ano[the]r new body.
+Th[is] [is] a ""rep[ti][le]"" body.
+It [is] a remarkab[le] body,
+capab[le] of va[ri]ous types
+of ev[ol]u[ti]on.
+Alm[ig]hty Power!
+Grant [thi]s creature a
+new body!
+
+
+
+",0,"Those swarm[in]g g[ia]nt
 [in]sects put [the] ba[la]nce
 of nature out of
 order, but [thi]ngs sho[ul]d
@@ -1260,7 +1504,7 @@ Bestow upon [thi]s
 creature a new body!
 
 
-",0,,"gThe plants will soon increase to the extent that they devoured them, and the land will overflow with greenery. It should become a world of peaceful life for animals.h
+","gThe plants will soon increase to the extent that they devoured them, and the land will overflow with greenery. It should become a world of peaceful life for animals.h
 
 gIt's a wonderful body that holds the potential of various types of evolution.h"
 "‚Â‚¬‚ÌŽž‘ã‚ÍA
@@ -1282,7 +1526,25 @@ called ""Dinosaurs"",
 because of their 
 strength.
 
-",157,"We[ll], [in] [thi]s next era,
+",157,"In [the] next era, tri[al]s
+await.
+Those [the]re are about
+to ev[ol]ve yet fur[the]r,
+[in] a world of gpower[.h]
+
+Later on, because of
+[the]ir [str]ength, [the]y w[ill]
+be g[iv]en a namec
+
+
+
+gD[in]osaurshc
+
+
+
+
+
+",0,"We[ll], [in] [thi]s next era,
 many creatures w[ill]
 ev[ol]ve fur[the]r and
 become much [la]rger,
@@ -1306,7 +1568,7 @@ Dreadf[ul] rep[ti][le]sc
 
 
 
-",0,,"Odd grammar
+","Odd grammar
 
 gThis next age, you'll pass through a trial, and a world of 'power' of creatures that have evolved furtherh ...?"
 "‚»‚ç‚Ì@‚Ù‚¤‚©‚ç
@@ -1367,35 +1629,41 @@ Whisper B:
 good for the future of
 this planet------""
 
-",539,"You hear a w[hi]spered
-conversa[ti]on from
-above you.
+",539,"You hear a wh[is]pered
+conversa[ti]on from [the]
+skyc
 
 
 
-A:
-gCapta[in]! Isn['t] [tha]t
- green cryst[al] ba[si]c[al][ly]
- an eev[ol]u[ti]on revers[al]f
- de[vi]ce [tha]t can restore
- [the] foss[il] record[?h]
-B:
-gcyeeesch
-A:
-gBut, Capta[in]c [is]n['t]
- ma[ni]p[ul]a[ti]ng ev[ol]u[ti]on
- [li]ke [tha]tc c[lu]msy[?h]
-B:
-gcnooooch
+Wh[is]per A:
+gCapta[in]! The green
+ Cryst[al]s [tha]t return you
+ to your former s[el]fc
+ Were [the]y eev[ol]u[ti]on
+ revers[al]f dev[ic]es[?h]
+Wh[is]per B:
+gYeeesch
 
-A:
-gI don['t] know what w[ill]
- come of [it][!h]
-B:
-gc
+Wh[is]per A:
+gBut, capta[in]c
 
- c[it] [is] for [the] good of
- [thi]s wor[ld]ch
+ Us[in]g such a [thi]ng to
+ ma[ni]p[ul]ate ev[ol]u[ti]onc
+ Isn['t] [tha]t unw[is]e[?h]
+Wh[is]per B:
+gNoooo[!!]h
+
+Wh[is]per A:
+gIf any[thi]ng happens,
+ [it] wasn['t] my idea[.h]
+
+
+
+Wh[is]per B:
+gcc
+ It['s] for [the] future
+ of [thi]s p[la]netch
+
 
 ",0,"You hear a w[hi]spered
 conversa[ti]on from
@@ -1446,3 +1714,4 @@ B:
 gI don't know what will come of it.h
 
 gThis is for the future of this world.h"
+,,,,,,,
