@@ -1,0 +1,25 @@
+#:import PixelDisplay pyy_chr.ui.kivy.PixelDisplay
+
+BoxLayout:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+
+        Button:
+            text: 'Settings'
+            size_hint: (None, None)
+            on_release: app.open_settings()
+
+    TextInput:
+        id: text_input
+        on_text: app.on_text_changed(self.text)
+        on_cursor_row: app.scroll_to_line(self.cursor_row)
+
+
+    BoxLayout:
+        PixelDisplay:
+            pixel_provider: app.pixel_provider
+            #size: self.texture_size
+            #size_hint: (None, None)
