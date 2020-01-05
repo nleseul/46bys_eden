@@ -12,10 +12,21 @@ BoxLayout:
             size_hint: (None, None)
             on_release: app.open_settings()
 
-    TextInput:
-        id: text_input
-        on_text: app.on_text_changed(self.text)
-        on_cursor_row: app.scroll_to_line(self.cursor_row)
+        Button:
+            text: 'Newline'
+            size_hint: (None, None)
+            on_release:
+                text_input.insert_text('\n')
+                text_input.focus = True
+
+    ScrollView:
+        id: text_scroll_hack
+        TextInput:
+            id: text_input
+            size_hint_y: None
+            height: max(self.minimum_height, text_scroll_hack.height)
+            on_text: app.on_text_changed(self.text)
+            on_cursor_row: app.scroll_to_line(self.cursor_row)
 
 
     BoxLayout:
