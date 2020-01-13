@@ -60,8 +60,8 @@ Time Gate"
   cave"
 　　きょうりゅうたいりくのいりぐち,35,(e5) (1) Door to Dina Continent,27,"  Arr[iv][al] on [the]
 d[in]osaur con[ti]nent"
-　　げんしガエルのぬま,23,(e5) (1)  Marsh of Prime Frog  ,27,"  Swamp of
-anc[ie]nt frogs"
+　　げんしガエルのぬま,23,(e5) (1)  Marsh of Prime Frog  ,27," Swamp of
+proto-frogs"
 　　両せい類のぬま,19,(e5) (1)  Marsh of Amphibians  ,27,"Swamp of
 amp[hi]b[ia]ns"
 　　テコドントのなわばり,25,(e5) (1)  Domain of Tecodonto  ,27,"Thecodontosaur
@@ -76,7 +76,7 @@ terr[it]ory"
    terr[it]ory"
 　　ステゴザウルスのなわばり,29,(e5) (1)  Domain of Segosaurus ,27,"Stegosaur
 terr[it]ory"
-　　げんしガエルのなわばり,27,(e5) (1)  Domain of Prime Frog ,27,"Anc[ie]nt frog
+　　げんしガエルのなわばり,27,(e5) (1)  Domain of Prime Frog ,27,"Proto-frog
  terr[it]ory"
 　　トリケラトプスのなわばり,29,(e5) (1)   Domain of Tritops   ,27,"Tr[ic]eratops
  terr[it]ory"
@@ -182,3 +182,4 @@ To[ol]-Users"
  of Eden"
 　,3,  ,3,
 　,3,  ,3,
+,,,,
