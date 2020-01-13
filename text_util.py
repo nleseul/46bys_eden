@@ -26,7 +26,10 @@ def map_char(ch, map, unknown_chars = None):
         
 def consume_char(line, map, unknown_chars = None):
     if line[0] == '[':
-        end_index = line.index(']')
+        end_index = line.find(']')
+        if end_index < 0:
+            return line[1:], b'\x00'
+
         ch = line[1:end_index]
         
         if ch.startswith('#'):

@@ -60,7 +60,7 @@ class PreviewerApp(App):
                 continue
             if line_index >= current_line + LINES:
                 break
-            writer.write((line_index - current_line + 1) * (WIDTH + 2) + 1, line.ljust(WIDTH, b'\x00'))
+            writer.write((line_index - current_line + 1) * (WIDTH + 2) + 1, line.ljust(WIDTH, b'\x00')[:WIDTH])
         writer.end_write()
 
 if __name__ == '__main__':
