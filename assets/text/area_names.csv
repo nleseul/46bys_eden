@@ -5,7 +5,7 @@ new journeys"
 　　テローダスのうみ,21,(e5) (1)    Ocean of Terodus   ,27,"Sea of
 The[lo]dus"
 　,3,  ,3,
-　　ケファラスピスのなわばり,29,(e5) (1)   Domain of Cepalas   ,27,"Cepha[la]ps[is]
+　　ケファラスピスのなわばり,29,(e5) (1)   Domain of Cepalas   ,27,"Cepha[la]p[si]s
 terr[it]ory"
 　,3,  ,3,
 　　クラドセラケのなわばり,27,(e5) (2) Domain of Kuraseleache,27,"C[la]dose[la]che
@@ -16,13 +16,13 @@ Coe[la]canths"
 　　パンゲアのかいがん,23,(e5) (8)     Coast of Pange    ,27,"Coast of
 Pangaea"
 　　みちびきのどうくつ,23,(e5) (1)    Cave of Guidance   ,27,"Cave of
-guidance"
+gu[id]ance"
 　　ゆうわくのどうくつ,23,(e5) (1)   Cave of Temptation  ,27," Cave of
 tempta[ti]on"
 　　サンヨウチュウとオウムガイのどうくつ,41,(e5) (1)     Cave of Origin    ,27,"Cave of tr[il]ob[it]es
   and nau[ti][lu]ses"
 　　ジニクチスのどうくつ,25,(e5) (1)   Cave of Zinichtys   ,27,"Cave of
-D[in][ic]h[thy]s"
+Di[ni]ch[thy]s"
 　　　　しょう　　　／　　エリアつうかしました,47,    Chapter  You pass   /   Area,33,"
 Ch.    /   areas c[le]ar"
 　　パンゲアのかいがん,23,(e5) (8)     Coast of Pange    ,27,"Coast of
@@ -31,20 +31,20 @@ Pangaea"
 Pangaea"
 　　よわきなイクチオステガのとち,33,(e5) (1) Land of timid Ikustega,27,"Land of f[li]ghty
  Ich[thy]ostega"
-　　つよきなイクチオステガのとち,33,(e5) (1) Land of bull Ikustega ,27,"Land of [fi]ghty
+　　つよきなイクチオステガのとち,33,(e5) (1) Land of bull Ikustega ,27,"Land of f[ei]sty
  Ich[thy]ostega"
-　　両せい類のまもりのとち,27,(e5) (1)   Land of Amphibians  ,27,"Amp[hi]b[ia]n[s']
- refuge"
+　　両せい類のまもりのとち,27,(e5) (1)   Land of Amphibians  ,27,"Amp[hi]b[ia]n
+refuge"
 　　イクチオステガちょうろうのとち,35,(e5) (1) Land of Boss Ikustega ,27,"Ich[thy]ostega
 E[ld]er['s] home"
-　　なにもいないとち,21,(e5) (1)       Empty Land      ,27,"Midd[le] of
+　　なにもいないとち,21,(e5) (1)       Empty Land      ,27,"M[id]d[le] of
 nowhere"
 　　プロトファスマのなわばり,29,(e5) (1)   Domain of Profasu   ,27,"Protophasma
  terr[it]ory"
 　　きょだいハチのなわばり,27,(e5) (1)  Domain of Giant Bee  ,27,"G[ia]nt bee
 terr[it]ory"
-　　コン虫のまもりのとち,25,(e5) (1)     Land of Insect    ,27,"  Insect[s']
-occup[ie]d [la]nd"
+　　コン虫のまもりのとち,25,(e5) (1)     Land of Insect    ,27,"Insect[s']
+conquest"
 　,3,  ,3,
 　　せんたくのさばく,21,(e5) (1)    Desert of Choice   ,27,"Desert of
  cho[ic]es"
@@ -81,7 +81,7 @@ terr[it]ory"
 　　トリケラトプスのなわばり,29,(e5) (1)   Domain of Tritops   ,27,"Tr[ic]eratops
  terr[it]ory"
 　　かくれほにゅう類のやま,27,(e5) (1)   Mt. Hidden Mammals  ,27," Mounta[in] of
-[hi]dden mamm[al]s"
+h[id]den mamm[al]s"
 　　プレシオサウルスのうみ,27,(e5) (1)  Ocean of Plesusaurus ,27," Sea of
 P[le][si]osaurs"
 　,3,  ,3,
@@ -96,8 +96,8 @@ terr[it]ory"
 　　ティラノサウルスのなわばり,31,(e5) (1)  Domain of Tyrosaurus ,27,"Tyrannosaur
  terr[it]ory"
 　,3,  ,3,
-　　アステロイドのかわ,23,(e5) (1)   River of Asteroid   ,27," R[iv]er of
-Asteroids"
+　　アステロイドのかわ,23,(e5) (1)   River of Asteroid   ,27,"R[iv]er of
+Aster[oi]ds"
 　,3,  ,3,
 　,3,  ,3,
 　,3,  ,3,
@@ -124,8 +124,8 @@ terr[it]ory"
 remnants"
 　　いきのこりもののとち,25,(e5) (1)    Land of Survival   ,27,"Land of
 remnants"
-　　バルキテリウムのなわばり,29,(e5) (1)   Domain of Balrium   ,27,"Paracera[the]rium
-   terr[it]ory"
+　　バルキテリウムのなわばり,29,(e5) (1)   Domain of Balrium   ,27,"Paracera[the]r[iu]m
+  terr[it]ory"
 　　ハイエノドンのなわばり,27,(e5) (1)   Domain of Hynodon   ,27,"Creodonta
 terr[it]ory"
 　　イエティぞくのなわばり,27,(e5) (1)     Domain of Yeti    ,27,"  Ye[ti]
@@ -136,11 +136,11 @@ terr[it]ory"
 fortress"
 　,3,  ,3,
 　　しんぱんのどうくつ,23,(e5) (1)   Cave of Judgement   ,27,"Cave of
-[the] F[al][le]n"
-　　デルタデリジウムのどうくつ,31,(e5) (1)   Cave of Deltadium   ,27,"   Cave of
-D[el]ta[the]ridiums"
-　　さいごのたびだちのとき,27,(e5) (1)  Final Step to Evolve ,27,"Enter[in]g [#3031]
- f[in][al] era"
+judgment"
+　　デルタデリジウムのどうくつ,31,(e5) (1)   Cave of Deltadium   ,27,"  Cave of
+D[el]ta[the]r[id]ium"
+　　さいごのたびだちのとき,27,(e5) (1)  Final Step to Evolve ,27,"Enter[in]g [the]
+ [fi]n[al] era"
 　　オオツノジカのなわばり,27,(e5) (1)  Domain of Sincerous  ,27,"G[ia]nt [el]k
 terr[it]ory"
 　　にくしょく魚のなわばり,27,(e5) (1) Domain of Fish of Prey,27," F[le]sh-ea[ti]ng
@@ -149,13 +149,13 @@ f[is]h terr[it]ory"
 terr[it]ory"
 　　ワニのなわばり,19,(e5) (1)  Domain of Alligator  ,27,"Crocod[il]e
 terr[it]ory"
-　　グリズリーのなわばり,25,(e5) (1)   Domain of Grizzly   ,27,"Grizz[ly] bear
+　　グリズリーのなわばり,25,(e5) (1)   Domain of Grizzly   ,27,"G[ri]zz[ly] bear
  terr[it]ory"
-　　かくれステゴのもり,23,(e5) (1)  Forest of Segosaurus ,27,"Hidden
- g[la]de"
+　　かくれステゴのもり,23,(e5) (1)  Forest of Segosaurus ,27,"  H[id]den
+Stego g[la]de"
 　　エオヒッパスのなわばり,27,(e5) (1)      Domain Eohip     ,27,"Eo[hi]ppus
 terr[it]ory"
-　　サーベルタイガーのなわばり,31,(e5) (1) Domain of Saber Tiger ,27,"Saber-too[#3031]d
+　　サーベルタイガーのなわばり,31,(e5) (1) Domain of Saber Tiger ,27,"Saber-too[the]d
 cat terr[it]ory"
 　,3,  ,3,
 　　ディアトリマのなわばり,27,(e5) (1)   Domain of Ditryma   ,27,"D[ia]tryma
@@ -170,16 +170,15 @@ terr[it]ory"
 　,3,  ,3,
 　,3,  ,3,
 　　さいごのうみ,17,(e5) (1)      Final Ocean      ,27,"Return to
- [#3031] sea"
+ [the] sea"
 　,3,  ,3,
 　,3,  ,3,
 　,3,  ,3,
-　　えん人のほらあな,21,(e5) (1)  Cave of Monkey Human ,27,"V[ill]age of
-To[ol]-Users"
+　　えん人のほらあな,21,(e5) (1)  Cave of Monkey Human ,27,"Sim[ia]n
+ den"
 　,3,  ,3,
 　,3,  ,3,
 　　エデンのいりぐち,21,(e5) (1)   Entrance of Eden   ,26,"Thresh[ol]d
  of Eden"
 　,3,  ,3,
 　,3,  ,3,
-,,,,

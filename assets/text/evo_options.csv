@@ -14,7 +14,7 @@ Hard%%%%%%%%%600P
   carapace
 Larger body%%400P
 
-Sm[al][le]r body%%%200P",98
+Sma[ll]er body%%200P",98
 "さいしょのアゴ……………　　１０ｐ
 クラドセラケのアゴ………　２００ｐ
 ジニクチスのアゴ…………　８００ｐ",81,"Original Jaws..............10P
@@ -23,7 +23,7 @@ Zinichthy's Jaws..........800P",96,"Simp[le] jaw%%%% 10P
 
 C[la]dose[la]che%%%200P
   jaw
-D[in][ic]h[thy]s jaw%%800P",78
+Di[ni]ch[thy]s jaw%800P",78
 "さいしょのツノ……………　２００ｐ
 ねじりツノ…………………　３００ｐ
 ちょうちんアンコウのツノ　５００ｐ
@@ -77,7 +77,7 @@ Coe[la]canth%%%%100P
   ta[il]
 Pteraps[is]%%%%%300P
   ta[il]
-D[in][ic]h[thy]s ta[il]%%500P
+Di[ni]ch[thy]s ta[il]%500P
 
 C[la]dose[la]che%%%700P
   ta[il]",135
@@ -101,7 +101,7 @@ Armored sk[in]%5000P
 
 Larger body%1000P
 
-Sm[al][le]r body%%1000P",147
+Sma[ll]er body%1000P",147
 "カエルのアゴ………………　　５０ｐ
 イクチオステガのアゴ……　２００ｐ
 キバのはえたアゴ…………　５００ｐ
@@ -161,7 +161,7 @@ Thorn Dorsal Fin.........1000P
 Jumping Dorsal Fin.......1000P
 Remove.....................50P",192,"Simp[le] dors[al]%  50P
   f[in]
-Ves[ti]gi[al]%%%%% 200P
+Ves[ti]g[ia]l%%%%% 200P
   shark f[in]
 Edaphosaur%%1000P
   f[in]
@@ -252,7 +252,7 @@ A[ll]osaur%%%%%3000P
   jaw
 Tyrannosaur%5000P
   jaw
-P[si][tt]acosaur%% 100P
+Ps[it]tacosaur% 100P
   jaw
 Pteranodon%% 200P
   jaw
@@ -351,7 +351,7 @@ Fea[the]red%%%%3000P
   sk[in]
 Larger body%1500P
 
-Sm[al][le]r body%%1500P",162
+Sma[ll]er body%1500P",162
 "プテラノドンの　尾………　１００ｐ
 ウネウネの　尾……………　３００ｐ
 トゲの　尾…………………　５００ｐ
@@ -394,7 +394,7 @@ Ramap[it]hecus%5000P
   body
 Larger body%1500P
 
-Sm[al][le]r body%%1500P",0
+Sma[ll]er body%1500P",0
 "ネズミがたのアゴ…………　１００ｐ
 ネコがたのアゴ……………　２００ｐ
 イヌがたのアゴ……………　６００ｐ
@@ -461,9 +461,9 @@ Decrease Body Size.......1500P",96,"Con[ti]nue to%%2000P
   ev[ol]ve
 Larger body%1500P
 
-Sm[al][le]r body%%1500P",0
+Sma[ll]er body%1500P",0
 "からだを、大きく…………１５００ｐ
 からだを、小さく…………１５００ｐ",44,"Increase Body Size.......1500P
 Decrease Body Size.......1500P",64,"Larger body%1500P
 
-Sm[al][le]r body%%1500P",0
+Sma[ll]er body%1500P",0
