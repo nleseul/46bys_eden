@@ -4,6 +4,15 @@
 0C=Åh
 0D=~
 
+1213=tha
+1214=the
+1215=tho
+1216=thu
+1217=thy
+1218=thr
+
+1f='t
+
 22=!!
 23=?!
 24=!Åh
@@ -16,22 +25,16 @@
 2B=?Åf
 2C=.~
 
-3031=tha
-3032=the
-3033=tho
-3034=thu
-3035=thy
-3036=thr
-3738=thi
+3031=str
+3233=thi
 
-3a='ll
-3b='t
+3b='ll
 3c='r
 3d='v
 3e='d
 3f=s'
 
-4243=str
+
 
 5f=_
 
@@ -86,10 +89,11 @@ A6=ig
 A7=il
 A8=in
 A9=ip
-AA=is
-AB=it
-AC=iu
-AD=iv
+AA=ir
+AB=is
+AC=it
+AD=iu
+AE=iv
 
 B0='s
 B1=ill
@@ -144,15 +148,16 @@ E0=ai
 E1=ci
 E2=ei
 E3=fi
-E4=hi
-E5=li
-E6=ni
-E7=oi
-E8=pi
-E9=ri
-EA=si
-EB=ti
-EC=vi
+E4=gi
+E5=hi
+E6=li
+E7=ni
+E8=oi
+E9=pi
+EA=ri
+EB=si
+EC=ti
+ED=vi
 
 F0=al
 F1=el
