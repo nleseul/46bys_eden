@@ -1,6 +1,6 @@
 "＊
 さあ、”進化の時”かやってきましたよ！
-　(f)",55,,,"[#4601]Anyway, it's time to evolve!
+　(f)",55,,,"[#4601]Now, [le]t us ev[ol]ve!
 [#cf01ffbb010f]",
 "＊
 １．とこを、進化　させますか？
@@ -20,7 +20,7 @@
 (7)．／
 (6)８９：；＜＝
 (7)＞？
-(8)(e)進化　させない。",287,,,"[#4300]What body part wou[ld] you
+(8)(e)進化　させない。",287,,,"[#4300]Wh[ic]h body part wou[ld] you
 [#6300][li]ke to ev[ol]ve?
 [#a400ffbb00ffdd2048494a4b]
 [#a800ffbb01ffdd204c4d4e4f]
@@ -48,7 +48,7 @@
 　はい
 ／
 (1)いいえ",73,0,,"[#5002]Are you sure?
-[#92020e] [#ffbb00]Yes[#ffbbff]/[#ffbb01]No",0x11605 (when isolated)
+[#92020e] [#ffbb00]Yes[#ffbbff]/[#ffbb01]No","0x11605 (when isolated)"
 "ｏ　　　＊
 進化ホイントか
 足りません！",47,,,"[#5002]You don['t] have
@@ -57,14 +57,14 @@
 ＊　＊
 ふしきな、時のなかれか
 あなたを進化させます…。",69,,,"[#0901]Time f[lo]ws by
-[#2901]rapid[ly], and
+[#2901]strange[ly], and
 [#4901]you ev[ol]ve…",
 "＊
 ２．とう、進化　させますか？
 (1)(2)(2)(2)(2)(2)(2)(2)(2)(2)(2)(2)(2)(2)(3)
 (8)ｅｖｏ．ｐ：　　　　　　　(a)
 (4)(5)(5)(5)(5)(5)(5)(5)(5)(5)(5)(5)(5)(5)(6)",139,,,"[#4301]How wou[ld] you
-[#6301][li]ke to ev[ol]ve it?
+[#6301][li]ke to ev[ol]ve [it]?
 [#ef000102020202020202020202020203]
 [#0f0108]EP:         [#0a]
 [#2f010405050505050505050505050506]",
@@ -72,27 +72,26 @@
 ＊
 進化かおこります。
 　(f)",63,,,"[#0701]An unfam[ili]ar
-[#2701]environment causes
+[#2701]env[ir]onment causes
 [#4701]causes you to ev[ol]ve.
 [#af01ffbb000f]",
 "＊
 クリスタルのカかきれました。
 ＊　　　　＊
 まえのすかたに、もとります。
-　(f)",93,,,"[#0701]The Cryst[al]['s] power [is]
-[#2701]dep[le]ted. You return
-[#4701]to your norm[al] form.
+　(f)",93,,,"[#0601]The Cryst[al]['s] power [is]
+[#2601]dep[le]ted. You return
+[#4601]to your norm[al] form.
 [#af01ffbb000f]",
 "クリスタルのカによって、
 ＊　　　＊　　＊
 ふしきな進化か、はしまります。
 　(f)",89,,,"[#0701]The Cryst[al]['s] power
-[#2701]acc[el]erates your
-[#4701]ev[ol]u[ti]on!
-[#af01ffbb000f]",0x1161f
+[#2701]causes a strange
+[#4701]ev[ol]u[ti]on.
+[#af01ffbb000f]","0x1161f"
 "あなたの　ゆうき　に　しゅくふく　あれ！
 ”鳥類”　に　進化　します！
-　(f)",83,,,"[#0701]Is [#3233]s a reward for
-[#2701]courage…? You are
-[#4701]ev[ol]ved [in]to a “bird”!
+　(f)",83,,,"[#0701]Be b[le]ssed for your courage!
+[#4701]You ev[ol]ve [in]to a “bird”!
 [#af01ffbb000f]",

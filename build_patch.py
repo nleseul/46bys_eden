@@ -145,6 +145,16 @@ def write_dialog_choice_entry(patch, address, dialog_index=None, page_index=None
     if first_option is not None:
         patch.add_record(address + 12, num_16bit(first_option))
 
+def write_hdma_table_entry(patch, base_address, entry_index, row_count=None, left_value=None, right_value=None):
+    # The HDMA tables we care about all modify the window registers to form the shapes of window
+    # backgrounds. Each entry is three bytes: Number of rows affected, left bound, right bound.
+    entry_address = base_address + 3 * entry_index
+    if row_count is not None:
+        patch.add_record(entry_address,     num_8bit(row_count))
+    if left_value is not None:
+        patch.add_record(entry_address + 1, num_8bit(left_value))
+    if right_value is not None:
+        patch.add_record(entry_address + 2, num_8bit(right_value))
 
 if __name__ == '__main__':
     os.makedirs('build', exist_ok=True)
@@ -298,11 +308,14 @@ if __name__ == '__main__':
     # Starting address, width, height. The fourth word is a flag of some kind, but I'm not sure what it does.
 
     # Area menu
+    patch.add_record(0xf80da, num_16bit(17) + num_16bit(7))  # Main window (3 options) is wider and shorter.
     patch.add_record(0xf810a, num_16bit(23))                 # Name entry grid is narrower.
     patch.add_record(0xf8110, num_16bit(7))                  # "Name" window starts earlier
     patch.add_record(0xf8112, num_16bit(17))                 #   and is wider.
     patch.add_record(0xf811c, num_16bit(4))                  # "Fossil recorded" is shortened.
-    patch.add_record(0xf8122, num_16bit(17) + num_16bit(13)) # Window for the main window is a bit bigger.
+    patch.add_record(0xf8122, num_16bit(17) + num_16bit(9))  # Window for the main window is a bit bigger.
+    patch.add_record(0xf815a, num_16bit(17) + num_16bit(5))  # Main window (2 options) is wider and shorter.
+    patch.add_record(0xf8164, num_16bit(5))                  # Main window (1 option) is shorter.
     write_strings_from_csv(patch, 'assets/text/menu_area.csv', reverse_font_map, 0xf8170, 19 * 2, 0xf8196, 1378, newline=b'\xff\xfe', terminator=b'\xff\xff')
 
     # Evolution menu
@@ -316,7 +329,7 @@ if __name__ == '__main__':
     write_strings_from_csv(patch, 'assets/text/menu_evo.csv', reverse_font_map, 0xf8748, 10 * 2, 0xf875c, 1008, newline=b'\xff\xfe', terminator=b'\xff\xff')
 
     # Map menu
-    patch.add_record(0xf8b4e, num_16bit(17) + num_16bit(13))                    # Window for the main menu is a bit bigger.
+    patch.add_record(0xf8b4e, num_16bit(17) + num_16bit(9))                     # Window for the main menu is a bit bigger.
     patch.add_record(0xf8b5e, num_16bit(15))                                    # "Are you sure?" (for saving) gets wider.
     patch.add_record(0xf8b68, num_16bit(4))                                     # "Save data recorded" gets shorter.
     patch.add_record(0xf8b94, num_16bit(0x01c7))                                # "There are no records" moves down a row
@@ -361,6 +374,11 @@ if __name__ == '__main__':
     patch.add_record(0x1c699, text_util.map_char('e', reverse_font_map))
 
     # And HDMA tables...
+    write_hdma_table_entry(patch, 0x1158b, 1, row_count=0x32, right_value=0x8d) # 3-option root menu - Wider on right and shorter.
+    write_hdma_table_entry(patch, 0x11595, 2, row_count=0x22)                   # Status window (2 options) - Menu shorter.
+    write_hdma_table_entry(patch, 0x11595, 4, row_count=0x48)                   #                             Next region(s) wider to compensate.
+    write_hdma_table_entry(patch, 0x115d1, 1, row_count=0x22, right_value=0x8d) # 2-option root menu - Wider on right and shorter.
+
     patch.add_record(0x1160f, b'\x7b') # Standalone yes/no confirmation on evo menu; make slightly wider on the left.
     patch.add_record(0x11618, b'\x42') # Some window a little shorter; might be one of the evolution messages.
     patch.add_record(0x11622, b'\x42') # I think this is the red crystal message. Make it a bit shorter.
@@ -371,56 +389,74 @@ if __name__ == '__main__':
     patch.add_record(0x11661, b'\xd5') #                      blocks? I don't know.
     patch.add_record(0x11669, b'\x1e') # "Save data recorded." Wider on the left.
     patch.add_record(0x11679, b'\x8d') # "Where will you record your save data?" - Menu window wider on right
-    patch.add_record(0x1167a, b'\x46') #                                         - and taller on bottom.
-    patch.add_record(0x1167d, b'\x10') #                                         - Shorten the save window to compensate.
+    patch.add_record(0x1167a, b'\x26') #                                         - and taller on bottom.
+    patch.add_record(0x1167d, b'\x30') #                                         - Shorten the save window to compensate.
     patch.add_record(0x11689, b'\x8d') # "Are you sure?" (for saving) - Menu window wider on right
-    patch.add_record(0x1168a, b'\x46') #                                and taller on bottom.
-    patch.add_record(0x1168d, b'\x10') #                                Shorten the save window to compensate.
+    patch.add_record(0x1168a, b'\x26') #                                and taller on bottom.
+    patch.add_record(0x1168d, b'\x30') #                                Shorten the save window to compensate.
     patch.add_record(0x11692, b'\xb5') #                                Wider confirmation window.
     patch.add_record(0x116ad, b'\x60') # "There are no records!" - Menu window wider on left
     patch.add_record(0x116ae, b'\x0b') #                           and right
     patch.add_record(0x116af, b'\x8d') #                           and taller on bottom.
     patch.add_record(0x116b0, b'\x1a') #                           Compensate with shorter message window.
     patch.add_record(0x116bc, b'\x8d') # "This will overwrite..." (for saving) - Menu window wider on right
-    patch.add_record(0x116bd, b'\x46') #                                         and taller on bottom.
-    patch.add_record(0x116c0, b'\x10') #                                         Shorten the save window to compensate.
+    patch.add_record(0x116bd, b'\x26') #                                         and taller on bottom.
+    patch.add_record(0x116c0, b'\x30') #                                         Shorten the save window to compensate.
     patch.add_record(0x116d3, b'\x1c') # Believe this to be the area name window.
-    patch.add_record(0x116ff, b'\x62') # Used by both the area and map root menus. - Window becomes taller
+    patch.add_record(0x116ff, b'\x40') # Used by both the area and map root menus. - Window becomes taller
     patch.add_record(0x11701, b'\x8d') #                                             and wider.
-    patch.add_record(0x1170b, b'\x8d') # "Proceed with green crystal?" - Window becomes wider
-    patch.add_record(0x1170c, b'\x1b') #                                 and taller.
-    patch.add_record(0x1170f, b'\x2f') #                                 Shorten next region to compensate.
-    patch.add_record(0x1171b, b'\x8d') # "Which entry to restore?" - Window becomes wider
-    patch.add_record(0x1171c, b'\x1b') #                             and taller.
-    patch.add_record(0x1171f, b'\x41') #                             Shorten next region to compensate.
-    patch.add_record(0x1172b, b'\x8d') # "Restore--are you sure? / Cannot restore" - Root menu wider
-    patch.add_record(0x1172c, b'\x1b') #                                             and taller.
-    patch.add_record(0x1172f, b'\x14') #                                             Shorten next region to compensate.
+    patch.add_record(0x11709, b'\x40') # "Proceed with green crystal?" - Menu becomes shorter
+    patch.add_record(0x1170b, b'\x8d') #                                 and wider.
+    patch.add_record(0x1170d, b'\xff\x00') #                             Then a gap between windows.
+    patch.add_record(0x1170f, b'\x49') #                                 Shorten next region to compensate.
+    patch.add_record(0x11719, b'\x40') # "Which entry to restore?" - Window becomes shorter
+    patch.add_record(0x1171b, b'\x8d') #                             and wider.
+    patch.add_record(0x1171d, b'\xff\x00') #                         Then a gap between windows.
+    patch.add_record(0x1171f, b'\x5b') #                             Shorten next region to compensate.
+    patch.add_record(0x11729, b'\x40') # "Restore--are you sure? / Cannot restore" - Window becomes shorter
+    patch.add_record(0x1172b, b'\x8d') #                                             and wider.
+    patch.add_record(0x1172d, b'\xff\x00') #                                         Then a gap between windows.
+    patch.add_record(0x1172f, b'\x2e') #                                             Shorten next region to compensate.
+    write_hdma_table_entry(patch, 0x1173c, 2, row_count=0x32) # Status window (3 options) - Menu shorter.
+    write_hdma_table_entry(patch, 0x1173c, 4, row_count=0x38) #                             Extend next region(s) to compensate.
+    write_hdma_table_entry(patch, 0x1174f, 1, row_count=0x30, right_value=0x8d) # "Record where?" (3 opt) - Menu wider and shorter.
+    write_hdma_table_entry(patch, 0x1174f, 2, row_count=0x08, left_value=0xff, right_value=0x00) #          Gap between windows.
+    write_hdma_table_entry(patch, 0x1174f, 3, row_count=0x58)                   #                           Extend final region to compensate.
+    write_hdma_table_entry(patch, 0x1175f, 1, row_count=0x30, right_value=0x8d) # "Are you sure?" (3 opt) - Menu wider and shorter.
+    write_hdma_table_entry(patch, 0x1175f, 2, row_count=0x08, left_value=0x0f, right_value=0x00) #          Gap between windows.
+    write_hdma_table_entry(patch, 0x1175f, 3, row_count=0x2f) #                                             Extend next region to compensate.
+    write_hdma_table_entry(patch, 0x11785, 2, row_count=0x42) # Status window (4 options) - Menu shorter.
+    write_hdma_table_entry(patch, 0x11785, 3, row_count=0x68) #                             Extend next region to compensate.
     patch.add_record(0x1179a, b'\x8d') # "Which entry to preserve?" - Window becomes wider
-    patch.add_record(0x1179b, b'\x2d') #                              and taller.
-    patch.add_record(0x1179e, b'\x2d') #                              Shorten next region to compensate.
+    patch.add_record(0x1179b, b'\x0d') #                              and taller.
+    patch.add_record(0x1179e, b'\x4d') #                              Shorten next region to compensate.
+    write_hdma_table_entry(patch, 0x117a5, 1, right_value=0x8d) # "Preserve--are you sure?" (4 options) - Menu wider
+    write_hdma_table_entry(patch, 0x117a5, 2, row_count=0x0a)   #                                         and shorter.
+    write_hdma_table_entry(patch, 0x117a5, 3, row_count=0x26)   #                                         Extend next to compensate.
     patch.add_record(0x117e0, b'\x8d') # "Which entry would you like to view?" - Menu window wider on right
-    patch.add_record(0x117e1, b'\x2c') #                                         and taller on bottom.
-    patch.add_record(0x117e4, b'\x2e') #                                         Shorten next region to compensate.
+    patch.add_record(0x117e1, b'\x0c') #                                         and taller on bottom.
+    patch.add_record(0x117e4, b'\x4e') #                                         Shorten next region to compensate.
     patch.add_record(0x1180e, b'\x8d') # "Which save data will you delete?" - Menu window wider on right
-    patch.add_record(0x1180f, b'\x3e') #                                      and taller on bottom.
-    patch.add_record(0x11812, b'\x18') #                                      Shorten next region to compensate.
+    patch.add_record(0x1180f, b'\x1e') #                                      and taller on bottom.
+    patch.add_record(0x11812, b'\x38') #                                      Shorten next region to compensate.
     patch.add_record(0x1181e, b'\x8d') # "Are you sure?" (for deleting) - Menu window wider on right
-    patch.add_record(0x1181f, b'\x3e') #                                  and taller on bottom.
-    patch.add_record(0x11822, b'\x18') #                                  Shorten next region to compensate.
+    patch.add_record(0x1181f, b'\x1e') #                                  and taller on bottom.
+    patch.add_record(0x11822, b'\x38') #                                  Shorten next region to compensate.
     patch.add_record(0x11827, b'\xb5') #                                  Wider confirmation window.
     patch.add_record(0x1182c, b'\x41') # "Save data deleted" - Window starts earlier on top,
     patch.add_record(0x1182f, b'\x1d') #                       isn't as tall,
     patch.add_record(0x11830, b'\x5b') #                       starts later on the left,
     patch.add_record(0x11831, b'\xac') #                       and stops earlier on the right.
-    patch.add_record(0x1183b, b'\x8d') # "Which entry will you delete?" - Menu window wider on right
-    patch.add_record(0x1183c, b'\x1c') #                                  and taller on bottom.
-    patch.add_record(0x1183f, b'\x3e') #                                  Shorten next region to compensate.
-    patch.add_record(0x1184b, b'\x8d') # "Are you sure?" (for deleting records) - Menu window wider on right
-    patch.add_record(0x1184c, b'\x1c') #                                          and taller on bottom.
-    patch.add_record(0x1184f, b'\x14') #                                          Shorten next region to compensate.
+    patch.add_record(0x11839, b'\x40') # "Which entry will you delete?" - Menu becomes shorter
+    patch.add_record(0x1183b, b'\x8d') #                                  and wider on right.
+    patch.add_record(0x1183c, b'\x08\xff\x00') #                          Then a gap between windows.
+    patch.add_record(0x1183f, b'\x58') #                                  And the bottom window needs to be taller.
+    patch.add_record(0x11849, b'\x40') # "Are you sure?" (for deleting records) - Menu becomes shorter
+    patch.add_record(0x1184b, b'\x8d') #                                          and wider on right.
+    patch.add_record(0x1184c, b'\x08\xff\x00') #                                  Then a gap between windows.
+    patch.add_record(0x1184f, b'\x2e') #                                          Lengthen next region to compensate.
     patch.add_record(0x11854, b'\xc5') #                                          Wider confirmation window
-    patch.add_record(0x11857, b'\xcd') #                                          continuing to next region.
+    patch.add_record(0x11857, b'\xc5') #                                          continuing to next region.
 
     # Dialog window dimensions... mostly constants in assembly.
     # All I'm doing is changing the width of text to 22 characters to fill the existing window and shifting the text over by
