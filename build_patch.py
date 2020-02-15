@@ -332,13 +332,12 @@ if __name__ == '__main__':
     patch.add_record(0xf8b4e, num_16bit(17) + num_16bit(9))                     # Window for the main menu is a bit bigger.
     patch.add_record(0xf8b5e, num_16bit(15))                                    # "Are you sure?" (for saving) gets wider.
     patch.add_record(0xf8b68, num_16bit(4))                                     # "Save data recorded" gets shorter.
-    patch.add_record(0xf8b94, num_16bit(0x01c7))                                # "There are no records" moves down a row
-    patch.add_record(0xf8b98, num_16bit(4))                                     #   and get shorter to compensate.
+    patch.add_record(0xf8b94, num_16bit(0x0147))                                # "There are no records" moves up several rows
+    patch.add_record(0xf8b98, num_16bit(4))                                     #   and get shorter.
     patch.add_record(0xf8bae, num_16bit(15))                                    # "Are you sure?" (for deleting) gets wider.
     patch.add_record(0xf8bb4, num_16bit(0x010b) + num_16bit(11) + num_16bit(4)) # "Save data deleted" moves down, gets longer, and gets shorter.
     patch.add_record(0xf8bce, num_16bit(15))                                    # "Are you sure?" (for deleting record entries) gets shorter.
-    patch.add_record(0xf8bd4, num_16bit(0x0127))                                # "Entry deleted" moves down...
-    patch.add_record(0xf8bd8, num_16bit(3))                                     #   and gets shorter.
+    patch.add_record(0xf8bd4, num_16bit(0x010b) + num_16bit(11) + num_16bit(4)) # "Entry deleted" moves down, gets longer, and gets shorter.
     write_strings_from_csv(patch, 'assets/text/menu_map.csv', reverse_font_map, 0xf8bdc, 18 * 2, 0xf8c00, 1366, newline=b'\xff\xfe', terminator=b'\xff\xff')
 
     # Prologue and title screen strings... no window borders associated with these.
@@ -395,10 +394,9 @@ if __name__ == '__main__':
     patch.add_record(0x1168a, b'\x26') #                                and taller on bottom.
     patch.add_record(0x1168d, b'\x30') #                                Shorten the save window to compensate.
     patch.add_record(0x11692, b'\xb5') #                                Wider confirmation window.
-    patch.add_record(0x116ad, b'\x60') # "There are no records!" - Menu window wider on left
-    patch.add_record(0x116ae, b'\x0b') #                           and right
-    patch.add_record(0x116af, b'\x8d') #                           and taller on bottom.
-    patch.add_record(0x116b0, b'\x1a') #                           Compensate with shorter message window.
+    patch.add_record(0x116ad, b'\x40') # "There are no records!" - Menu window shorter
+    patch.add_record(0x116af, b'\x8d') #                           and wider on right.
+    patch.add_record(0x116b0, b'\x1a') #                           Shorter message window.
     patch.add_record(0x116bc, b'\x8d') # "This will overwrite..." (for saving) - Menu window wider on right
     patch.add_record(0x116bd, b'\x26') #                                         and taller on bottom.
     patch.add_record(0x116c0, b'\x30') #                                         Shorten the save window to compensate.
@@ -443,10 +441,10 @@ if __name__ == '__main__':
     patch.add_record(0x1181f, b'\x1e') #                                  and taller on bottom.
     patch.add_record(0x11822, b'\x38') #                                  Shorten next region to compensate.
     patch.add_record(0x11827, b'\xb5') #                                  Wider confirmation window.
-    patch.add_record(0x1182c, b'\x41') # "Save data deleted" - Window starts earlier on top,
-    patch.add_record(0x1182f, b'\x1d') #                       isn't as tall,
-    patch.add_record(0x11830, b'\x5b') #                       starts later on the left,
-    patch.add_record(0x11831, b'\xac') #                       and stops earlier on the right.
+    patch.add_record(0x1182c, b'\x41') # "Save data/entry deleted" - Window starts earlier on top,
+    patch.add_record(0x1182f, b'\x1d') #                             isn't as tall,
+    patch.add_record(0x11830, b'\x5b') #                             starts later on the left,
+    patch.add_record(0x11831, b'\xac') #                             and stops earlier on the right.
     patch.add_record(0x11839, b'\x40') # "Which entry will you delete?" - Menu becomes shorter
     patch.add_record(0x1183b, b'\x8d') #                                  and wider on right.
     patch.add_record(0x1183c, b'\x08\xff\x00') #                          Then a gap between windows.
