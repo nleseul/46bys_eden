@@ -1,25 +1,23 @@
-    Almanic Staff    [#ff]
+    Alman[ic] Staff[#ff]
 
-Game Designed by[#ff]
-       Takashi Yoneda[#ff]
+Game Des[ig]ned by[#ff]
+      Takas[hi] Yoneda[#ff]
 
 Programmed by[#ff]
-       Saburou Contora[#ff]
-       Tetsuya Furuta[#ff]
-       Hiromitsu Shioya[#ff]
+      Saburou Contora[#ff]
+      Tetsuya Furuta[#ff]
+      H[ir]om[it]su S[hi]oya[#ff]
 
-Graphics Designed by[#ff]
-       Naoyuki Hayakawa[#ff]
-       Yasuo Wakatsuki[#ff]
-       Takashi Shichijo[#ff]
-       Hidetoshi Fujioka[#ff]
+Graph[ic]s Des[ig]ned by[#ff]
+      Naoyu[ki] Hayakawa[#ff]
+      Yasuo Wakatsu[ki][#ff]
+      Takas[hi] S[hi]c[hi]jo[#ff]
+      H[id]etos[hi] Fu[ji]oka[#ff]
 
-Special Thanks[#ff]
-       Hiroshi Yokokura[#ff]
-       Masumi Gotou[#ff]
-       Tommy Bon Bon[#ff]
-
-
+Spec[ia]l Thanks[#ff]
+      H[ir]os[hi] Yokokura[#ff]
+      Masumi Gotou[#ff]
+      Tommy Bon Bon[#ff]
 
 
 
@@ -27,21 +25,23 @@ Special Thanks[#ff]
 
 
 
-    Music Staff    [#ff]
 
-Music Composed by[#ff]
-       Koichi Sugiyama[#ff]
 
-Music Arranged by[#ff]
-       Motoaki Takenouchi[#ff]
+    Mus[ic] Staff[#ff]
+
+Mus[ic] Composed by[#ff]
+      K[oi]c[hi] Su[gi]yama[#ff]
+
+Mus[ic] Arranged by[#ff]
+      Motoa[ki] Takenouc[hi][#ff]
 
 Sound Created by[#ff]
-       Cube Corporation[#ff]
-         Yoshiaki Kubotera[#ff]
-         Masanori Hikichi[#ff]
-         Tomohiro Endo[#ff]
-         Dogen Shibuya[#ff]
-         Hiroo Tengenji[#ff]
+      Cube Corpora[ti]on[#ff]
+        Yos[hi]a[ki] Kubotera[#ff]
+        Masano[ri] H[ik][ic][hi][#ff]
+        Tomoh[ir]o Endo[#ff]
+        Dogen S[hi]buya[#ff]
+        H[ir]oo Tengen[ji][#ff]
 
 
 
@@ -49,53 +49,37 @@ Sound Created by[#ff]
 
 
 
-    Enix Staff    [#ff]
+    E[ni]x Staff[#ff]
 
-       Takao Kawaguchi[#ff]
+      Takao Kawaguc[hi][#ff]
 
-       Yasuyuki Sone[#ff]
-       Keiko Ito[#ff]
-       Hideki Yamamoto[#ff]
-       Kouji Mitumori[#ff]
-       Kazunori Takado[#ff]
-       Yasuhito Watanabe[#ff]
-       Junji Kuwahara[#ff]
-       Yuchi Kikumoto[#ff]
-       Yasuko Sekiguchi[#ff]
-       Miwako Matumoto[#ff]
+      Yasuyu[ki] Sone[#ff]
+      K[ei]ko Ito[#ff]
+      H[id]e[ki] Yamamoto[#ff]
+      Kou[ji] M[it]umo[ri][#ff]
+      Kazuno[ri] Takado[#ff]
+      Yasuh[it]o Watanabe[#ff]
+      Jun[ji] Kuwahara[#ff]
+      Yuc[hi] K[ik]umoto[#ff]
+      Yasuko Sek[ig]uc[hi][#ff]
+      Miwako Matumoto[#ff]
 
-Special Thanks[#ff]
+Spec[ia]l Thanks[#ff]
 
-       Shinichi Kodua[#ff]
-       Yumiko Manaka[#ff]
+      S[hi]n[ic][hi] Kodua[#ff]
+      Yum[ik]o Manaka[#ff]
 
-       Hiroomi Tanaka[#ff]
-       Ryuichi Moriya[#ff]
-       Shigeru Kitaori[#ff]
-       Masayo Ikeda[#ff]
-       Hirotomo Morisada[#ff]
-       Mieko Hukui[#ff]
-       Hajime Iesaka[#ff]
-       Keiko Hattori[#ff]
-       Kanako Kunimatsu[#ff]
-       Naoki Yasuda[#ff]
-       Yoshiaki Ujiie[#ff]
-
-
-
-
-
-
-
-    Art Staff    [#ff]
-
-Package Illustrated by[#ff]
-       Kamui Fujiwara[#ff]
-
-Art Designed by[#ff]
-       Micro Creative[#ff]
-       Brahman[#ff]
-       Yasumi Kawano[#ff]
+      H[ir]oomi Tanaka[#ff]
+      Ryu[ic][hi] Mo[ri]ya[#ff]
+      S[hi]geru K[it]ao[ri][#ff]
+      Masayo Ikeda[#ff]
+      H[ir]otomo Mor[is]ada[#ff]
+      M[ie]ko Huk[ui][#ff]
+      Ha[ji]me Iesaka[#ff]
+      K[ei]ko Ha[tt]o[ri][#ff]
+      Kanako Ku[ni]matsu[#ff]
+      Nao[ki] Yasuda[#ff]
+      Yos[hi]a[ki] U[ji][ie][#ff]
 
 
 
@@ -103,46 +87,60 @@ Art Designed by[#ff]
 
 
 
-    Production Staff    [#ff]
+    Art Staff[#ff]
 
-Art Directed by[#ff]
-       Masahiro Hirasawa[#ff]
+Package I[ll]ustrated by[#ff]
+      Kam[ui] Fu[ji]wara[#ff]
 
-Publicity[#ff]
-       Teruhiko Hanawa[#ff]
+Art Des[ig]ned by[#ff]
+      M[ic]ro Crea[ti]ve[#ff]
+      Brahman[#ff]
+      Yasumi Kawano[#ff]
 
-Assistants[#ff]
-       Teturou Shimoda[#ff]
-       Kenjiro Kano[#ff]
 
-Assistant Producers[#ff]
-       Hiroki Fujimoto[#ff]
-       Keiko Taga[#ff]
 
-Directed by[#ff]
-       Takashi Yoneda[#ff]                 (Almanic)[#ff]
+
+
+
+
+    Produc[ti]on Staff[#ff]
+
+Art D[ir]ected by[#ff]
+      Masah[ir]o H[ir]asawa[#ff]
+
+Pub[li]c[it]y[#ff]
+      Teru[hi]ko Hanawa[#ff]
+
+Ass[is]tants[#ff]
+      Teturou S[hi]moda[#ff]
+      Kenj[ir]o Kano[#ff]
+
+Ass[is]tant Producers[#ff]
+      H[ir]o[ki] Fu[ji]moto[#ff]
+      K[ei]ko Taga[#ff]
+
+D[ir]ected by[#ff]
+      Takas[hi] Yoneda[#ff]                (Alman[ic])[#ff]
 
 Produced by[#ff]
-       Keizou Mochizuki[#ff]
+      K[ei]zou Moc[hi]zu[ki][#ff]
 
-Published by[#ff]
-       Yukinobu Chida[#ff]
-
-
+Pub[li]shed by[#ff]
+      Yuk[in]obu C[hi]da[#ff]
 
 
 
 
 
 
+    Trans[la][ti]on Patch[#ff]
+
+Hack[in]g, trans[la][ti]on,[#ff]and graph[ic]s[#ff]
+      NLese[ul][#ff]
 
 
-
-
-
-
-
-
+T[hi]s patch [is] a non-commerc[ia]l[#ff]fan project. A[ll] r[ig]hts b[el]ong[#ff]to [the] [ti]t[le]['s] o[ri]g[in][al] creators.[#ff]
+Thank you a[ll][!!] [#09][#ff]
 
 
 
@@ -153,10 +151,17 @@ Published by[#ff]
 
 
 
-    [#20]1992 Almanic[#ff]
-    [#20]1992 Koichi Sugiyama[#ff]
+
+
+
+
+
+
+    [#20]1992 Alman[ic][#ff]
+    [#20]1992 K[oi]c[hi] Su[gi]yama[#ff]
     [#20]1992 Cube[#ff]
-    [#20]1992 Enix[#ff]
+    [#20]1992 E[ni]x[#ff]
+    [#21]2020 NLese[ul][#ff]
 
 
 
@@ -178,15 +183,7 @@ Published by[#ff]
 
 
 
-
-
-
-
-
-
-
-
-         ~End~  [#ff]
+         ~End~[#ff]
 
 
 

@@ -34,7 +34,10 @@
 3e='d
 3f=s'
 
-
+40=ii
+41=ji
+42=ki
+43=ik
 
 5f=_
 
@@ -157,7 +160,8 @@ E9=pi
 EA=ri
 EB=si
 EC=ti
-ED=vi
+ED=ui
+EE=vi
 
 F0=al
 F1=el
