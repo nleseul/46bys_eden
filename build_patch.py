@@ -505,8 +505,13 @@ if __name__ == '__main__':
     # "Triconodon" image from chapter 4 intro
     write_gfx_from_file(patch, 'assets/gfx/triconodon.bin', 0x1247e2, 2248)
 
+    # Now let's finish up by updating the SNES ROM header.
+    write_with_size_check(patch, 0x7fc0, 21, b'46BYS TO FARAWAY EDEN', 0x20) # ROM title
+    patch.add_record(0x7fde, num_16bit(0x7a6c))                              # Checksum
+    patch.add_record(0x7fdc, num_16bit(0xffff ^ 0x7a6c))                     # Complement of checksum
+
     # All done! Build the patch now...
-    with open('build/test.ips', 'w+b') as f:
+    with open('build/The 4.6 Billion Year Saga - To Faraway Eden.ips', 'w+b') as f:
         f.write(patch.encode())
 
     # Apply the patch to a ROM file, if one was specified at the command line.
@@ -517,5 +522,5 @@ if __name__ == '__main__':
 
         rom_data = patch.apply(rom_data)
 
-        with open('build/test.sfc', 'wb') as f:
+        with open('build/The 4.6 Billion Year Saga - To Faraway Eden.sfc', 'wb') as f:
             f.write(rom_data)
