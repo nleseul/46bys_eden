@@ -293,8 +293,10 @@ if __name__ == '__main__':
 
     # At 0x1f010, there's some code that wants to draw a fake progress meter of ellipses for a "test" that was once part of
     # the mammal dialog. It has constants against which the dialog index (0x1f016) and the line index (0x1f1e)
-    # are checked. Make sure the line index is correct.
-    patch.add_record(0x1f01f, num_16bit(2 * 6))
+    # are checked.
+    patch.add_record(0x1f01f, num_16bit(2 * 6))    # Make sure the line index is correct.
+    patch.add_record(0x1f04f, num_8bit(0xbf))      # change the character written to the nicer-looking four-dot ellipsis.
+    patch.add_record(0x1f052, num_24bit(0x7eea8a)) # And place it at the left edge of the window.
 
     # Somewhere in the vicinity of 0x1f0d8, there's another set of checks for dialog events which handles the ones that load cut scenes.
     patch.add_record(0x1f0e3, num_8bit(7 * 6))  # 0x2f - Tyrannosaurs
