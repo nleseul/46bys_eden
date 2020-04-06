@@ -483,6 +483,10 @@ if __name__ == '__main__':
     patch.add_record(0x1f1af, b'\x02') # Start music at index 2.
     patch.add_record(0x1f1dc, b'\x05') # End the prologue and move on to the sun scene at index 5.
 
+    # Starting at 0xf51df is a table of timings for each page in the intro dialog text. We have
+    # fewer pages than the original, so we're shifting a chunk of that array back by two entries.
+    patch.add_record(0xf51eb, b'\x00\x03\x00\x01\x00\x06\x01\xff\xff\xff\xff\xff')
+
     # Tilemap for the chapter graphics and possibly some other things.
     write_gfx_from_file(patch, 'assets/gfx/chapter_tilemap.bin', 0x4efec, 1488)
 
@@ -507,8 +511,8 @@ if __name__ == '__main__':
 
     # Now let's finish up by updating the SNES ROM header.
     write_with_size_check(patch, 0x7fc0, 21, b'46BYS TO FARAWAY EDEN', 0x20) # ROM title
-    patch.add_record(0x7fde, num_16bit(0x7a6c))                              # Checksum
-    patch.add_record(0x7fdc, num_16bit(0xffff ^ 0x7a6c))                     # Complement of checksum
+    patch.add_record(0x7fde, num_16bit(0x7e61))                              # Checksum
+    patch.add_record(0x7fdc, num_16bit(0xffff ^ 0x7e61))                     # Complement of checksum
 
     # All done! Build the patch now...
     with open('build/The 4.6 Billion Year Saga - To Faraway Eden.ips', 'w+b') as f:
