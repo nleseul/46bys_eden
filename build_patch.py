@@ -115,7 +115,7 @@ def write_gfx_from_file(patch, filename, address, length):
 
 def write_code(patch, filename, address, length):
     tmp_filename = 'build/_tmp.a65'
-    result = subprocess.run(['xa', '-o', tmp_filename, '-w', filename], stderr=subprocess.PIPE)
+    result = subprocess.run(['xa', '-o', tmp_filename, '-w', filename], shell=True, stderr=subprocess.PIPE)
     if result.returncode == 0:
         with open(tmp_filename, 'rb') as tmp_file:
             write_with_size_check(patch, address, length, tmp_file.read(), fill_byte=b'\xea')
