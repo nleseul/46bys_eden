@@ -231,6 +231,14 @@ if __name__ == '__main__':
     # When navigating up from "End," it needs to shift the current index forward a bit to align visually. This checks that value.
     patch.add_record(0x1bd73, num_16bit(86 - 10))
 
+    # Handle wrapping when navigating right from "End."
+    patch.add_record(0x1bc51, num_16bit(87))
+    patch.add_record(0x1bc56, num_16bit(80))
+
+    # Handle wrapping to "End" when navigating left on the last row.
+    patch.add_record(0x1bca1, num_16bit(79))
+    patch.add_record(0x1bca6, num_16bit(86))
+
     # At 0x1bdcc, there's a list of indices in the character grid that should be skipped over. We don't need most of them.
     write_with_size_check(patch, 0x1bdcc, 14, num_8bit(28) + num_8bit(58), fill_byte=b'\xff')
 
@@ -511,8 +519,8 @@ if __name__ == '__main__':
 
     # Now let's finish up by updating the SNES ROM header.
     write_with_size_check(patch, 0x7fc0, 21, b'46BYS TO FARAWAY EDEN', 0x20) # ROM title
-    patch.add_record(0x7fde, num_16bit(0x7e61))                              # Checksum
-    patch.add_record(0x7fdc, num_16bit(0xffff ^ 0x7e61))                     # Complement of checksum
+    patch.add_record(0x7fde, num_16bit(0x63c4))                              # Checksum
+    patch.add_record(0x7fdc, num_16bit(0xffff ^ 0x63c4))                     # Complement of checksum
 
     # All done! Build the patch now...
     with open('build/The 4.6 Billion Year Saga - To Faraway Eden.ips', 'w+b') as f:
