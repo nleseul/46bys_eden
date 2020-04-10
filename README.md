@@ -46,7 +46,7 @@ popular one right now is [Lunar IPS](http://fusoya.eludevisibility.org/lips/).
 You could also use [my command-line Python IPS tool](https://github.com/nleseul/ips_util),
 if you really want to. 
 
-The patch should be applied to the Japanese ROM. The CRC32 hash is `CA23CB27`.
+The patch should be applied to the Japanese ROM. The CRC32 hash is `B090235A`.
 I'm probably not supposed to link to a source for this ROM; just ask Google.
 
 # Building the patch
